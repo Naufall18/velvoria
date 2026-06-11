@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Welcome</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#002625",
+                        "tertiary-fixed": "#b9ece9",
+                        "on-secondary-fixed": "#301408",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1a1f3a",
+                        "surface": "#fff8f3",
+                        "secondary": "#7d5545",
+                        "on-surface": "#1d1b18",
+                        "error": "#EF4444",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container": "#f3ede8",
+                        "on-error-container": "#93000a",
+                        "border-subtle": "#E0E0E0",
+                        "surface-light": "#F5F5F5",
+                        "surface-dim": "#dfd9d4",
+                        "on-secondary-container": "#7a5242",
+                        "surface-container-high": "#eee7e2",
+                        "on-primary-container": "#8286a7",
+                        "white": "#FFFFFF",
+                        "on-secondary": "#ffffff",
+                        "background": "#fff8f3",
+                        "on-primary-fixed": "#151a34",
+                        "outline": "#77767e",
+                        "text-secondary": "#808080",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "inverse-surface": "#33302d",
+                        "on-tertiary-container": "#60918f",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "surface-container-low": "#f9f2ed",
+                        "primary": "#030722",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#c0c4e8",
+                        "surface-bright": "#fff8f3",
+                        "secondary-container": "#ffc9b4",
+                        "success": "#10B981",
+                        "surface-tint": "#585d7b",
+                        "inverse-on-surface": "#f6efeb",
+                        "text-primary": "#333333",
+                        "tertiary": "#000d0c",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#404562",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "warning": "#F59E0B",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "surface-variant": "#e8e1dc",
+                        "outline-variant": "#c7c5ce",
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dee1ff",
+                        "on-surface-variant": "#46464d",
+                        "on-background": "#1d1b18",
+                        "secondary-fixed": "#ffdbce",
+                        "on-tertiary-fixed-variant": "#1a4e4c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "base": "8px",
+                        "4xl": "96px",
+                        "xl": "32px",
+                        "nav-height-mobile": "64px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "2xl": "48px",
+                        "nav-height-desktop": "80px",
+                        "sm": "8px",
+                        "xs": "4px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "title-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                        "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface min-h-screen flex flex-col items-center justify-center font-body-md text-text-primary antialiased selection:bg-secondary-container selection:text-primary">
+<main class="w-full max-w-[1440px] px-md md:px-[48px] py-4xl flex flex-col items-center justify-center relative z-10">
+<div class="max-w-xl w-full flex flex-col items-center text-center">
+<!-- Success Icon -->
+<div class="mb-lg fade-in-up flex items-center justify-center w-24 h-24 rounded-full bg-secondary-container/20">
+<span class="material-symbols-outlined text-[48px] text-secondary" style="font-variation-settings: 'FILL' 0;">
+                    auto_awesome
+                </span>
+</div>
+<!-- Headlines -->
+<h1 class="font-display-md text-display-md text-primary mb-md fade-in-up delay-100">
+                Welcome to Velvoria
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-2xl fade-in-up delay-200">
+                Your journey into curated luxury begins now. We've sent a welcome guide to your inbox.
+            </p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-md w-full sm:w-auto fade-in-up delay-300">
+<button class="w-full sm:w-auto px-xl py-md bg-secondary text-white font-title-sm text-title-sm rounded-lg hover:bg-secondary/90 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:ring-offset-2 focus:ring-offset-surface">
+                    Explore Boutique
+                </button>
+<button class="w-full sm:w-auto px-xl py-md bg-transparent text-primary font-title-sm text-title-sm rounded-lg border-[2px] border-primary hover:bg-primary/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface">
+                    Complete Profile
+                </button>
+</div>
+</div>
+</main>
+<!-- Decorative ambient background elements -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
+<div class="absolute w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[100px] mix-blend-multiply opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+</div>
+</body></html>

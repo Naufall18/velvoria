@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publishing Success - Velvoria</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#c0c4e8",
+                    "surface-dim": "#dfd9d4",
+                    "surface": "#fff8f3",
+                    "on-error-container": "#93000a",
+                    "background": "#fff8f3",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "tertiary-fixed": "#b9ece9",
+                    "on-background": "#1d1b18",
+                    "border-subtle": "#E0E0E0",
+                    "tertiary-container": "#002625",
+                    "on-tertiary-container": "#60918f",
+                    "on-primary-container": "#8286a7",
+                    "outline": "#77767e",
+                    "on-primary-fixed": "#151a34",
+                    "inverse-surface": "#33302d",
+                    "primary-fixed": "#dee1ff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#585d7b",
+                    "error": "#EF4444",
+                    "outline-variant": "#c7c5ce",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "surface-container-highest": "#e8e1dc",
+                    "text-primary": "#333333",
+                    "inverse-primary": "#c0c4e8",
+                    "tertiary": "#000d0c",
+                    "on-primary-fixed-variant": "#404562",
+                    "success": "#10B981",
+                    "primary-container": "#1a1f3a",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1d1b18",
+                    "on-tertiary-fixed": "#00201f",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#7a5242",
+                    "warning": "#F59E0B",
+                    "inverse-on-surface": "#f6efeb",
+                    "on-surface-variant": "#46464d",
+                    "on-secondary-fixed": "#301408",
+                    "white": "#FFFFFF",
+                    "primary": "#030722",
+                    "surface-container": "#f3ede8",
+                    "surface-light": "#F5F5F5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "surface-bright": "#fff8f3",
+                    "surface-variant": "#e8e1dc",
+                    "secondary": "#7d5545",
+                    "secondary-container": "#ffc9b4",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "text-secondary": "#808080",
+                    "surface-container-low": "#f9f2ed",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eee7e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "3xl": "64px",
+                    "xl": "32px",
+                    "nav-height-desktop": "80px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "base": "8px",
+                    "2xl": "48px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "nav-height-mobile": "64px",
+                    "4xl": "96px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display", "serif"],
+                    "label-md": ["Inter", "sans-serif"],
+                    "title-lg": ["Inter", "sans-serif"],
+                    "headline-lg": ["Playfair Display", "serif"],
+                    "display-md": ["Playfair Display", "serif"],
+                    "headline-lg-mobile": ["Playfair Display", "serif"],
+                    "label-lg": ["Inter", "sans-serif"],
+                    "title-md": ["Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "title-sm": ["Inter", "sans-serif"],
+                    "headline-md": ["Playfair Display", "serif"],
+                    "body-sm": ["Inter", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "headline-sm": ["Playfair Display", "serif"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      /* Animation for success mark */
+      @keyframes popIn {
+        0% { transform: scale(0.8); opacity: 0; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      .animate-pop {
+        animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface min-h-screen flex items-center justify-center p-md md:p-3xl font-body-md text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Main Container - Suppressed Nav for Success Context -->
+<main class="w-full max-w-[800px] flex flex-col items-center">
+<!-- Success Header -->
+<header class="flex flex-col items-center text-center gap-md mb-2xl animate-pop opacity-0">
+<div class="w-24 h-24 rounded-full bg-secondary-fixed flex items-center justify-center mb-sm shadow-sm">
+<span class="material-symbols-outlined text-[48px] text-secondary" style="font-variation-settings: 'FILL' 1;">
+                    verified
+                </span>
+</div>
+<h1 class="font-display-md text-display-md text-primary tracking-tight">
+                Elegance Published
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">
+                Your masterpiece has been successfully curated and is now live in the Velvoria collection.
+            </p>
+</header>
+<!-- Product Preview Card -->
+<article class="w-full bg-surface-container-lowest rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-md md:p-lg flex flex-col md:flex-row items-center gap-lg mb-2xl transition-shadow duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)]">
+<div class="w-full md:w-48 h-48 rounded-lg overflow-hidden shrink-0 bg-surface-variant relative">
+<img alt="Product Preview" class="w-full h-full object-cover" data-alt="A highly detailed, professional editorial fashion photograph of a luxurious midnight blue silk gown delicately draped on a minimalist mannequin. The setting is a pristine, high-key studio environment with soft, diffused white lighting that highlights the rich, lustrous sheen of the premium silk fabric. The composition embodies a clean, modern luxury aesthetic perfectly suited for a high-end e-commerce marketplace, focusing on the refined texture and elegant silhouette of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc25pV1P8CNeEG49eODAgaOzUn_gRcEhKBG9MlRWL5NGsViX4vnh7S_llxjCmCs1kV4WPhtwyueBM0DdU76rXor06J6EyT94zB3ZJAZbp4rujcQ26AlbYXC3jls9BOMi_VmhY0sdUZmb8rJlg07gvsyKV9t-T_eT8OplHVmLtUfK0ZqacFQ4zcPTiiWXzKKDJN4C3kOybe0r-gsLF1z8agqgWSqauwgTmjy6rQ9zP8ax3lW6uMiAWSLxY-McjwJAA3Fyu6oEon62I"/>
+</div>
+<div class="flex flex-col items-start gap-sm flex-1 w-full">
+<div class="inline-flex items-center gap-xs px-sm py-xs bg-secondary-container rounded-full mb-xs">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">
+                        visibility
+                    </span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider">
+                        Now Visible to Shoppers
+                    </span>
+</div>
+<h2 class="font-title-lg text-title-lg text-primary">
+                    Midnight Silk Gown
+                </h2>
+<div class="flex flex-col gap-xs text-on-surface-variant">
+<p class="font-body-md text-body-md">
+<span class="font-label-md text-label-md mr-xs">SKU:</span> VLV-2023-MS88
+                    </p>
+<p class="font-body-md text-body-md">
+<span class="font-label-md text-label-md mr-xs">Category:</span> Evening Wear
+                    </p>
+<p class="font-body-md text-body-md font-semibold text-primary mt-xs">
+                        $1,250.00
+                    </p>
+</div>
+</div>
+</article>
+<!-- Action Suite -->
+<section class="w-full max-w-lg flex flex-col sm:flex-row gap-md mb-2xl">
+<button class="flex-1 py-md px-lg border-2 border-primary text-primary rounded-lg font-label-lg text-label-lg hover:bg-surface-container-highest transition-all duration-300 flex justify-center items-center gap-xs group">
+                View Live Product
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
+                    arrow_forward
+                </span>
+</button>
+<button class="flex-1 py-md px-lg bg-primary text-white rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-all duration-300 shadow-sm hover:shadow-md">
+                Return to Dashboard
+            </button>
+</section>
+<!-- Discovery Boost -->
+<footer class="flex flex-col items-center gap-md pt-lg border-t border-border-subtle w-full max-w-sm">
+<p class="font-body-sm text-body-sm text-outline uppercase tracking-widest">
+                Boost Early Discovery
+            </p>
+<div class="flex gap-md">
+<button aria-label="Share via Link" class="w-12 h-12 rounded-full border border-border-subtle flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">
+                        link
+                    </span>
+</button>
+<button aria-label="Share Collection" class="w-12 h-12 rounded-full border border-border-subtle flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">
+                        ios_share
+                    </span>
+</button>
+<button aria-label="Email Listing" class="w-12 h-12 rounded-full border border-border-subtle flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">
+                        mail
+                    </span>
+</button>
+</div>
+</footer>
+</main>
+</body></html>

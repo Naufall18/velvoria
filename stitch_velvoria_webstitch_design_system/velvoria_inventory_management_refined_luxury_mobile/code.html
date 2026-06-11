@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria Vendor - Inventory</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f9f2ed",
+                      "surface-container-high": "#eee7e2",
+                      "on-secondary": "#ffffff",
+                      "secondary": "#7d5545",
+                      "outline": "#77767e",
+                      "text-secondary": "#808080",
+                      "surface-dim": "#dfd9d4",
+                      "on-error-container": "#93000a",
+                      "on-surface-variant": "#46464d",
+                      "background": "#fff8f3",
+                      "on-error": "#ffffff",
+                      "error": "#EF4444",
+                      "surface": "#fff8f3",
+                      "on-secondary-fixed": "#301408",
+                      "inverse-on-surface": "#f6efeb",
+                      "surface-container-highest": "#e8e1dc",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "primary": "#030722",
+                      "tertiary-container": "#002625",
+                      "on-tertiary": "#ffffff",
+                      "warning": "#F59E0B",
+                      "secondary-container": "#ffc9b4",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "border-subtle": "#E0E0E0",
+                      "on-tertiary-fixed": "#00201f",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1d1b18",
+                      "tertiary-fixed": "#b9ece9",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "inverse-surface": "#33302d",
+                      "secondary-fixed": "#ffdbce",
+                      "white": "#FFFFFF",
+                      "surface-bright": "#fff8f3",
+                      "primary-container": "#1a1f3a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#dee1ff",
+                      "surface-light": "#F5F5F5",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "surface-tint": "#585d7b",
+                      "on-primary-fixed-variant": "#404562",
+                      "outline-variant": "#c7c5ce",
+                      "on-primary-fixed": "#151a34",
+                      "success": "#10B981",
+                      "on-background": "#1d1b18",
+                      "on-primary-container": "#8286a7",
+                      "on-tertiary-container": "#60918f",
+                      "text-primary": "#333333",
+                      "surface-container": "#f3ede8",
+                      "surface-variant": "#e8e1dc",
+                      "inverse-primary": "#c0c4e8",
+                      "tertiary": "#000d0c",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "on-secondary-container": "#7a5242"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "3xl": "64px",
+                      "lg": "24px",
+                      "base": "8px",
+                      "xl": "32px",
+                      "nav-height-desktop": "80px",
+                      "md": "16px",
+                      "4xl": "96px",
+                      "2xl": "48px",
+                      "xs": "4px",
+                      "nav-height-mobile": "64px",
+                      "sm": "8px"
+              },
+              "fontFamily": {
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Custom styles for toggle switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #030722;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #030722;
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-[80px]">
+<!-- TopAppBar (Mobile) -->
+<header class="sticky top-0 z-40 bg-surface shadow-sm border-b border-outline-variant flex justify-between items-center h-nav-height-desktop px-md w-full md:hidden">
+<button class="text-primary hover:bg-surface-container-low transition-colors duration-300 p-2 rounded-full scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Inventory</h1>
+<button class="text-primary hover:bg-surface-container-low transition-colors duration-300 p-2 rounded-full scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="p-md space-y-lg max-w-[1440px] mx-auto md:px-lg">
+<!-- Search and Filter Section -->
+<section class="space-y-md">
+<!-- Search Bar -->
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-text-secondary group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-8 pr-4 py-3 bg-transparent border-b border-outline-variant focus:border-primary focus:outline-none font-body-lg text-on-surface transition-all placeholder:text-text-secondary" placeholder="Search inventory..." type="text"/>
+</div>
+<!-- Horizontal Filter Chips -->
+<div class="flex overflow-x-auto space-x-sm pb-2 scrollbar-hide">
+<button class="whitespace-nowrap px-4 py-2 bg-primary text-white rounded-full font-label-lg transition-colors">All</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-lg hover:bg-surface-container-highest transition-colors">Jewelry</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-lg hover:bg-surface-container-highest transition-colors">Apparel</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-lg hover:bg-surface-container-highest transition-colors">Home Decor</button>
+<button class="whitespace-nowrap px-4 py-2 bg-surface-container-high text-on-surface-variant rounded-full font-label-lg hover:bg-surface-container-highest transition-colors">Accessories</button>
+</div>
+</section>
+<!-- Inventory List -->
+<section class="space-y-md">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-lg flex space-x-md shadow-sm border border-border-subtle relative group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden p-lg">
+<div class="absolute left-0 top-0 bottom-0 w-[4px] bg-secondary-container"></div>
+<div class="flex-shrink-0">
+<img alt="Rose Gold Diamond Ring" class="w-24 h-24 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl" data-alt="A delicate rose gold diamond ring resting on a smooth cream-colored velvet cushion. The lighting is soft and luxurious, highlighting the facets of the diamond and the warm tones of the rose gold. The composition is minimalist, focusing entirely on the elegance of the jewelry piece against a neutral background. The aesthetic is high-end, sophisticated, and pristine, fitting for a luxury boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgDgQaCN-tx6wnvr2BXw-GocnL_yHKHt0xCQz_kpgGc6BrF5ga3zRoZdA4KexzL_wyfKMdcMtMvuaUh7W6jhI1m_Ei0EMt_aceczsOF69ItozdM8IOvME3H3md92tvwXbl2hgh1iXUHpqCEy7wrK2xPNBaaib_bOVUTFJPXdMosQ8fJV28bAc3UCjmEg24BtIxM5YzPd-49vVZCbrhZRUPHBZB9HU7Tye70-bHsnXva4hwi3_nf-gp5BV7jRIzQbnbRH66q6OODaI"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Aura Diamond Ring</h3>
+<button class="text-text-secondary hover:text-primary">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">SKU: JEL-RD-001</p>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="font-title-md text-title-md text-primary">$1,250.00</span>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+<span class="font-label-md text-success tracking-wide uppercase">15 units left</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex justify-end space-x-3 mt-3 border-t border-border-subtle pt-2">
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">visibility</span></button>
+<!-- Toggle -->
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out" id="toggle1" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container-high cursor-pointer transition-colors duration-200 ease-in-out" for="toggle1"></label>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-lg flex space-x-md shadow-sm border border-border-subtle relative group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden p-lg">
+<div class="flex-shrink-0">
+<img alt="Minimalist Watch" class="w-24 h-24 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl" data-alt="A sleek minimalist wristwatch with a dark navy leather strap and a clean white dial featuring subtle silver hands. The watch is presented on a smooth, slightly textured cream surface. The lighting is crisp and even, casting soft shadows that enhance the depth of the image. The overall mood is modern, professional, and quietly luxurious. The palette emphasizes deep blues, clean whites, and warm off-whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH5mIauxSnViVPNqUWNarFj71vJZxCoDlMtzswYM9SNqKTlAWkWsrIH-zSa9WIKFgIj_LREV6m9zS5hRgV3MWym_2PxalhHHbqF6d8AUtYyqjXq7L8KBXLnSf_k25pOv-6yeJhglcOhLIstyr1QSae_-UoJcYDjD27MDvDB15xo-CV059F4nxRFuAp0vbvtd1fyY-GmKriUaQQczmyatZIRa2Rvpt8JHapGSUI_sUyoEWPwXibCOFBskKWtM2wW7XUqO3upDnSwB0"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Chronos Minimal</h3>
+<button class="text-text-secondary hover:text-primary">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">SKU: ACC-WT-042</p>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="font-title-md text-title-md text-primary">$450.00</span>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-warning"></span>
+<span class="font-label-md text-warning tracking-wide uppercase">3 units left</span>
+</div>
+</div>
+<div class="flex justify-end space-x-3 mt-3 border-t border-border-subtle pt-2">
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">visibility</span></button>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container-high cursor-pointer transition-colors duration-200 ease-in-out" for="toggle2"></label>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-lg flex space-x-md shadow-sm border border-border-subtle relative group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden opacity-75 p-lg">
+<div class="flex-shrink-0">
+<img alt="Cashmere Scarf" class="w-24 h-24 object-cover grayscale group-hover:scale-105 transition-transform duration-500 rounded-xl" data-alt="A folded cream-colored cashmere scarf resting on a stark white pedestal. The texture of the fine knit is visible, conveying softness and high quality. The background is a slightly darker warm grey to provide gentle contrast. The lighting is soft and diffused, creating an atmosphere of cozy luxury. The overall aesthetic is minimalist, emphasizing the premium material of the apparel accessory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmRKIaSt14m-s810gwhLDDNjBUeoPPkxLQwM0H6klzof3OcOFFPLvFFcXnRJJO1oPWSqQv_J84ODtaTgsgRcywY5yBQ-ag4gfvCHfBpvElto6qm-4ZHeKaFTjSt5fseK_78j_JHtAb4lWAgXDxF8bm1k2aG8B_URdbEvwvfx57MUJOff7OQGZ7Gk_KTg2VmqL_gmHN2PnN7vlacSOpHFGvwa3eDMLJ5gI1c4enE3h2gX9b6w49tEmunEcoDLUkOqbDOvS8HV13n3g"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Luxe Cashmere Scarf</h3>
+<button class="text-text-secondary hover:text-primary">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">SKU: APP-SC-089</p>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="font-title-md text-title-md text-text-secondary line-through">$120.00</span>
+<div class="flex items-center space-x-2">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-label-md text-error tracking-wide uppercase">Out of Stock</span>
+</div>
+</div>
+<div class="flex justify-end space-x-3 mt-3 border-t border-border-subtle pt-2">
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">edit</span></button>
+<button class="text-text-secondary hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">visibility</span></button>
+<div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out" id="toggle3" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container-high cursor-pointer transition-colors duration-200 ease-in-out" for="toggle3"></label>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB (Add New Product) -->
+<button class="fixed bottom-[88px] right-md bg-secondary-container text-on-secondary-fixed shadow-[0_8px_24px_rgba(0,0,0,0.12)] p-4 rounded-full hover:scale-105 active:scale-95 transition-transform z-40 md:hidden flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-nav-height-mobile px-4 bg-surface border-t border-outline-variant shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary-container rounded-xl py-1 px-4 hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="list_alt" style="font-variation-settings: 'FILL' 1;">list_alt</span>
+<span class="font-label-md text-label-md mt-1 font-bold">Stock</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md mt-1">Sales</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md mt-1">Account</span>
+</a>
+</nav>
+</body></html>

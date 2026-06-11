@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE | The Art of Exquisite Living</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "warning": "#F59E0B",
+                      "text-secondary": "#808080",
+                      "on-secondary": "#ffffff",
+                      "border-subtle": "#E0E0E0",
+                      "secondary-fixed": "#ffdbce",
+                      "white": "#FFFFFF",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "secondary-container": "#ffc9b4",
+                      "error": "#EF4444",
+                      "inverse-surface": "#33302d",
+                      "inverse-primary": "#c0c4e8",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f9f2ed",
+                      "surface": "#fff8f3",
+                      "surface-container-high": "#eee7e2",
+                      "surface-container": "#f3ede8",
+                      "on-secondary-container": "#7a5242",
+                      "on-primary-fixed-variant": "#404562",
+                      "on-error-container": "#93000a",
+                      "secondary": "#7d5545",
+                      "tertiary-container": "#002625",
+                      "on-surface-variant": "#46464d",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "outline-variant": "#c7c5ce",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "primary": "#030722",
+                      "on-primary-fixed": "#151a34",
+                      "surface-bright": "#fff8f3",
+                      "surface-variant": "#e8e1dc",
+                      "error-container": "#ffdad6",
+                      "outline": "#77767e",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f6efeb",
+                      "surface-dim": "#dfd9d4",
+                      "tertiary": "#000d0c",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "success": "#10B981",
+                      "primary-container": "#1a1f3a",
+                      "on-secondary-fixed": "#301408",
+                      "on-surface": "#1d1b18",
+                      "background": "#fff8f3",
+                      "surface-tint": "#585d7b",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "on-primary-container": "#8286a7",
+                      "text-primary": "#333333",
+                      "tertiary-fixed": "#b9ece9",
+                      "surface-container-highest": "#e8e1dc",
+                      "surface-light": "#F5F5F5",
+                      "on-background": "#1d1b18",
+                      "on-tertiary-container": "#60918f",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#dee1ff",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#00201f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "nav-height-mobile": "64px",
+                      "nav-height-desktop": "80px",
+                      "lg": "24px",
+                      "4xl": "96px",
+                      "sm": "8px",
+                      "3xl": "64px",
+                      "2xl": "48px"
+              },
+              "fontFamily": {
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          html { scroll-behavior: smooth; }
+          .parallax {
+              transform: translateY(var(--scroll-y, 0px));
+              transition: transform 0.1s ease-out;
+          }
+      </style>
+</head>
+<body class="bg-surface text-text-primary antialiased font-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 max-w-[1440px] mx-auto bg-white shadow-sm dark:shadow-none h-[80px]">
+<div class="flex items-center gap-xl w-1/3">
+<div class="relative w-full max-w-[300px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary" data-icon="search">search</span>
+<input class="w-full bg-surface-light rounded-[8px] pl-10 pr-4 py-2 border-none focus:ring-2 focus:ring-primary focus:outline-none font-body-md text-body-md text-text-primary placeholder:text-text-secondary" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="w-1/3 flex justify-center">
+<a class="font-display-md text-display-md text-primary dark:text-primary-fixed tracking-tight" href="#">LUXE</a>
+</div>
+<div class="flex items-center justify-end gap-xl w-1/3">
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-title-md text-title-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Collections</a>
+<a class="font-title-md text-title-md text-text-secondary hover:text-primary transition-colors duration-300" href="#">Designers</a>
+<a class="font-title-md text-title-md text-text-secondary hover:text-primary transition-colors duration-300" href="#">Ready-to-Wear</a>
+<a class="font-title-md text-title-md text-text-secondary hover:text-primary transition-colors duration-300" href="#">Accessories</a>
+<a class="font-title-md text-title-md text-text-secondary hover:text-primary transition-colors duration-300" href="#">Lifestyle</a>
+<a class="font-title-md text-title-md text-text-secondary hover:text-primary transition-colors duration-300" href="#">Bespoke</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="text-text-primary hover:text-primary transition-all duration-300 scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="text-text-primary hover:text-primary transition-all duration-300 scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-text-primary hover:text-primary transition-all duration-300 scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-[80px]">
+<!-- Hero Section -->
+<section class="min-h-[calc(100vh-80px)] w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-stretch bg-surface overflow-hidden">
+<div class="w-full md:w-1/2 flex flex-col justify-center px-12 lg:px-2xl py-4xl md:py-0 relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-xl leading-tight">The Art of<br/>Exquisite Living</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-md mb-2xl">Discover a curated world of unparalleled craftsmanship. Every piece in our collection is an investment in timeless elegance and uncompromising quality, designed for those who appreciate the finer things.</p>
+<div class="flex gap-md">
+<button class="bg-primary text-white rounded-lg px-xl py-3 font-title-md text-title-md hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">Explore Collection</button>
+<button class="bg-transparent text-primary border-2 border-primary rounded-lg px-xl py-3 font-title-md text-title-md hover:bg-surface-container-low transition-colors duration-300">Our Heritage</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative min-h-[512px] md:min-h-full overflow-hidden">
+<div class="absolute inset-0 bg-surface-variant parallax" style="transform: scale(1.1);">
+<img alt="Luxury Interior" class="w-full h-full object-cover" data-alt="A meticulously curated luxury living space featuring a modernist velvet sofa in deep emerald green, resting on a polished herringbone hardwood floor. Large floor-to-ceiling windows bathe the room in soft, natural morning light, highlighting the rich textures and premium materials. The scene exudes an effortless, sophisticated elegance with a warm, inviting atmosphere consistent with a high-end editorial spread." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4N7Tpq4LyiFQRNeZT7Mnxe0at84l5AIE2ikRZHhqk2bXs3R7WYLOjr9MIXj3bsUq3bi69FAp3SV7egQy5KXUga6mn0pfDDUkMgfyYfvtA5zOS3LeLEgxzfvKjFTi1HT6YB6gn18QGuXLA4dILRBJ_TI-wEPUMM-XbHSncQpm5UMvqE8MISLrQBv1jyT2oStAH7WzFAvTVhF-mgN0zd-QSlzcd9OEXd5lNiWUxwLoZh98PyaZfopCI3vaWoNch0dyYDHF7wjOVrQ0"/>
+</div>
+</div>
+</section>
+<!-- Featured Collections -->
+<section class="py-[120px] px-12 max-w-[1440px] mx-auto">
+<div class="flex justify-between items-end mb-4xl">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Curated Collections</h2>
+<p class="font-body-lg text-body-lg text-text-secondary">Exceptional pieces selected for the discerning eye.</p>
+</div>
+<button class="font-title-md text-title-md text-primary hover:text-secondary transition-colors duration-300 flex items-center gap-xs">
+                    View All <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-xl auto-rows-[400px]">
+<!-- Large Highlight Card -->
+<div class="md:col-span-8 bg-white rounded-xl overflow-hidden relative group cursor-pointer shadow-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 border-l-[4px] border-[#B76E79]">
+<div class="absolute inset-0 overflow-hidden">
+<img alt="Artisan Ceramics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A close-up view of handcrafted artisan ceramics arranged artfully on a raw linen cloth. The soft, diffuse natural light highlights the organic textures and subtle glaze imperfections of the pottery, emphasizing its bespoke, premium nature. The color palette is composed of warm earth tones, soft creams, and muted terracottas, creating a serene, minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqtMVOvtB1hPhVB2AStZ6cnw7o5JG288COthjUxqE_z_2FNZjL9qsmS-q_MLAD9DILdmSsz65P9OxLQz8oHrs02Nnj1LKXZ65SOTJGPBBgF-pvDPNrTu-RukVIl0TVXemK9TE_empLgJGsC78sBZVucBOQJlR6TOi4TKxRiVN6sa0VAtUY-pB5DZsRM29ji9-I2B8OJ42a_GKffsyz-GVukOKUwXtHZu0a5_x7Ydz_tFPE1vvgOxlygc6uUkJuNqF53SWmHX55hH4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 p-xl w-full">
+<span class="inline-block bg-white text-primary text-label-md font-label-md px-3 py-1 rounded-full mb-md shadow-sm">Bespoke Collection</span>
+<h3 class="font-headline-sm text-headline-sm text-white mb-sm">The Artisan Ceramics</h3>
+<p class="font-body-md text-body-md text-white/80 max-w-md">Earthy textures meet refined silhouettes in our latest curated selection of handmade pottery.</p>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="md:col-span-4 bg-white rounded-lg overflow-hidden group cursor-pointer shadow-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300">
+<div class="h-2/3 overflow-hidden relative">
+<img alt="Luxury Watch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A macro shot of a sophisticated luxury mechanical timepiece resting on a dark slate surface. The intricate details of the watch face, including the metallic hands and precise dial markings, are highlighted by stark, dramatic studio lighting. The scene conveys precision, high-end craftsmanship, and timeless elegance, set against a moody, sophisticated background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmzs4g1NClDx3fY81m8p2WqPauK8ckklGvs5OeKWUJWriRp61kMeQ2SNmsC25uujiktXOOVc0s8m-xIk3GbGQPfeZ2heRU3rkEDNxUlsDconr2eKLaAOA8nwntZDteqYraiqLI0d09leKSezFRA_T_Z6DRWaHBP0_TflFKz_2NNgjK8XoOJHPJVMKbnrXz9DaeFKaQwj25Jgap7pjGHg4Jdr4fzmJNxjfcnHbPw_hrp4Hptyqi3lGVKF8h6vUnPFruKxrhDE96Q0"/>
+<div class="absolute top-md left-md bg-[#B76E79] text-white text-label-md font-label-md px-2 py-1 rounded-sm">New</div>
+</div>
+<div class="p-lg h-1/3 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Chronograph Premiere</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Horology Masters</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">$4,250</span>
+<button class="bg-primary-container text-white p-2 rounded-full hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="md:col-span-4 bg-white rounded-lg overflow-hidden group cursor-pointer shadow-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300">
+<div class="h-2/3 overflow-hidden relative">
+<img alt="Designer Handbag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A sleek, minimalist designer leather handbag presented elegantly on a polished marble pedestal. The lighting is soft and directional, casting subtle shadows that emphasize the bag's structural lines and premium leather grain. The background is a muted, pale cream tone, perfectly aligning with a high-end luxury fashion aesthetic and a clean, sophisticated atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx7bpau12YnrwwsC2-538udf-3n_zmt7rK80CoJE2UvnWIU8DvpsOQzpmutx46gFsz1CdG4NlwA0mmvKd1nrAumNPqEn1QqpfA-PfubFc6TvyYva-pkFJwHbKeH995m-02k-D9xro-dyaS-9H1IeDoT5AbvBQ6xk-mYJQUL9vdq-JZ8WxLtT7HcP58jigIhkCtAtdbQstGVowhdHXQOryZQ7WX56TGj_EvfTmvtWE1KIFrOYFv7xc7HcXgBlNv2BdAhO_Z5Py10xE"/>
+</div>
+<div class="p-lg h-1/3 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Structure Tote</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Maison Atelier</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">$1,890</span>
+<button class="bg-primary-container text-white p-2 rounded-full hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Standard Card -->
+<div class="md:col-span-8 bg-white rounded-lg overflow-hidden group cursor-pointer shadow-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300">
+<div class="h-2/3 overflow-hidden relative">
+<img alt="Fine Jewelry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An exquisite piece of fine jewelry, a delicate diamond and rose gold necklace, draped carefully over a piece of raw, unpolished quartz. The lighting is pristine and brilliant, causing the gemstones to sparkle intensely against the organic texture of the stone. The composition is highly refined, embodying a luxurious, minimalist aesthetic with a focus on precious materials and artisanal detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82AjY5If-RHbztab-JYejiTIEmq6khcqXmlg8d2ElcAL-3DZKk-MVhmX30_aoz_9JYAg3irlWKBHQWL0O2HYrauvjXPoAD-ZGQmqkt5VnBmyaK4ioulkfekrVGkyYj7w1bpISHN_lD4K9LUpMzDvXiaXfmhmkXW1_JHSEGbK9UGG4No1Kx_YJd3Jr1mgQQm2XpbF8Id0_dj79G-N8NBYIhYZxlXv2tNWsuH3o0L6tMxA7IijIQDSgrl65wiARSi4gQ6tZf-BLGPw"/>
+</div>
+<div class="p-lg h-1/3 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Eternity Pendant</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Aura Jewels</p>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">$3,400</span>
+<button class="bg-primary-container text-white p-2 rounded-full hover:bg-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Vendors -->
+<section class="py-[120px] px-12 max-w-[1440px] mx-auto border-t border-border-subtle">
+<div class="text-center mb-4xl">
+<h2 class="font-headline-md text-headline-md text-primary mb-sm">Exclusive Ateliers</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto">Discover the visionary creators behind our most sought-after collections.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl">
+<!-- Vendor Column -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-lg shadow-sm group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 p-1 border border-border-subtle">
+<img alt="Vendor Profile" class="w-full h-full object-cover rounded-full" data-alt="A striking black and white portrait of a master artisan in their workshop. The subject is looking thoughtfully off-camera, conveying a sense of dedication and profound expertise. The lighting is dramatic and moody, emphasizing the texture of their environment and the intensity of their craft, fitting for a premium brand profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz7Gourcm0HDrdjl0q2fqwCutmaW3liCkLfh_KIvwdtDjkSiGY1Oo3cgpZWRI8uilG9D4wBd1vxR-698hOe1znYgrXmsXAse4UJhBLDMXRKOqL6yVyEQuszCIrYWi4ePt6YBdngtsHpNZ8ZZpS7waY2gW7L_8Kq7bZjWg7KTekQzS2zGR0ou14pDQNwF1PjcPG90g9J6ddO8moBZ0q_jlVsZ3LaLXP312EwBLWyayTZSqf1PKaOLsZ7S_efrbaa1an3pnb6VKfs00"/>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Maison Atelier</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Leather Goods &amp; Accessories</p>
+<button class="text-primary font-title-sm text-title-sm border-b border-primary pb-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Boutique</button>
+</div>
+<!-- Vendor Column -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-lg shadow-sm group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 p-1 border border-border-subtle">
+<img alt="Vendor Profile" class="w-full h-full object-cover rounded-full" data-alt="A refined, modern portrait of a bespoke tailor standing confidently in a bright, minimalist studio space. They are wearing a flawlessly constructed suit, exuding authority and quiet luxury. The natural light highlights the premium fabrics and the clean, sophisticated atmosphere of the setting, indicative of a high-end luxury service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ur302_K55RHfsnT4cZU2AZ-2Qead6P-k5N4uIiQoBg92Mu-7ycW5nzUpaeSMf1SdqMjDOKmL_-EEScRYzZJ6r6SkGTFAFAJJWPbIPfJ6YVeQomfGeulLcz3HpBqB_4rHzFsDPoo1v0BxN3-_7XrU1zenyu107H5DrvvERy6EqLP4hMdLqqE-9rCDNBRBaWEddIM1v_XRMqWiunlq4Ao1hdFdpA46EULs_1dDGh1yH6QRqxqjNEkn8Og2UNgOvocVoQuhjb3Bsv4"/>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Sartorial Masters</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Bespoke Tailoring</p>
+<button class="text-primary font-title-sm text-title-sm border-b border-primary pb-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Boutique</button>
+</div>
+<!-- Vendor Column -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-lg shadow-sm group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 p-1 border border-border-subtle">
+<img alt="Vendor Profile" class="w-full h-full object-cover rounded-full" data-alt="An elegant, softly lit portrait of an interior designer in a sophisticated showroom. She radiates creative confidence, framed by blurred background elements of high-end furniture and abstract art. The color palette is warm and inviting, utilizing soft creams and muted earthy tones to establish a premium, approachable luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5FLNGR0sZWFT6B_Ds-QL8HRN8EdPbpl99Pf2-G9Bvb23m6L8qBFY3K1b3BrBUMX1qsJvJFepdelt7aaXkoWRPiu6Q65G2Ny0o7HPh9GaQBNqoTksLD_ZZOIEm1alg8fbiBlTA7FxmCfstOWDvCl52GpRIZ6wvA-YQG7_3Df_39zejoWxDD1vVgqd0vL0bP0TXzTvs4x8k6jTknCdJMx1K9SuPZHjTsSypzPGylfcN-Oz1mX___3VHZiIKg0U5dz1zgGMvbaUqpU8"/>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Studio VITA</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Curated Homeware</p>
+<button class="text-primary font-title-sm text-title-sm border-b border-primary pb-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Boutique</button>
+</div>
+<!-- Vendor Column -->
+<div class="flex flex-col items-center text-center group cursor-pointer">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-lg shadow-sm group-hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 p-1 border border-border-subtle">
+<img alt="Vendor Profile" class="w-full h-full object-cover rounded-full" data-alt="A serene portrait of a jewelry designer working delicately at a jeweler's bench. The image is captured with a shallow depth of field, focusing sharply on her hands and the sparkling gemstone she is inspecting, while the rest of the busy workshop softly blurs away. The lighting is precise, highlighting the meticulous nature of her craft and the luxurious environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuvC4Ccv79jYMHGYMLJ7EGEXJdrMNn9vd8IXO2bjrrgpogidme9xtWPr6IChqw1VgYrRJkbCkoaNrS248vds6fOLW6R0Qi8ZPBacbSbkjpB2-yP5y5szCNA9d6hKwGHv04RDWchbNxCFRdSbqkcJAcpg7PTIhTpt1NpZcrzCjm8rFo6qo5SH7XvMZwt4a9eLw6Q2eThvLO-KNk4Rkji7G7A3ZM_d3OzWEFZMqL30ld76gzmT8jfppBqYbP68KGL4-9fLhj-rkKiNA"/>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-xs">Aura Jewels</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Fine Jewelry</p>
+<button class="text-primary font-title-sm text-title-sm border-b border-primary pb-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Boutique</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface dark:bg-inverse-surface border-t border-border-subtle dark:border-outline-variant w-full">
+<div class="w-full py-4xl px-12 grid grid-cols-1 md:grid-cols-4 gap-xl max-w-[1440px] mx-auto">
+<div class="col-span-1">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-xl block tracking-tight" href="#">LUXE</a>
+<p class="font-body-sm text-body-sm text-text-secondary dark:text-inverse-on-surface mb-lg max-w-[250px]">Defining modern luxury through exceptional craftsmanship and curated experiences.</p>
+<div class="flex gap-md">
+<a class="text-text-secondary hover:text-primary transition-colors duration-300 opacity-100 hover:opacity-80" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary mb-sm font-semibold">Discover</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">About Us</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Careers</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Wholesale</a>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary mb-sm font-semibold">Client Services</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Contact</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Size Guide</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">FAQ</a>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary mb-sm font-semibold">Legal &amp; Locations</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Store Locator</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary hover:translate-x-1 transition-transform duration-300 block w-fit" href="#">Gift Cards</a>
+</div>
+</div>
+<div class="w-full px-12 py-lg max-w-[1440px] mx-auto border-t border-border-subtle dark:border-outline-variant flex justify-between items-center">
+<p class="font-body-sm text-body-sm text-text-secondary">© 2024 LUXE MULTI-VENDOR. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<script>
+        // Simple Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            document.documentElement.style.setProperty('--scroll-y', `${scrolled * 0.2}px`);
+        });
+    </script>
+</body></html>

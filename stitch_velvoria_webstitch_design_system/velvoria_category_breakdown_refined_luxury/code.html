@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Category Breakdown - Velvoria Vendor Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#404562",
+                      "surface-tint": "#585d7b",
+                      "on-background": "#1d1b18",
+                      "success": "#10B981",
+                      "on-primary-fixed": "#151a34",
+                      "outline-variant": "#c7c5ce",
+                      "white": "#FFFFFF",
+                      "surface-bright": "#fff8f3",
+                      "tertiary-fixed": "#b9ece9",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "inverse-surface": "#33302d",
+                      "secondary-fixed": "#ffdbce",
+                      "on-surface": "#1d1b18",
+                      "surface-light": "#F5F5F5",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "primary-container": "#1a1f3a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#dee1ff",
+                      "inverse-primary": "#c0c4e8",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "on-secondary-container": "#7a5242",
+                      "tertiary": "#000d0c",
+                      "text-primary": "#333333",
+                      "on-tertiary-container": "#60918f",
+                      "on-primary-container": "#8286a7",
+                      "surface-variant": "#e8e1dc",
+                      "surface-container": "#f3ede8",
+                      "surface": "#fff8f3",
+                      "on-surface-variant": "#46464d",
+                      "background": "#fff8f3",
+                      "on-error": "#ffffff",
+                      "error": "#EF4444",
+                      "surface-container-highest": "#e8e1dc",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "primary": "#030722",
+                      "on-secondary-fixed": "#301408",
+                      "inverse-on-surface": "#f6efeb",
+                      "secondary": "#7d5545",
+                      "surface-container-high": "#eee7e2",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#f9f2ed",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#dfd9d4",
+                      "on-error-container": "#93000a",
+                      "outline": "#77767e",
+                      "text-secondary": "#808080",
+                      "warning": "#F59E0B",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#00201f",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "border-subtle": "#E0E0E0",
+                      "secondary-container": "#ffc9b4",
+                      "tertiary-container": "#002625"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "lg": "24px",
+                      "base": "8px",
+                      "3xl": "64px",
+                      "sm": "8px",
+                      "nav-height-mobile": "64px",
+                      "xs": "4px",
+                      "nav-height-desktop": "80px",
+                      "md": "16px",
+                      "4xl": "96px",
+                      "2xl": "48px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #fff8f3;
+        }
+        
+        /* Custom Donut Chart CSS */
+        .donut-container {
+            position: relative;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #1a1f3a 0% 36%, 
+                #e8b4a0 36% 62%, 
+                #c0c4e8 62% 82%, 
+                #7a5242 82% 94%, 
+                #dfd9d4 94% 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        
+        .donut-hole {
+            width: 180px;
+            height: 180px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.04);
+        }
+        
+        /* Smooth transitions */
+        .period-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+      </style>
+<style>body { background-color: #fff8f3; } .donut-container { position: relative; width: 240px; height: 240px; border-radius: 50%; background: conic-gradient(#030722 0% 36%, #e8b4a0 36% 62%, #10B981 62% 82%, #7d5545 82% 94%, #f9f2ed 94% 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); } .donut-hole { width: 200px; height: 200px; background-color: #ffffff; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); } .period-btn { transition: all 0.3s ease; } .category-card { transition: transform 0.3s ease, box-shadow 0.3s ease; } .category-card:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }</style>
+</head>
+<body class="antialiased text-on-surface min-h-screen pb-[80px]">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-white dark:bg-surface-container shadow-sm flex items-center h-nav-height-mobile px-md md:px-lg max-w-[1440px] mx-auto shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<button aria-label="Go back" class="text-primary dark:text-primary-fixed hover:bg-surface-light dark:hover:bg-surface-variant transition-colors active:scale-95 transition-transform p-2 rounded-full mr-4 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed tracking-tight font-extrabold flex-1 text-center pr-10">Category Breakdown</h1>
+</header>
+<main class="max-w-[1440px] mx-auto px-md md:px-2xl py-lg">
+<!-- Period Selector -->
+<div class="flex justify-center mb-xl">
+<div class="inline-flex bg-surface-container-low rounded-lg p-1 shadow-sm border border-border-subtle"><button class="period-btn px-5 py-2 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:text-primary">Daily</button><button class="period-btn px-5 py-2 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:text-primary">Weekly</button><button class="period-btn px-5 py-2 rounded-md font-label-lg text-label-lg bg-white text-primary shadow-sm font-semibold border border-border-subtle">Monthly</button><button class="period-btn px-5 py-2 rounded-md font-label-lg text-label-lg text-on-surface-variant hover:text-primary">Yearly</button></div>
+</div>
+<!-- Hero Visualization Section -->
+<section class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-xl mb-2xl flex flex-col items-center justify-center border border-border-subtle overflow-hidden relative">
+<!-- Decorative background element -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<h2 class="font-title-lg text-title-lg text-primary mb-xl z-10">Revenue by Category</h2>
+<div class="donut-container z-10 mb-xl">
+<div class="donut-hole"><span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-[0.2em] mb-2">Total Revenue</span><span class="font-display-md text-display-md text-primary">$124,500</span></div>
+</div>
+<!-- Legend -->
+<div class="flex flex-wrap justify-center gap-4 z-10 w-full max-w-2xl mt-4"><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#030722]"></div><span class="font-label-md text-label-md text-on-surface-variant">Fine Jewelry</span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#e8b4a0]"></div><span class="font-label-md text-label-md text-on-surface-variant">Leather Goods</span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#10B981]"></div><span class="font-label-md text-label-md text-on-surface-variant">Silks &amp; Textiles</span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#7d5545]"></div><span class="font-label-md text-label-md text-on-surface-variant">Fragrances</span></div><div class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-[#f9f2ed]"></div><span class="font-label-md text-label-md text-on-surface-variant">Home Decor</span></div></div>
+</section>
+<!-- Category List -->
+<section class="max-w-3xl mx-auto space-y-4">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-lg px-2 border-l-4 border-[#e8b4a0]">Top Performing Categories</h3>
+<!-- Item 1 -->
+<div class="category-card bg-white rounded-xl p-md border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-between relative overflow-hidden group"><div class="absolute left-0 top-0 bottom-0 w-1 bg-[#030722]"></div><div class="flex items-center gap-4 pl-2"><div class="w-10 h-10 rounded-full bg-primary-container/5 flex items-center justify-center text-[#030722]"><span class="material-symbols-outlined" data-icon="diamond">diamond</span></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-0.5">Fine Jewelry</h4><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span>36% of total</span><span class="w-1 h-1 rounded-full bg-border-subtle"></span><span>24 items sold</span></div></div></div><div class="text-right"><div class="font-title-lg text-title-lg text-primary mb-0.5">$45,200</div><div class="font-label-md text-label-md text-success flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>+12.4%</div></div></div>
+<!-- Item 2 -->
+<div class="category-card bg-white rounded-xl p-md border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1 bg-[#e8b4a0]"></div><div class="flex items-center gap-4 pl-2"><div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-[#030722]"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-0.5">Leather Goods</h4><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span>26% of total</span><span class="w-1 h-1 rounded-full bg-border-subtle"></span><span>42 items sold</span></div></div></div><div class="text-right"><div class="font-title-lg text-title-lg text-primary mb-0.5">$32,100</div><div class="font-label-md text-label-md text-success flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>+5.2%</div></div></div>
+<!-- Item 3 -->
+<div class="category-card bg-white rounded-xl p-md border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1 bg-[#10B981]"></div><div class="flex items-center gap-4 pl-2"><div class="w-10 h-10 rounded-full bg-primary-fixed/20 flex items-center justify-center text-[#030722]"><span class="material-symbols-outlined" data-icon="checkroom">checkroom</span></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-0.5">Silks &amp; Textiles</h4><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span>20% of total</span><span class="w-1 h-1 rounded-full bg-border-subtle"></span><span>86 items sold</span></div></div></div><div class="text-right"><div class="font-title-lg text-title-lg text-primary mb-0.5">$24,800</div><div class="font-label-md text-label-md text-error flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="trending_down">trending_down</span>-2.1%</div></div></div>
+<!-- Item 4 -->
+<div class="category-card bg-white rounded-xl p-md border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1 bg-[#7d5545]"></div><div class="flex items-center gap-4 pl-2"><div class="w-10 h-10 rounded-full bg-[#7a5242]/10 flex items-center justify-center text-[#030722]"><span class="material-symbols-outlined" data-icon="water_drop">water_drop</span></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-0.5">Fragrances</h4><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span>12% of total</span><span class="w-1 h-1 rounded-full bg-border-subtle"></span><span>112 items sold</span></div></div></div><div class="text-right"><div class="font-title-lg text-title-lg text-primary mb-0.5">$15,400</div><div class="font-label-md text-label-md text-success flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>+8.7%</div></div></div>
+<!-- Item 5 -->
+<div class="category-card bg-white rounded-xl p-md border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex items-center justify-between relative overflow-hidden"><div class="absolute left-0 top-0 bottom-0 w-1 bg-[#f9f2ed]"></div><div class="flex items-center gap-4 pl-2"><div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center text-[#030722]"><span class="material-symbols-outlined" data-icon="chair">chair</span></div><div><h4 class="font-headline-sm text-headline-sm text-primary mb-0.5">Home Decor</h4><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span>6% of total</span><span class="w-1 h-1 rounded-full bg-border-subtle"></span><span>18 items sold</span></div></div></div><div class="text-right"><div class="font-title-lg text-title-lg text-primary mb-0.5">$7,000</div><div class="font-label-md text-label-md text-success flex items-center justify-end gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>+15.1%</div></div></div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 bg-white dark:bg-surface-container shadow-[0_-2px_8px_rgba(0,0,0,0.05)] md:hidden"><button class="flex flex-1 flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors active:scale-95 transition-transform font-label-md text-label-md"><span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span><span>Dashboard</span></button><button class="flex flex-1 flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors active:scale-95 transition-transform font-label-md text-label-md"><span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span><span>Inventory</span></button><button class="flex flex-1 flex-col items-center justify-center text-primary font-bold p-2 hover:opacity-80 transition-opacity active:scale-95 transition-transform font-label-md text-label-md"><span class="material-symbols-outlined mb-1" data-icon="analytics" data-weight="fill" style="font-variation-settings: 'FILL' 1;">analytics</span><span>Analytics</span></button><button class="flex flex-1 flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-colors active:scale-95 transition-transform font-label-md text-label-md"><span class="material-symbols-outlined mb-1" data-icon="person">person</span><span>Profile</span></button></nav>
+</body></html>

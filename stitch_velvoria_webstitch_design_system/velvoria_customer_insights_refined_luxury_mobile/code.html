@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "success": "#10B981",
+                      "white": "#FFFFFF",
+                      "text-secondary": "#808080",
+                      "on-primary-fixed": "#151a34",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c7c5ce",
+                      "border-subtle": "#E0E0E0",
+                      "background": "#fff8f3",
+                      "on-surface": "#1d1b18",
+                      "tertiary": "#000d0c",
+                      "primary-fixed": "#dee1ff",
+                      "surface-bright": "#fff8f3",
+                      "outline": "#77767e",
+                      "text-primary": "#333333",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "surface-container": "#f3ede8",
+                      "on-tertiary-fixed": "#00201f",
+                      "secondary": "#7d5545",
+                      "surface-light": "#F5F5F5",
+                      "inverse-primary": "#c0c4e8",
+                      "on-secondary": "#ffffff",
+                      "warning": "#F59E0B",
+                      "on-primary-container": "#8286a7",
+                      "primary-container": "#1a1f3a",
+                      "on-surface-variant": "#46464d",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "surface-tint": "#585d7b",
+                      "surface-container-highest": "#e8e1dc",
+                      "error": "#EF4444",
+                      "on-tertiary-container": "#60918f",
+                      "on-secondary-fixed": "#301408",
+                      "on-primary-fixed-variant": "#404562",
+                      "tertiary-container": "#002625",
+                      "secondary-fixed": "#ffdbce",
+                      "secondary-container": "#ffc9b4",
+                      "surface-dim": "#dfd9d4",
+                      "primary": "#030722",
+                      "tertiary-fixed": "#b9ece9",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "surface-container-high": "#eee7e2",
+                      "inverse-on-surface": "#f6efeb",
+                      "on-secondary-container": "#7a5242",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e8e1dc",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#1d1b18",
+                      "surface": "#fff8f3",
+                      "inverse-surface": "#33302d",
+                      "surface-container-low": "#f9f2ed",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "base": "8px",
+                      "4xl": "96px",
+                      "xs": "4px",
+                      "3xl": "64px",
+                      "2xl": "48px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "nav-height-desktop": "80px",
+                      "nav-height-mobile": "64px"
+              },
+              "fontFamily": {
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ]
+              },
+              "fontSize": {
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+          .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+          }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pb-[nav-height-mobile] md:pb-0 pt-[nav-height-mobile] md:pt-[nav-height-desktop]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white dark:bg-surface-container text-primary dark:text-on-surface shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex items-center h-[64px] md:h-[80px] px-lg max-w-[1440px] mx-auto">
+<button class="hover:opacity-80 transition-opacity duration-300 active:scale-95 transition-transform flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-light">
+<span class="material-symbols-outlined text-title-lg">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm flex-1 text-center font-bold tracking-tight pr-10 font-display-lg">Customer Insights</h1>
+</header>
+<main class="max-w-[1440px] mx-auto px-md md:px-2xl py-lg space-y-xl md:grid md:grid-cols-12 md:gap-lg md:space-y-0 space-y-2xl md:gap-xl">
+<!-- Period Selector -->
+<div class="md:col-span-12 flex justify-center">
+<div class="bg-surface-container rounded-lg p-xs inline-flex shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<button class="px-md py-sm rounded-DEFAULT font-label-md text-label-md text-text-secondary hover:text-on-surface transition-colors">Daily</button>
+<button class="px-md py-sm rounded-DEFAULT font-label-md text-label-md text-text-secondary hover:text-on-surface transition-colors">Weekly</button>
+<button class="px-md py-sm rounded-DEFAULT font-label-md text-label-md text-primary shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-colors">Monthly</button>
+<button class="px-md py-sm rounded-DEFAULT font-label-md text-label-md text-text-secondary hover:text-on-surface transition-colors">Yearly</button>
+</div>
+</div>
+<!-- Audience Overview Card -->
+<section class="md:col-span-8 p-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative overflow-hidden group rounded-xl shadow-sm bg-surface-container-low">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary-container rounded-l-lg"></div>
+<h2 class="font-title-lg text-title-lg text-text-secondary mb-sm">Total Reach</h2>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-display-lg text-display-lg text-primary-container">12,450</span>
+<div class="flex items-center text-success font-label-md text-label-md bg-success/10 px-xs py-0.5 rounded">
+<span class="material-symbols-outlined text-[16px] mr-0.5">trending_up</span>
+                    +12.5% vs last month
+                </div>
+</div>
+<div class="mt-lg">
+<div class="flex justify-between font-label-md text-label-md text-text-secondary mb-xs">
+<span class="">Returning (70%)</span>
+<span class="">New (30%)</span>
+</div>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden flex"><div class="h-full bg-primary-container w-[70%]"></div><div class="h-full bg-secondary-container w-[30%]"></div></div>
+</div>
+</section>
+<!-- Purchasing Behavior -->
+<section class="md:col-span-4 flex flex-col gap-lg rounded-xl shadow-sm">
+<div class="p-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 rounded-xl shadow-sm bg-surface-container-low">
+<h3 class="font-label-lg text-label-lg text-text-secondary mb-xs">Avg. Lifetime Value</h3>
+<p class="font-headline-md text-headline-md text-primary">$2,400</p>
+</div>
+<div class="p-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 rounded-xl shadow-sm bg-surface-container-low">
+<h3 class="font-label-lg text-label-lg text-text-secondary mb-xs">Orders per Customer</h3>
+<p class="font-headline-md text-headline-md text-primary">3.2</p>
+</div>
+</section>
+<!-- Top Regions Section -->
+<section class="md:col-span-6 p-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative rounded-xl shadow-sm bg-surface-container-low">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary-container rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h2 class="font-title-md text-title-md text-primary mb-lg">Top Regions</h2>
+<ul class="space-y-md">
+<li class="">
+<div class="flex justify-between font-label-md text-label-md mb-xs">
+<span class="text-on-surface font-title-sm text-title-sm text-primary-container">London</span>
+<span class="text-text-secondary font-medium">45% • $56k</span>
+</div>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-1 bg-primary-container w-full rounded-full"></div></div>
+</li>
+<li class="">
+<div class="flex justify-between font-label-md text-label-md mb-xs">
+<span class="text-on-surface font-title-sm text-title-sm text-primary-container">New York</span>
+<span class="text-text-secondary font-medium">35% • $42k</span>
+</div>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-1 bg-primary-container w-full rounded-full"></div></div>
+</li>
+<li class="">
+<div class="flex justify-between font-label-md text-label-md mb-xs">
+<span class="text-on-surface font-title-sm text-title-sm text-primary-container">Paris</span>
+<span class="text-text-secondary font-medium">20% • $24k</span>
+</div>
+<div class="h-1 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-1 bg-primary-container w-full rounded-full"></div></div>
+</li>
+</ul>
+</section>
+<!-- Age Distribution -->
+<section class="md:col-span-6 p-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative rounded-xl shadow-sm bg-surface-container-low">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary-container rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<h2 class="font-title-md text-title-md text-primary mb-lg">Age Distribution</h2>
+<div class="space-y-sm mt-md"><div class="flex flex-col gap-md"><div class="flex flex-col gap-xs"><div class="flex justify-between items-center"><span class="font-label-md text-text-secondary">18-24</span><span class="font-bold text-primary-container">15%</span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary-container rounded-full" style="width: 15%"></div></div></div><div class="flex flex-col gap-xs"><div class="flex justify-between items-center"><span class="font-label-md text-text-secondary">25-34</span><span class="font-bold text-primary-container">40%</span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary-container rounded-full" style="width: 40%"></div></div></div><div class="flex flex-col gap-xs"><div class="flex justify-between items-center"><span class="font-label-md text-text-secondary">35-44</span><span class="font-bold text-primary-container">25%</span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-success rounded-full" style="width: 25%"></div></div></div><div class="flex flex-col gap-xs"><div class="flex justify-between items-center"><span class="font-label-md text-text-secondary">45-54</span><span class="font-bold text-primary-container">12%</span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-secondary rounded-full" style="width: 12%"></div></div></div><div class="flex flex-col gap-xs"><div class="flex justify-between items-center"><span class="font-label-md text-text-secondary">55+</span><span class="font-bold text-primary-container">8%</span></div><div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 8%"></div></div></div></div></div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full h-[64px] flex justify-around items-center px-md bg-white dark:bg-surface-container shadow-[0_-2px_8px_rgba(0,0,0,0.08)] z-50">
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1 hover:bg-surface-light dark:hover:bg-surface-variant transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1">storefront</span>
+<span class="font-label-md text-label-md">Store</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-xl px-4 py-1 hover:bg-surface-light dark:hover:bg-surface-variant transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1 hover:bg-surface-light dark:hover:bg-surface-variant transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1">receipt_long</span>
+<span class="font-label-md text-label-md">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-4 py-1 hover:bg-surface-light dark:hover:bg-surface-variant transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</a>
+</nav>
+</body></html>

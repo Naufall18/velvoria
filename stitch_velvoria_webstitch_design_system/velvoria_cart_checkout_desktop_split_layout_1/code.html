@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "warning": "#F59E0B",
+                    "text-secondary": "#808080",
+                    "on-secondary": "#ffffff",
+                    "border-subtle": "#E0E0E0",
+                    "secondary-fixed": "#ffdbce",
+                    "white": "#FFFFFF",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "secondary-container": "#ffc9b4",
+                    "error": "#EF4444",
+                    "inverse-surface": "#33302d",
+                    "inverse-primary": "#c0c4e8",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f9f2ed",
+                    "surface": "#fff8f3",
+                    "surface-container-high": "#eee7e2",
+                    "surface-container": "#f3ede8",
+                    "on-secondary-container": "#7a5242",
+                    "on-primary-fixed-variant": "#404562",
+                    "on-error-container": "#93000a",
+                    "secondary": "#7d5545",
+                    "tertiary-container": "#002625",
+                    "on-surface-variant": "#46464d",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "outline-variant": "#c7c5ce",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "primary": "#030722",
+                    "on-primary-fixed": "#151a34",
+                    "surface-bright": "#fff8f3",
+                    "surface-variant": "#e8e1dc",
+                    "error-container": "#ffdad6",
+                    "outline": "#77767e",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f6efeb",
+                    "surface-dim": "#dfd9d4",
+                    "tertiary": "#000d0c",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "success": "#10B981",
+                    "primary-container": "#1a1f3a",
+                    "on-secondary-fixed": "#301408",
+                    "on-surface": "#1d1b18",
+                    "background": "#fff8f3",
+                    "surface-tint": "#585d7b",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "on-primary-container": "#8286a7",
+                    "text-primary": "#333333",
+                    "tertiary-fixed": "#b9ece9",
+                    "surface-container-highest": "#e8e1dc",
+                    "surface-light": "#F5F5F5",
+                    "on-background": "#1d1b18",
+                    "on-tertiary-container": "#60918f",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#dee1ff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#00201f",
+                    "rose-gold": "#B76E79",
+                    "cream": "#FFF8F3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "nav-height-mobile": "64px",
+                    "nav-height-desktop": "80px",
+                    "lg": "24px",
+                    "4xl": "96px",
+                    "sm": "8px",
+                    "3xl": "64px",
+                    "2xl": "48px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "title-sm": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "display-md": ["Playfair Display"],
+                    "label-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E0E0E0;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-text-primary font-body-lg min-h-screen flex flex-col antialiased">
+<!-- TopNavBar: Intent is purely transactional (Checkout). Navigation links are suppressed. -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 max-w-[1440px] mx-auto bg-white shadow-sm h-[80px]">
+<div class="flex items-center">
+<a class="font-display-md text-display-md text-primary" href="#">LUXE</a>
+</div>
+<div class="flex items-center space-x-md">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 0;">lock</span>
+<span class="font-title-sm text-title-sm text-text-secondary uppercase tracking-widest">Secure Checkout</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-4xl px-12 max-w-[1440px] mx-auto w-full grid grid-cols-12 gap-xl relative">
+<!-- Left Column: Checkout Forms (65% roughly 8 cols) -->
+<div class="col-span-12 lg:col-span-8 space-y-xl">
+<!-- Breadcrumbs / Steps -->
+<nav class="flex items-center space-x-sm text-body-sm font-body-sm text-text-secondary mb-lg">
+<span class="text-primary font-medium">1. Cart</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-bold">2. Shipping</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>3. Payment</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-xl">Shipping Details</h1>
+<!-- Contact Information -->
+<section class="bg-white rounded-lg p-lg shadow-sm border border-border-subtle/50">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-title-lg text-title-lg text-primary">Contact Information</h2>
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Already have an account? Log in</a>
+</div>
+<div class="space-y-md">
+<div>
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="email">Email Address</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="email" placeholder="Enter your email" type="email"/>
+</div>
+<div class="flex items-center space-x-sm">
+<input class="rounded border-border-subtle text-primary focus:ring-primary w-4 h-4 cursor-pointer" id="newsletter" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-text-secondary cursor-pointer" for="newsletter">Email me with news and offers</label>
+</div>
+</div>
+</section>
+<!-- Shipping Address -->
+<section class="bg-white rounded-lg p-lg shadow-sm border border-border-subtle/50 mt-xl">
+<h2 class="font-title-lg text-title-lg text-primary mb-md">Shipping Address</h2>
+<div class="grid grid-cols-2 gap-md">
+<div class="col-span-2 sm:col-span-1">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="firstName">First Name</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="firstName" type="text"/>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="lastName">Last Name</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="lastName" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="company">Company (Optional)</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="company" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="address">Address</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="address" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="apartment">Apartment, suite, etc. (Optional)</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="apartment" type="text"/>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="city">City</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="city" type="text"/>
+</div>
+<div class="col-span-1 sm:col-span-1 flex space-x-md">
+<div class="w-1/2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="state">State</label>
+<select class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md appearance-none" id="state">
+<option>NY</option>
+<option>CA</option>
+<option>TX</option>
+</select>
+</div>
+<div class="w-1/2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="zip">ZIP Code</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="zip" type="text"/>
+</div>
+</div>
+<div class="col-span-2">
+<label class="block font-label-lg text-label-lg text-primary mb-xs" for="phone">Phone</label>
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md" id="phone" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Shipping Method -->
+<section class="bg-white rounded-lg p-lg shadow-sm border border-border-subtle/50 mt-xl">
+<h2 class="font-title-lg text-title-lg text-primary mb-md">Shipping Method</h2>
+<div class="space-y-sm">
+<label class="flex items-center justify-between p-md border border-primary rounded-lg bg-surface-container-low cursor-pointer relative">
+<div class="flex items-center space-x-md">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4 border-border-subtle" name="shipping_method" type="radio"/>
+<div>
+<p class="font-title-md text-title-md text-primary">Standard Shipping</p>
+<p class="font-body-sm text-body-sm text-text-secondary">3-5 Business Days</p>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary">Free</span>
+<div class="absolute inset-0 border-2 border-primary rounded-lg pointer-events-none"></div>
+</label>
+<label class="flex items-center justify-between p-md border border-border-subtle rounded-lg hover:border-primary/50 transition-colors cursor-pointer">
+<div class="flex items-center space-x-md">
+<input class="text-primary focus:ring-primary w-4 h-4 border-border-subtle" name="shipping_method" type="radio"/>
+<div>
+<p class="font-title-md text-title-md text-primary">Express Shipping</p>
+<p class="font-body-sm text-body-sm text-text-secondary">1-2 Business Days</p>
+</div>
+</div>
+<span class="font-title-md text-title-md text-primary">$25.00</span>
+</label>
+</div>
+</section>
+<!-- Actions -->
+<div class="flex justify-between items-center mt-xl pt-lg border-t border-border-subtle">
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors flex items-center" href="#">
+<span class="material-symbols-outlined text-sm mr-xs">arrow_back</span>
+                    Return to Cart
+                </a>
+<button class="bg-primary text-white font-title-md text-title-md px-xl py-md rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300">
+                    Continue to Payment
+                </button>
+</div>
+</div>
+<!-- Right Column: Sticky Order Summary (35% roughly 4 cols) -->
+<div class="col-span-12 lg:col-span-4 relative">
+<div class="sticky top-[104px] bg-cream rounded-lg p-lg shadow-sm border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary border-b border-border-subtle/50 pb-md mb-md">Order Summary</h2>
+<!-- Cart Items List (Scrollable if many items) -->
+<div class="max-h-[409px] overflow-y-auto custom-scrollbar pr-sm space-y-md mb-lg">
+<!-- Item 1 -->
+<div class="flex items-start space-x-md">
+<div class="w-20 h-24 bg-white rounded flex-shrink-0 relative border border-border-subtle overflow-hidden">
+<img alt="Elegant silk blouse in cream color displayed on a sleek modern mannequin. The lighting is soft and luxurious, highlighting the fabric's smooth texture against a minimalist neutral studio background. The style is high-end fashion editorial." class="w-full h-full object-cover" data-alt="Elegant silk blouse in cream color displayed on a sleek modern mannequin. The lighting is soft and luxurious, highlighting the fabric's smooth texture against a minimalist neutral studio background. The style is high-end fashion editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaJY8L0Atjy1BQLuY8y51uNB4yQ3_eaRlkc-MoM_XC03ZjhlR8k-52RhyMb50GgMjWAorRbdqcd78udEeVGxcIVwCnu8De98qmjLvpjJbobCV7PNpX9cZ-kEKeMdexcedfPhZksinQ5DXt2sudJSiK2eg6aBDoSqWkXD1mwpu9973o7v2ylmd__jhKAHLC3peRP4ryah-ArmkDfvYpRKCsAPqiQ2Fi7c4vNXF4YwA2qGPYqQKhnJmUu1Ld_Bov5Az4gU54KyrzXLw"/>
+<span class="absolute top-0 right-0 -mt-2 -mr-2 bg-text-secondary text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full z-10 border border-white">1</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-title-sm text-title-sm text-primary line-clamp-1">Silk Georgette Blouse</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">Color: Ivory</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Size: S</p>
+<p class="font-title-sm text-title-sm text-primary mt-sm">$850.00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start space-x-md">
+<div class="w-20 h-24 bg-white rounded flex-shrink-0 relative border border-border-subtle overflow-hidden">
+<img alt="A luxurious leather handbag in deep navy blue resting on a polished marble surface. The lighting emphasizes the fine grain of the leather and the subtle rose gold hardware. The composition is clean, sophisticated, and minimalist." class="w-full h-full object-cover" data-alt="A luxurious leather handbag in deep navy blue resting on a polished marble surface. The lighting emphasizes the fine grain of the leather and the subtle rose gold hardware. The composition is clean, sophisticated, and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRZSkY9Cr9z9g_ZFsaDM6oeHhhFHOSvVRYvUKwzjKrrEzUGFhMobdTh9IdwBnHncat6GFCtRGJ7_gvKIqtNYoDJ2d8uL5-D_t_tRNxh80xHZCNcNFz0oj0FTDXisB6LgWb-UzBQkI3ML5Nwa_13JzM70T8E9hP75p4PyWtDzOKISl1P-swkiDz0ShCUPtmoZGg08kRnBd7r1kB9FfWNlujqQa9xHp0ySh-7sJkMkFhTdPb8J34rHTlJrLO_lqN41HTTpy7Ke10a9A"/>
+<span class="absolute top-0 right-0 -mt-2 -mr-2 bg-text-secondary text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full z-10 border border-white">1</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-title-sm text-title-sm text-primary line-clamp-1">Classic Leather Tote</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">Color: Deep Navy</p>
+<p class="font-title-sm text-title-sm text-primary mt-sm">$1,250.00</p>
+</div>
+</div>
+</div>
+<!-- Discount Code -->
+<div class="border-y border-border-subtle/50 py-md mb-md">
+<div class="flex space-x-sm">
+<input class="flex-grow bg-white border border-border-subtle rounded-lg px-md py-sm focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all font-body-md placeholder:text-text-secondary" placeholder="Gift card or discount code" type="text"/>
+<button class="bg-transparent border-2 border-primary text-primary font-title-sm text-title-sm px-md py-sm rounded-lg hover:bg-primary/5 transition-colors">Apply</button>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-sm text-body-md font-body-md text-text-secondary">
+<div class="flex justify-between">
+<span>Subtotal</span>
+<span class="text-primary font-medium">$2,100.00</span>
+</div>
+<div class="flex justify-between">
+<span>Shipping</span>
+<span class="text-primary font-medium">Free</span>
+</div>
+<div class="flex justify-between">
+<span>Estimated Taxes</span>
+<span class="text-primary font-medium">$168.00</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-md pt-md border-t border-primary/20">
+<span class="font-headline-sm text-headline-sm text-primary">Total</span>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-text-secondary mr-xs">USD</span>
+<span class="font-headline-sm text-headline-sm text-primary">$2,268.00</span>
+</div>
+</div>
+<div class="mt-lg pt-md flex items-center justify-center space-x-sm text-text-secondary opacity-70">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-body-sm text-body-sm">Payments are secure and encrypted.</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer: Simplified for transactional intent -->
+<footer class="w-full py-xl px-12 max-w-[1440px] mx-auto border-t border-border-subtle dark:border-outline-variant text-center bg-surface">
+<p class="font-body-sm text-body-sm text-text-secondary">© 2024 LUXE MULTI-VENDOR. ALL RIGHTS RESERVED.</p>
+<div class="mt-sm space-x-md">
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Refund Policy</a>
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria Vendor - Order Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "error": "#EF4444",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "primary": "#030722",
+                    "on-background": "#1d1b18",
+                    "on-primary-fixed-variant": "#404562",
+                    "surface-light": "#F5F5F5",
+                    "tertiary-fixed": "#b9ece9",
+                    "inverse-surface": "#33302d",
+                    "on-surface-variant": "#46464d",
+                    "surface-tint": "#585d7b",
+                    "on-tertiary-container": "#60918f",
+                    "text-secondary": "#808080",
+                    "warning": "#F59E0B",
+                    "success": "#10B981",
+                    "primary-container": "#1a1f3a",
+                    "tertiary": "#000d0c",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "white": "#FFFFFF",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "surface-container-low": "#f9f2ed",
+                    "inverse-primary": "#c0c4e8",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e8e1dc",
+                    "surface-variant": "#e8e1dc",
+                    "surface-bright": "#fff8f3",
+                    "surface-container": "#f3ede8",
+                    "on-secondary": "#ffffff",
+                    "border-subtle": "#E0E0E0",
+                    "inverse-on-surface": "#f6efeb",
+                    "text-primary": "#333333",
+                    "outline-variant": "#c7c5ce",
+                    "outline": "#77767e",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "on-surface": "#1d1b18",
+                    "primary-fixed": "#dee1ff",
+                    "surface-container-high": "#eee7e2",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-container": "#7a5242",
+                    "tertiary-container": "#002625",
+                    "surface-dim": "#dfd9d4",
+                    "secondary": "#7d5545",
+                    "on-secondary-fixed": "#301408",
+                    "on-primary-fixed": "#151a34",
+                    "on-tertiary-fixed": "#00201f",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "on-primary-container": "#8286a7",
+                    "background": "#fff8f3",
+                    "surface": "#fff8f3",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#ffc9b4",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "nav-height-mobile": "64px",
+                    "sm": "8px",
+                    "lg": "24px",
+                    "base": "8px",
+                    "nav-height-desktop": "80px",
+                    "md": "16px",
+                    "2xl": "48px",
+                    "xl": "32px",
+                    "4xl": "96px",
+                    "xs": "4px",
+                    "3xl": "64px"
+            },
+            "fontFamily": {
+                    "title-sm": [
+                            "Inter"
+                    ],
+                    "display-md": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "label-lg": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Playfair Display"
+                    ],
+                    "title-md": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "title-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "title-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-md": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.5px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "58px",
+                                    "letterSpacing": "-0.5px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.4px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.15px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "title-lg": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.surface-bright');
+            color: theme('colors.on-surface');
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen pb-nav-height-mobile md:pb-0">
+<!-- Top Navigation (Mobile & Desktop) -->
+<header class="w-full top-0 sticky shadow-sm dark:bg-surface-container-high bg-white dark:bg-inverse-surface z-40">
+<div class="flex justify-between items-center h-[80px] px-lg w-full max-w-[1440px] mx-auto">
+<button aria-label="Go back" class="text-primary dark:text-primary-fixed hover:bg-surface-container-low transition-colors duration-300 active:scale-95 transition-transform duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Order #ORD-2024-8891</h1>
+<button aria-label="More options" class="text-primary dark:text-primary-fixed hover:bg-surface-container-low transition-colors duration-300 active:scale-95 transition-transform duration-200 p-2 rounded-full">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-[1440px] mx-auto px-4 md:px-lg py-lg space-y-xl md:grid md:grid-cols-12 md:gap-lg md:space-y-0">
+<!-- Left Column (Order Details) -->
+<div class="md:col-span-8 space-y-lg">
+<!-- Status & Date Header -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-title-lg text-title-lg text-primary mb-1">Order Details</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Placed on October 24, 2024 at 10:42 AM</p>
+</div>
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-4 py-2 rounded-full w-fit">
+<span class="material-symbols-outlined text-[18px]" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-md text-label-md">Delivered</span>
+</div>
+</section>
+<!-- Customer Information Card -->
+<section class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-lg flex flex-col gap-md">
+<h3 class="font-title-md text-title-md text-primary border-b border-border-subtle pb-2">Customer Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-0.5" data-icon="person">person</span>
+<div>
+<p class="font-label-lg text-label-lg text-text-primary">Eleanor Vance</p>
+<p class="font-body-sm text-body-sm text-text-secondary">eleanor.vance@example.com</p>
+<p class="font-body-sm text-body-sm text-text-secondary">+1 (555) 123-4567</p>
+</div>
+</div>
+</div>
+<div class="space-y-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-0.5" data-icon="location_on">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-text-primary">Shipping Address</p>
+<p class="font-body-sm text-body-sm text-text-secondary">1042 Hillhouse Avenue<br/>Suite 4B<br/>New Haven, CT 06511<br/>United States</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Order Items List -->
+<section class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="p-lg border-b border-border-subtle">
+<h3 class="font-title-md text-title-md text-primary">Items (2)</h3>
+</div>
+<div class="flex flex-col divide-y divide-border-subtle">
+<!-- Item 1 -->
+<div class="p-lg flex gap-md items-start hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-24 h-24 rounded-lg bg-surface-dim overflow-hidden flex-shrink-0">
+<img alt="A luxurious black leather tote bag displayed against a clean, bright minimalist studio background, high fashion lighting" class="w-full h-full object-cover" data-alt="A luxurious black leather tote bag displayed against a clean, bright minimalist studio background, high fashion lighting. The deep navy and crisp white luxury aesthetic is maintained. Professional product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcVYm-P0LlLnvHy1sYQ3sKaLsOA0gN-ijovfqglfn5mgqaapQBd6HHi6Up6RAf3Q_41gY-UviVbLIfDIGuOzdlTU6ycN0FTRFT7xmL7NOCeDEsxYMcrrxVV3I0WWvnabkwpL4Cq7u6CBBu2fMoN_Kp1_6SD0FG66x2uZXedQIdNovdQsw9MUaukNvAZ01S_1uL-5fhcVcD7RD6vUAbxsYUpLBiAujPIRaenU52pt6WwR0pmyadBKCud4_f0Q33tvXcnB0tAQ0Yck"/>
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[96px]">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h4 class="font-title-md text-title-md text-primary">Midnight Leather Tote</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">SKU: MLT-092-BLK</p>
+</div>
+<p class="font-title-md text-title-md text-primary whitespace-nowrap">$450.00</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<p class="font-label-md text-label-md text-outline px-2 py-1 bg-surface-light rounded">Qty: 1</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Total: $450.00</p>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-lg flex gap-md items-start hover:bg-surface-container-low transition-colors duration-300">
+<div class="w-24 h-24 rounded-lg bg-surface-dim overflow-hidden flex-shrink-0">
+<img alt="An elegant silk scarf with geometric patterns draped softly over a minimal marble pedestal, bright studio lighting" class="w-full h-full object-cover" data-alt="An elegant silk scarf with geometric patterns draped softly over a minimal marble pedestal, bright studio lighting. The setting embodies a refined, high-end boutique atmosphere with soft cream and navy tones. Professional product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqFAgpvoCHFA-bl4YRSfhEr-wXsrKNpN-pvguhXqR0KMK6CwQl9wqD-5bcDqfZHunEySA4fJ18OArIzUnYh0WeBue8UhJFRYbA63XqvvWlKyA38DVkVDAKcnHzQ2l60vEe8Ocy34yw_48TDgeKwj6aejt4h_PGZFrboJ-s2BEysbqo1_pd8iIOPKsFJONbNLTJ9yqcssSk-BfFbB2xTtyFfVAIylaEYFYgla-ipaDyOvrUktXJEzZ2bQ8ztQgEtSrYvocd67inIM"/>
+</div>
+<div class="flex-grow flex flex-col justify-between min-h-[96px]">
+<div class="flex justify-between items-start gap-4">
+<div>
+<h4 class="font-title-md text-title-md text-primary">Geometric Silk Scarf</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">SKU: GSS-441-NVY</p>
+</div>
+<p class="font-title-md text-title-md text-primary whitespace-nowrap">$125.00</p>
+</div>
+<div class="flex justify-between items-end mt-4">
+<p class="font-label-md text-label-md text-outline px-2 py-1 bg-surface-light rounded">Qty: 2</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Total: $250.00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column (Summary & Actions) -->
+<div class="md:col-span-4 space-y-lg md:sticky md:top-[104px] md:self-start">
+<!-- Order Summary Card -->
+<section class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-lg">
+<h3 class="font-title-md text-title-md text-primary mb-md">Order Summary</h3>
+<div class="space-y-3 mb-md pb-md border-b border-border-subtle">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-text-secondary">Subtotal</span>
+<span class="font-body-md text-body-md text-text-primary">$700.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-text-secondary">Shipping (Express)</span>
+<span class="font-body-md text-body-md text-text-primary">$25.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md text-text-secondary">Tax (8%)</span>
+<span class="font-body-md text-body-md text-text-primary">$56.00</span>
+</div>
+</div>
+<div class="flex justify-between items-center mb-lg">
+<span class="font-title-lg text-title-lg text-primary">Total</span>
+<span class="font-headline-sm text-headline-sm text-primary">$781.00</span>
+</div>
+</section>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3">
+<button class="w-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg py-3 px-4 rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] active:scale-95 transition-all duration-300 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="edit_document">edit_document</span>
+                    Update Status
+                </button>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-label-lg text-label-lg py-3 px-4 rounded-lg hover:bg-surface-container-low active:scale-95 transition-all duration-300 flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]" data-icon="print">print</span>
+                    Print Invoice
+                </button>
+</div>
+</div>
+</main>
+</body></html>

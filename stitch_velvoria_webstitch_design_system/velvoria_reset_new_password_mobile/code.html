@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Reset Password</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f6efeb",
+                        "on-surface-variant": "#46464d",
+                        "surface-light": "#F5F5F5",
+                        "inverse-primary": "#c0c4e8",
+                        "secondary": "#7d5545",
+                        "error": "#EF4444",
+                        "surface-container-low": "#f9f2ed",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "surface": "#fff8f3",
+                        "outline-variant": "#c7c5ce",
+                        "on-primary-fixed": "#151a34",
+                        "secondary-container": "#ffc9b4",
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-bright": "#fff8f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#8286a7",
+                        "tertiary": "#000d0c",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "white": "#FFFFFF",
+                        "on-tertiary-fixed": "#00201f",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#60918f",
+                        "text-primary": "#333333",
+                        "surface-variant": "#e8e1dc",
+                        "on-secondary-fixed": "#301408",
+                        "text-secondary": "#808080",
+                        "tertiary-container": "#002625",
+                        "secondary-fixed": "#ffdbce",
+                        "tertiary-fixed": "#b9ece9",
+                        "outline": "#77767e",
+                        "warning": "#F59E0B",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "inverse-surface": "#33302d",
+                        "background": "#fff8f3",
+                        "success": "#10B981",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "primary-fixed": "#dee1ff",
+                        "on-secondary-container": "#7a5242",
+                        "primary-container": "#1a1f3a",
+                        "on-tertiary": "#ffffff",
+                        "border-subtle": "#E0E0E0",
+                        "on-background": "#1d1b18",
+                        "primary": "#030722",
+                        "surface-container": "#f3ede8",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-tint": "#585d7b",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eee7e2",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#1d1b18",
+                        "surface-dim": "#dfd9d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "4xl": "96px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "3xl": "64px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "8px",
+                        "nav-height-mobile": "64px",
+                        "md": "16px",
+                        "2xl": "48px",
+                        "nav-height-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-lg text-text-primary min-h-screen flex flex-col relative antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center px-4 h-nav-height-mobile md:h-nav-height-desktop max-w-[1440px] mx-auto">
+<button aria-label="Go back" class="p-2 text-on-surface-variant hover:opacity-80 transition-opacity duration-300 active:scale-95 transition-transform flex items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-primary-container focus:ring-opacity-20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<div class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight absolute left-1/2 -translate-x-1/2">
+                Velvoria
+            </div>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-4 pt-nav-height-mobile md:pt-nav-height-desktop pb-2xl">
+<div class="w-full max-w-md">
+<!-- Centered Card -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-xl md:p-2xl flex flex-col items-center">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary text-center mb-base">Create New Password</h1>
+<p class="font-body-md text-body-md text-text-secondary text-center mb-xl max-w-[280px]">Your new password must be different from previous passwords.</p>
+<!-- Form -->
+<form class="w-full space-y-md" onsubmit="event.preventDefault();">
+<!-- Password Field -->
+<div class="space-y-xs relative group">
+<label class="font-label-lg text-label-lg text-text-primary block" for="new_password">New Password</label>
+<div class="relative">
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm font-body-md text-body-md text-text-primary focus:outline-none focus:border-primary focus:ring-0 transition-colors placeholder:text-text-secondary" id="new_password" placeholder="Enter new password" type="password"/>
+<button aria-label="Toggle password visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password Field -->
+<div class="space-y-xs relative group">
+<label class="font-label-lg text-label-lg text-text-primary block" for="confirm_password">Confirm New Password</label>
+<div class="relative">
+<input class="w-full bg-white border border-border-subtle rounded-lg px-md py-sm font-body-md text-body-md text-text-primary focus:outline-none focus:border-primary focus:ring-0 transition-colors placeholder:text-text-secondary" id="confirm_password" placeholder="Confirm new password" type="password"/>
+<button aria-label="Toggle confirm password visibility" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Requirements -->
+<div class="pt-sm pb-base">
+<p class="font-label-md text-label-md text-text-secondary mb-2">Password must contain at least:</p>
+<ul class="space-y-1 font-body-sm text-body-sm text-text-secondary">
+<li class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[14px] text-outline-variant" style="font-variation-settings: 'FILL' 0;">check_circle</span>
+<span>8 characters</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[14px] text-outline-variant" style="font-variation-settings: 'FILL' 0;">check_circle</span>
+<span>1 number</span>
+</li>
+<li class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[14px] text-outline-variant" style="font-variation-settings: 'FILL' 0;">check_circle</span>
+<span>1 special character (!@#$%^&amp;*)</span>
+</li>
+</ul>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-secondary-container text-on-secondary-fixed font-title-md text-title-md py-3 rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 mt-lg active:scale-95" type="submit">
+                        Reset Password
+                    </button>
+</form>
+</div>
+</div>
+</main>
+<!-- Decorative ambient glow behind card for subtle depth -->
+<div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] bg-secondary-fixed opacity-[0.03] rounded-full blur-[100px] pointer-events-none -z-10"></div>
+<script>
+        // Simple password toggle logic for prototype feel
+        const toggleButtons = document.querySelectorAll('button[aria-label^="Toggle"]');
+        toggleButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const input = this.previousElementSibling;
+                const icon = this.querySelector('.material-symbols-outlined');
+                
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.textContent = 'visibility';
+                } else {
+                    input.type = 'password';
+                    icon.textContent = 'visibility_off';
+                }
+            });
+        });
+
+        // Basic requirement checking logic (visual only for prototype)
+        const newPasswordInput = document.getElementById('new_password');
+        const requirementsIcons = document.querySelectorAll('.space-y-1 .material-symbols-outlined');
+
+        newPasswordInput.addEventListener('input', function(e) {
+            const val = e.target.value;
+            
+            // Length
+            if(val.length >= 8) {
+                requirementsIcons[0].classList.replace('text-outline-variant', 'text-success');
+                requirementsIcons[0].style.fontVariationSettings = "'FILL' 1";
+            } else {
+                requirementsIcons[0].classList.replace('text-success', 'text-outline-variant');
+                requirementsIcons[0].style.fontVariationSettings = "'FILL' 0";
+            }
+
+            // Number
+            if(/\d/.test(val)) {
+                requirementsIcons[1].classList.replace('text-outline-variant', 'text-success');
+                requirementsIcons[1].style.fontVariationSettings = "'FILL' 1";
+            } else {
+                requirementsIcons[1].classList.replace('text-success', 'text-outline-variant');
+                requirementsIcons[1].style.fontVariationSettings = "'FILL' 0";
+            }
+
+            // Special Char
+            if(/[!@#$%^&*(),.?":{}|<>]/.test(val)) {
+                requirementsIcons[2].classList.replace('text-outline-variant', 'text-success');
+                requirementsIcons[2].style.fontVariationSettings = "'FILL' 1";
+            } else {
+                requirementsIcons[2].classList.replace('text-success', 'text-outline-variant');
+                requirementsIcons[2].style.fontVariationSettings = "'FILL' 0";
+            }
+        });
+    </script>
+</body></html>

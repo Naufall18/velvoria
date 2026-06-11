@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - The New Minimalist</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#00201f",
+                    "on-secondary-fixed": "#301408",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "primary-fixed": "#dee1ff",
+                    "surface-bright": "#fff8f3",
+                    "secondary-container": "#ffc9b4",
+                    "text-secondary": "#808080",
+                    "on-primary-fixed-variant": "#404562",
+                    "white": "#FFFFFF",
+                    "background": "#fff8f3",
+                    "surface-container-highest": "#e8e1dc",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#000d0c",
+                    "success": "#10B981",
+                    "surface-container-low": "#f9f2ed",
+                    "error-container": "#ffdad6",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "text-primary": "#333333",
+                    "surface-container-high": "#eee7e2",
+                    "on-background": "#1d1b18",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "surface": "#fff8f3",
+                    "secondary-fixed": "#ffdbce",
+                    "inverse-primary": "#c0c4e8",
+                    "outline": "#77767e",
+                    "border-subtle": "#E0E0E0",
+                    "warning": "#F59E0B",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "surface-variant": "#e8e1dc",
+                    "error": "#EF4444",
+                    "on-tertiary-container": "#60918f",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "surface-tint": "#585d7b",
+                    "on-surface-variant": "#46464d",
+                    "on-surface": "#1d1b18",
+                    "inverse-surface": "#33302d",
+                    "surface-dim": "#dfd9d4",
+                    "on-primary-fixed": "#151a34",
+                    "surface-light": "#F5F5F5",
+                    "on-primary-container": "#8286a7",
+                    "primary": "#030722",
+                    "tertiary-container": "#002625",
+                    "secondary": "#7d5545",
+                    "tertiary-fixed": "#b9ece9",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#7a5242",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c7c5ce",
+                    "surface-container": "#f3ede8",
+                    "primary-container": "#1a1f3a",
+                    "inverse-on-surface": "#f6efeb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "3xl": "64px",
+                    "2xl": "48px",
+                    "nav-height-desktop": "80px",
+                    "lg": "24px",
+                    "4xl": "96px",
+                    "nav-height-mobile": "64px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-md": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "title-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "title-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-primary min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-primary/80 backdrop-blur-md shadow-sm dark:shadow-none transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-[80px] px-8 max-w-[1440px] mx-auto">
+<button class="text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="font-display-md text-display-md tracking-widest text-primary dark:text-on-primary">
+                VELVORIA
+            </div>
+<button class="text-primary dark:text-on-primary hover:opacity-70 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-[96px] px-md md:px-2xl max-w-[1440px] mx-auto w-full">
+<!-- Header & Breadcrumbs -->
+<header class="mb-4xl flex flex-col items-center text-center">
+<div class="flex items-center gap-2 text-text-secondary font-label-md text-label-md mb-lg">
+<span>Stories</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Winter Lookbook</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary md:hidden hidden">The New Minimalist</h1>
+<h1 class="font-display-lg text-display-lg text-primary hidden md:block">The New Minimalist</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary md:hidden block">The New Minimalist</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mt-md">A curated selection of effortless essentials, defined by clean lines, premium textures, and quiet sophistication.</p>
+</header>
+<!-- Filter & Sort -->
+<div class="flex justify-between items-center border-b border-border-subtle pb-sm mb-xl">
+<button class="flex items-center gap-xs text-primary font-label-lg text-label-lg hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                Filter
+            </button>
+<div class="flex items-center gap-md">
+<span class="text-text-secondary font-body-sm text-body-sm hidden md:inline">Showing 12 items</span>
+<button class="flex items-center gap-xs text-primary font-label-lg text-label-lg hover:opacity-70 transition-opacity">
+                    Sort By
+                    <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Asymmetrical Product Grid -->
+<div class="grid grid-cols-4 md:grid-cols-12 gap-md md:gap-lg mb-4xl">
+<!-- Large Featured Item -->
+<div class="col-span-4 md:col-span-8 group relative bg-surface-container-lowest rounded-lg shadow-sm hover-lift cursor-pointer flex flex-col md:flex-row overflow-hidden">
+<div class="absolute top-md left-md z-10 bg-secondary-fixed-dim text-on-secondary-fixed font-label-md text-label-md px-2 py-1 rounded">
+                    New Arrival
+                </div>
+<div class="w-full md:w-1/2 aspect-[4/5] md:aspect-auto overflow-hidden bg-surface-container">
+<img alt="Midnight Tote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A luxurious, minimalist black leather tote bag resting on a clean, light cream stone pedestal. Soft, diffused natural studio lighting highlights the premium pebble texture of the leather and subtle matte gold hardware. The background is a stark, elegant white void, emphasizing the bag's structural silhouette and high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA72BYcYZnIR4iU-1DGen0AJIC_vUdl_QHT90BAmr9bE_l7ztF60ZBhrhhicnKJ_jabyp3MbydtkpqbVdupWVE8uFkeUh2LY_r35UymYzy2VoLJ5sYY30hAhHCMhuG5AqZABKIPFLskyjgKWA0SeRQI3QxjkYVqRzX6nmZU31CsEMcSTTgQp8DyyFQNTibmh_7VKOs1WBsHWk8ZodtQbJEyttdMjhrhih1xvdjs6OfnSEj22dBAS0gvlJEAgmUQ3QLGiOVqJpq3i_g"/>
+</div>
+<div class="p-xl flex flex-col justify-center w-full md:w-1/2">
+<h3 class="font-display-md text-display-md text-primary mb-xs">Midnight Tote</h3>
+<p class="font-body-lg text-body-lg text-text-secondary mb-xl">Crafted from Italian full-grain leather, designed for seamless transitions from day to night.</p>
+<div class="font-title-lg text-title-lg text-primary mb-xl">$1,450</div>
+<button class="bg-primary text-white font-label-lg text-label-lg py-3 px-6 rounded-lg hover:opacity-90 transition-opacity w-full md:w-auto">
+                        Quick Add
+                    </button>
+</div>
+</div>
+<!-- Standard Item 1 -->
+<div class="col-span-2 md:col-span-4 group relative bg-surface-container-lowest rounded-lg shadow-sm hover-lift cursor-pointer flex flex-col">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-surface-container">
+<img alt="Aura Necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A delicate, minimalist rose gold necklace featuring a single, smooth geometric pendant. It is draped elegantly over a soft, off-white silk fabric. The lighting is warm and directional, casting gentle shadows that accentuate the subtle sheen of the metal and the luxurious texture of the silk backdrop. High-end editorial jewelry photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4KWBZXvwoobxU8qKC_mp4n9Omn1vx4RcPaGRxMmimS98uX2oZM8ijmtlWDQGHZT_d_YOh9UytfHSJkAtprcSlnR_lLsMPHNllRkLXqvzm1qz8GzOimfEpLo3-2tipcWv8dlrfPtBoBYPH5bDcPEyvZ8jDybIGhewqcJGg4-_7rmwEDrAHtneu47njGNO-qQxE7iWJO21Qfhsg5dNtLQPqPvC0G-5WbEBTBKTb8wDXYllOIhXYe5tPZNCnLTYjoDegmb6Or2yGE-A"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h4 class="font-title-md text-title-md text-primary mb-xs">Aura Necklace</h4>
+<div class="font-body-md text-body-md text-text-secondary mt-auto">$380</div>
+</div>
+<!-- Quick Add Overlay -->
+<div class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-md rounded-lg">
+<button class="w-full bg-secondary-fixed text-primary font-label-lg text-label-lg py-2 rounded shadow-md hover:bg-secondary-container transition-colors">
+                        Quick Add
+                    </button>
+</div>
+</div>
+<!-- Standard Item 2 -->
+<div class="col-span-2 md:col-span-4 group relative bg-surface-container-lowest rounded-lg shadow-sm hover-lift cursor-pointer flex flex-col">
+<div class="aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-surface-container">
+<img alt="Forma Vase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A sleek, minimalist black ceramic vase with an asymmetrical, organic shape, placed on a pristine white minimalist tabletop. A single architectural white floral stem rests inside. The lighting is bright and high-key, creating a crisp, modern aesthetic that emphasizes form and negative space in a luxury home decor setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ3EINbz60kKgPvonhtAqvRCjGhoDTjz8UFFuVa8uICnE4Nt5tcEkGH581ZoUsX2olFTz06-xhPZUJSSmNKbQ-P5jQMmCZ0mAEs7Qp5pv07OXAIL3HukAYxTgmFKNX6j-VtehUjCNKFAxdTqWVVfTTEORDn_VIru1XxJ--AASUEW5LoyRUKM_XgEhu--ChLP83Dxl1YmblAkcdV3kyxBt8jT363vxHbphgZzR6h59y3Vlepwg2UVf8Oc6cMDiOcjb32hEsyl9CA9o"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h4 class="font-title-md text-title-md text-primary mb-xs">Forma Vase</h4>
+<div class="font-body-md text-body-md text-text-secondary mt-auto">$210</div>
+</div>
+<div class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-md rounded-lg">
+<button class="w-full bg-secondary-fixed text-primary font-label-lg text-label-lg py-2 rounded shadow-md hover:bg-secondary-container transition-colors">
+                        Quick Add
+                    </button>
+</div>
+</div>
+<!-- Standard Item 3 -->
+<div class="col-span-4 md:col-span-4 group relative bg-surface-container-lowest rounded-lg shadow-sm hover-lift cursor-pointer flex flex-col">
+<div class="absolute top-md left-md z-10 bg-error/10 text-error font-label-md text-label-md px-2 py-1 rounded">
+                    Limited
+                </div>
+<div class="aspect-[3/4] w-full overflow-hidden rounded-t-lg bg-surface-container">
+<img alt="Cashmere Wrap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A meticulously folded stack of luxury cashmere knitwear in neutral tones of cream, taupe, and soft grey. The textures are incredibly soft and inviting, highlighted by warm, low-angle studio lighting that creates depth and richness. The setting is minimal, focusing entirely on the premium quality and tactile nature of the fabrics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsk36xAcvXMEA9jTL7vyOQKvqfKw4Qn7eqsaqIsMi0cQ0cIHjvrxhzxCEuLN9dEc3c54XYsF2lc9raHN2J_KGxHQZL4LPLxuHpvl0fNTb6_9BG8O6AFRpwaIVM7Onxh3QZu_hPtwbd_JvRN01D_1T24TYW7rqWf-gBA5K8OBRMg1VUUEyJhLCFWuBQfyOXhPsRMZ6mGq3RxLbA4kTAUHrB-Q_7hpe8NYknSlu1pCnjyXvF9Xx2OM-sx-9LIVUZ4IGHx_kvm6SXwrY"/>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h4 class="font-title-md text-title-md text-primary mb-xs">Cashmere Wrap</h4>
+<div class="font-body-md text-body-md text-text-secondary mt-auto">$450</div>
+</div>
+<div class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-md rounded-lg">
+<button class="w-full bg-secondary-fixed text-primary font-label-lg text-label-lg py-2 rounded shadow-md hover:bg-secondary-container transition-colors">
+                        Quick Add
+                    </button>
+</div>
+</div>
+</div>
+<!-- Immersive Media Break -->
+<div class="w-full h-[530px] md:h-[707px] mb-4xl rounded-xl overflow-hidden relative group">
+<img alt="Editorial Campaign" class="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[20s] ease-linear" data-alt="A sweeping, cinematic editorial fashion shot of a female model walking through a sunlit, minimalist concrete architectural space. She is wearing an oversized, structured cream coat and holding the Midnight Tote. The lighting is dramatic, with strong geometric shadows cast across the floor, conveying a sense of modern luxury and effortless high-end style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgrK8VLErdvLSQpp27lKHuxccVwhEZ6L4z9yk_Kci_W537GyPInRNbqovWWOP7J21PFZBg1JrdxNOqlhL2nQVbAbdXrTkvSqC2Ky4Q2d-vJftslwcnavxgwIrE48shVoM9gctIc-0VMXH6odHhY9rbTiW1AJGi7N-cRm804T2pajIauEPrffGmF7F-z_-H1O8JrDN43TdRv6IaXWXpxt4g37KD33D0gwpAOTZspr0G3hXCKherG_vjNw6Z80GdVrTHupGr5CKq0I"/>
+<div class="absolute inset-0 bg-black/20 flex flex-col justify-end p-xl md:p-3xl">
+<h2 class="font-display-md text-display-md text-white mb-sm">The Architecture of Style</h2>
+<p class="font-body-lg text-body-lg text-white/90 max-w-lg">Discover the inspiration behind the collection's clean lines and structural forms.</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-[64px] px-4 bg-white dark:bg-primary shadow-[0_-2px_10px_rgba(0,0,0,0.05)] z-50">
+<button class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors scale-95 active:scale-90 w-full h-full">
+<span class="material-symbols-outlined mb-1 text-[24px]">auto_awesome</span>
+<span class="font-label-lg text-[10px] leading-none">Shop Story</span>
+</button>
+<!-- Active State -->
+<button class="flex flex-col items-center justify-center text-primary dark:text-secondary-fixed font-bold hover:text-primary dark:hover:text-on-primary transition-colors scale-95 active:scale-90 w-full h-full">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-lg text-[10px] leading-none">Collection</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors scale-95 active:scale-90 w-full h-full">
+<span class="material-symbols-outlined mb-1 text-[24px]">menu_book</span>
+<span class="font-label-lg text-[10px] leading-none">Stories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-on-surface-variant hover:text-primary dark:hover:text-on-primary transition-colors scale-95 active:scale-90 w-full h-full">
+<span class="material-symbols-outlined mb-1 text-[24px]">person</span>
+<span class="font-label-lg text-[10px] leading-none">Account</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Vendor Message Center</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "warning": "#F59E0B",
+                            "surface-bright": "#fff8f3",
+                            "inverse-surface": "#33302d",
+                            "surface-dim": "#dfd9d4",
+                            "primary": "#030722",
+                            "on-tertiary-fixed-variant": "#1a4e4c",
+                            "secondary-fixed": "#ffdbce",
+                            "on-primary-fixed": "#151a34",
+                            "error-container": "#ffdad6",
+                            "text-secondary": "#808080",
+                            "on-tertiary": "#ffffff",
+                            "secondary": "#7d5545",
+                            "outline": "#77767e",
+                            "background": "#fff8f3",
+                            "inverse-primary": "#c0c4e8",
+                            "border-subtle": "#E0E0E0",
+                            "on-tertiary-container": "#60918f",
+                            "surface-tint": "#585d7b",
+                            "secondary-fixed-dim": "#f0bba7",
+                            "error": "#EF4444",
+                            "secondary-container": "#ffc9b4",
+                            "on-secondary-fixed-variant": "#623e2f",
+                            "primary-fixed-dim": "#c0c4e8",
+                            "surface-container": "#f3ede8",
+                            "on-secondary-container": "#7a5242",
+                            "tertiary-fixed": "#b9ece9",
+                            "primary-container": "#1a1f3a",
+                            "on-primary-container": "#8286a7",
+                            "on-secondary": "#ffffff",
+                            "on-error": "#ffffff",
+                            "inverse-on-surface": "#f6efeb",
+                            "on-primary": "#ffffff",
+                            "text-primary": "#333333",
+                            "surface-container-highest": "#e8e1dc",
+                            "primary-fixed": "#dee1ff",
+                            "tertiary-fixed-dim": "#9dd0cd",
+                            "white": "#FFFFFF",
+                            "on-tertiary-fixed": "#00201f",
+                            "surface-container-lowest": "#ffffff",
+                            "on-surface-variant": "#46464d",
+                            "on-error-container": "#93000a",
+                            "on-primary-fixed-variant": "#404562",
+                            "surface-light": "#F5F5F5",
+                            "surface-container-high": "#eee7e2",
+                            "on-surface": "#1d1b18",
+                            "tertiary": "#000d0c",
+                            "surface-variant": "#e8e1dc",
+                            "on-background": "#1d1b18",
+                            "tertiary-container": "#002625",
+                            "outline-variant": "#c7c5ce",
+                            "success": "#10B981",
+                            "surface": "#fff8f3",
+                            "surface-container-low": "#f9f2ed",
+                            "on-secondary-fixed": "#301408",
+                            "rose-gold": "#E0BFB8" // Adding accent color based on prompt
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "base": "8px",
+                            "lg": "24px",
+                            "sm": "8px",
+                            "nav-height-desktop": "80px",
+                            "4xl": "96px",
+                            "3xl": "64px",
+                            "xs": "4px",
+                            "nav-height-mobile": "64px",
+                            "md": "16px",
+                            "2xl": "48px",
+                            "xl": "32px",
+                            "pb-safe": "env(safe-area-inset-bottom)"
+                    },
+                    "fontFamily": {
+                            "title-lg": ["Inter"],
+                            "title-md": ["Inter"],
+                            "label-lg": ["Inter"],
+                            "display-md": ["Playfair Display"],
+                            "body-sm": ["Inter"],
+                            "headline-md": ["Playfair Display"],
+                            "display-lg": ["Playfair Display"],
+                            "headline-lg": ["Playfair Display"],
+                            "body-md": ["Inter"],
+                            "body-lg": ["Inter"],
+                            "title-sm": ["Inter"],
+                            "label-md": ["Inter"],
+                            "headline-lg-mobile": ["Playfair Display"],
+                            "headline-sm": ["Playfair Display"],
+                            "headline-sm-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                            "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                            "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                            "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                            "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                            "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                            "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                            "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                            "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                            "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                            "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                            "headline-sm-mobile": ["20px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: theme('colors.surface');
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Custom scrollbar hiding */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen pb-[env(safe-area-inset-bottom)] md:hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 shadow-sm bg-white dark:bg-inverse-surface shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center px-4 h-16 w-full">
+<button aria-label="Menu" class="active:scale-95 transition-transform p-2 -ml-2 text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<h1 class="font-headline-sm-mobile text-headline-sm-mobile text-primary dark:text-primary-fixed font-bold tracking-tight">Messages</h1>
+<button aria-label="Search" class="active:scale-95 transition-transform p-2 -mr-2 text-primary dark:text-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[88px] pb-[96px] px-4 space-y-lg">
+<!-- Search Bar -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary text-[20px]">search</span>
+<input class="w-full bg-surface-light border border-border-subtle rounded-lg py-3 pl-10 pr-4 font-body-md text-body-md text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/10 transition-all shadow-[inset_0_1px_2px_rgba(0,0,0,0.02)]" placeholder="Search by customer or product..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex gap-sm overflow-x-auto no-scrollbar pb-1">
+<button class="px-4 py-2 rounded-full bg-primary text-white font-title-sm text-title-sm whitespace-nowrap active:scale-95 transition-transform">All</button>
+<button class="px-4 py-2 rounded-full bg-transparent border border-border-subtle text-text-primary font-title-sm text-title-sm whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-light">Unread (2)</button>
+<button class="px-4 py-2 rounded-full bg-transparent border border-border-subtle text-text-primary font-title-sm text-title-sm whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-light">Orders</button>
+<button class="px-4 py-2 rounded-full bg-transparent border border-border-subtle text-text-primary font-title-sm text-title-sm whitespace-nowrap active:scale-95 transition-transform hover:bg-surface-light">Inquiries</button>
+</div>
+<!-- Message List -->
+<div class="space-y-0">
+<!-- Message Item 1 (Unread, With Product) -->
+<div class="group relative flex items-start gap-md py-md border-b border-border-subtle last:border-b-0 active:bg-surface-light transition-colors -mx-4 px-4">
+<div class="relative shrink-0">
+<img alt="Customer Avatar" class="w-12 h-12 rounded-full object-cover border border-border-subtle shadow-sm" data-alt="A portrait of a young woman with a soft smile, soft natural lighting, light neutral background, high fashion photography style, luxurious and approachable mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk4nwVkkeHUrhwnUpUhOUKZYjvjHU8D-SKVOj1fHL1uVtcbVgWtdAajm2y0IbQrQAJiasAh2cR2O2U6Yb_Hun8WbHlGNhlAiA5vqTVDuBApaX-K1NnwqW_ghFMgkU9XkjVmQuaNXS2aFrU23mKHccNu3wezZA5FDOviSabUvopc1Zk06Yl84e-6fvGQDd89tWslyDcmeZgxSC6FqjLjzPDeZ7zJBnVpElqstupJ5103093nsnCEmmRTiyI0El1J8KxgXIZ96H6Dx0"/>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-rose-gold border-2 border-surface rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate pr-2 font-bold">Eleanor Vance</h3>
+<span class="font-body-sm text-body-sm text-primary font-semibold whitespace-nowrap">2m ago</span>
+</div>
+<p class="font-body-md text-body-md text-primary font-medium truncate mb-2">Is the Midnight Tote available in the smaller size?</p>
+<div class="inline-flex items-center gap-2 bg-surface-light px-2 py-1 rounded border border-border-subtle">
+<img alt="Midnight Tote thumbnail" class="w-6 h-6 rounded object-cover" data-alt="A sleek, minimalist black leather tote bag, soft studio lighting, pale cream background, high-end product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASDFdHmEgqcnwfGX5g8LXjJgGTbTafdZTCjtzFJlOnP-kaZi0oxFY2gHRhaJmRxXNCb0NTRcrlZIbnV9ba0ogLqsBZeK2PfR2CkqXMZ89qkbk5CXItyUkRGftSjwoh7cN5zT20T7Uiio7WzrCVFL_Yci_z_9RDzN-pcjglZNw8qnADHDHZaCA3gyNK6kWemsvLvMqIWU56T9nDHl-pPJqC_MmYAfabvEh07ACLfvtFcAZdQlRW_KYjO48AA1mteSLr5x_hSAFQVPo"/>
+<span class="font-label-md text-label-md text-text-secondary truncate max-w-[120px]">Midnight Tote</span>
+</div>
+</div>
+</div>
+<!-- Message Item 2 (Read) -->
+<div class="group relative flex items-start gap-md py-md border-b border-border-subtle last:border-b-0 active:bg-surface-light transition-colors -mx-4 px-4">
+<div class="relative shrink-0">
+<img alt="Customer Avatar" class="w-12 h-12 rounded-full object-cover border border-border-subtle shadow-sm opacity-90" data-alt="A portrait of a confident man with subtle facial hair, warm studio lighting, neutral background, professional and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPlTrNsYv8HMB328MIHOp_qo7eXP13uMkDb8SbLlH1SZx1Gh4eVJ-B1KL-SRmrPjHVqVeeq1DKpQ39TYaLxneG_5J_O90jX7V_SfA_K71VK44HZVY0XxjoUfT8R7jbHlTybJ0yxsfAF7y6kfpF4Ev321cTNwXn_aeagohYMnWvlqqRCLwkQg0AXsawOMnYEiilVhM50lvXmzFy4eMiTwCLvu5tj8QmwwR_Dz8orcuV2gwvJHrboxbqX3oLBvo8MOq2i5m03nC1IQ"/>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate pr-2">James Sterling</h3>
+<span class="font-body-sm text-body-sm text-text-secondary whitespace-nowrap">10:42 AM</span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary truncate mb-2">Thank you, the package arrived perfectly packaged. The quality is exceptional.</p>
+</div>
+</div>
+<!-- Message Item 3 (Unread, Read) -->
+<div class="group relative flex items-start gap-md py-md border-b border-border-subtle last:border-b-0 active:bg-surface-light transition-colors -mx-4 px-4">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-full bg-surface-dim border border-border-subtle flex items-center justify-center shadow-sm">
+<span class="font-title-lg text-title-lg text-primary">SC</span>
+</div>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-rose-gold border-2 border-surface rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate pr-2 font-bold">Sophia Chen</h3>
+<span class="font-body-sm text-body-sm text-primary font-semibold whitespace-nowrap">Yesterday</span>
+</div>
+<p class="font-body-md text-body-md text-primary font-medium truncate mb-2">I'd like to request a custom engraving on the clasp if possible.</p>
+</div>
+</div>
+<!-- Message Item 4 (Read, With Product) -->
+<div class="group relative flex items-start gap-md py-md border-b border-border-subtle last:border-b-0 active:bg-surface-light transition-colors -mx-4 px-4">
+<div class="relative shrink-0">
+<img alt="Customer Avatar" class="w-12 h-12 rounded-full object-cover border border-border-subtle shadow-sm opacity-90" data-alt="A portrait of a sophisticated woman looking off-camera, soft dramatic lighting, muted warm background, editorial luxury style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtITpQqxFKE1Dbe1dLQbuR9XDmpU_3nLdIUulJTIUtWrMWZ58upVVmRdpiQAP2a95MWpjpUiE91_70uhWAuz2NG1JID_CZMUwypX9aHMtBkhljEf4WiejKvOKoknu11dwTjDMiAFyF0xH43dcoDZTtkcXSzO2YDHTccq5CNCjdNo0t_-mc0YfQ8jrjlx1leLIR-47-frPx1pWi_-F--l3qFoKT5P_15ff8N3Wdzq1NMRbTkhN0vq94U5rR8fs0h8SIVAxAAb1CpU0"/>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate pr-2">Isabella Rossi</h3>
+<span class="font-body-sm text-body-sm text-text-secondary whitespace-nowrap">Tuesday</span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary truncate mb-2">Can you confirm the tracking number for order #4892?</p>
+<div class="inline-flex items-center gap-2 bg-surface-light px-2 py-1 rounded border border-border-subtle opacity-90">
+<img alt="Aura Necklace thumbnail" class="w-6 h-6 rounded object-cover" data-alt="A delicate rose gold necklace with a small geometric pendant, soft lighting, light textured background, high-end jewelry photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDABPxyan-lgqkgXCK-GFMLxPQ9FmtZ0_u3U1U1VpSlNGV9LdyAyBLqMbPOUeRX7aJskNsohpek3DTuLUv2IxpzZ9XaSxMmXN4BwL4aCG54KFHXU5ZKlEKPE8tqa2nPGV9v0Zhwak9byOsso26_Fxh5f5dR-Vg4wsXE5Sj3SDMh3MffX8M3u14jBKWyYj59aWoXZgA8QfoVdVM_M37U94fl6ECLt1g13InQj3UllWidPGI7Nviarw9-JTwTM8hZ5SRH5OjZH52WpTE"/>
+<span class="font-label-md text-label-md text-text-secondary truncate max-w-[120px]">Aura Necklace (Rose Gold)</span>
+</div>
+</div>
+</div>
+<!-- Message Item 5 (Read) -->
+<div class="group relative flex items-start gap-md py-md border-b border-border-subtle last:border-b-0 active:bg-surface-light transition-colors -mx-4 px-4">
+<div class="relative shrink-0">
+<img alt="Customer Avatar" class="w-12 h-12 rounded-full object-cover border border-border-subtle shadow-sm opacity-90" data-alt="A casual portrait of a man, natural sunlight outdoors, blurred green background, bright and welcoming mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtuXD7ZoENXw94zljW9HNNTHIzqqJyoFiTK8bq0RKDwxi6UKjGcI65vwvh1MESiR1z98NFGp1TlItWjCR7GK3AAzb9QKdP5gLU2JkLg3W2NNotE6VSKMnZtui0Bbgcu-jmjnicp_f1coNlUxV1sOjdLlOp-gsiaagp-1WzvtdwW8TzJp5YKcOzpnAAM396yQP6wWmelQQq_i1cF4qlyfqxMkMfFG4nXulvmqoAAl_3KODcSiU0StNXxOO_3A5Ak6xsHjIUu2i_shc"/>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-title-md text-title-md text-primary truncate pr-2">Marcus Thorne</h3>
+<span class="font-body-sm text-body-sm text-text-secondary whitespace-nowrap">Oct 12</span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary truncate mb-2">Great, I'll place the order now.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<!-- Suppressed based on logic rules for highly focused transaction/listing screens, but requested explicitly in prompt requirements. Assuming vendor needs quick compose access from inbox root. -->
+<button aria-label="New Message" class="fixed bottom-[88px] right-4 w-14 h-14 bg-rose-gold text-primary rounded-2xl shadow-[0_8px_24px_rgba(224,191,184,0.4)] flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">edit_square</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl shadow-[0_-2px_8px_rgba(0,0,0,0.08)] bg-white dark:bg-inverse-surface">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-2 pb-safe">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-xl px-3 py-1 hover:opacity-80 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="font-label-md text-label-md mt-0.5">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">group</span>
+<span class="font-label-md text-label-md mt-0.5">Clients</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+<span class="font-label-md text-label-md mt-0.5">Analytics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+<span class="font-label-md text-label-md mt-0.5">Store</span>
+</a>
+</div>
+</nav>
+</body></html>

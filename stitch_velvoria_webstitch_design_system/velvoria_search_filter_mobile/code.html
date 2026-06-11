@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Search</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e8e1dc",
+                      "on-error": "#ffffff",
+                      "on-secondary-container": "#7a5242",
+                      "on-primary-fixed": "#151a34",
+                      "warning": "#F59E0B",
+                      "white": "#FFFFFF",
+                      "surface-light": "#F5F5F5",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#eee7e2",
+                      "inverse-on-surface": "#f6efeb",
+                      "secondary": "#7d5545",
+                      "on-tertiary-fixed": "#00201f",
+                      "success": "#10B981",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "on-secondary-fixed": "#301408",
+                      "outline-variant": "#c7c5ce",
+                      "on-surface": "#1d1b18",
+                      "on-tertiary-container": "#60918f",
+                      "on-primary-container": "#8286a7",
+                      "text-secondary": "#808080",
+                      "border-subtle": "#E0E0E0",
+                      "primary-container": "#1a1f3a",
+                      "error-container": "#ffdad6",
+                      "inverse-surface": "#33302d",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#ffc9b4",
+                      "surface": "#fff8f3",
+                      "secondary-fixed": "#ffdbce",
+                      "tertiary-container": "#002625",
+                      "surface-container": "#f3ede8",
+                      "surface-container-highest": "#e8e1dc",
+                      "on-surface-variant": "#46464d",
+                      "surface-container-low": "#f9f2ed",
+                      "tertiary": "#000d0c",
+                      "outline": "#77767e",
+                      "on-primary-fixed-variant": "#404562",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#b9ece9",
+                      "surface-dim": "#dfd9d4",
+                      "primary": "#030722",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "error": "#EF4444",
+                      "on-background": "#1d1b18",
+                      "on-error-container": "#93000a",
+                      "background": "#fff8f3",
+                      "text-primary": "#333333",
+                      "surface-bright": "#fff8f3",
+                      "surface-tint": "#585d7b",
+                      "inverse-primary": "#c0c4e8",
+                      "primary-fixed": "#dee1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "sm": "8px",
+                      "nav-height-mobile": "64px",
+                      "2xl": "48px",
+                      "4xl": "96px",
+                      "3xl": "64px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "base": "8px",
+                      "nav-height-desktop": "80px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Custom scrollbar for chips */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface antialiased pb-[80px] md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-container-highest shadow-sm h-nav-height-mobile px-md max-w-[1440px] mx-auto flex justify-between items-center hidden md:flex">
+<button class="hover:opacity-80 transition-opacity duration-300 text-primary dark:text-primary-fixed scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="text-headline-sm font-headline-sm tracking-widest text-primary dark:text-primary-fixed uppercase">Velvoria</div>
+<button class="hover:opacity-80 transition-opacity duration-300 text-primary dark:text-primary-fixed scale-95 duration-200 ease-in-out">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</header>
+<main class="pt-[80px] px-md md:px-2xl max-w-[1440px] mx-auto">
+<!-- Search Bar & Filter Toggle -->
+<section class="mt-lg mb-xl">
+<div class="flex gap-sm">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-xl pr-sm py-sm rounded-lg border border-border-subtle bg-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-primary" placeholder="Search products, vendors..." type="text"/>
+</div>
+<button class="bg-white border border-border-subtle rounded-lg px-sm py-sm flex items-center justify-center text-primary hover:bg-surface-light transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</section>
+<div class="flex flex-col md:flex-row gap-xl">
+<!-- Filters Sidebar (Hidden on mobile, visible on desktop) -->
+<aside class="hidden md:block w-64 flex-shrink-0">
+<div class="sticky top-[100px] bg-white p-lg rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<h2 class="text-title-lg font-title-lg text-primary mb-lg font-headline-sm">Filters</h2>
+<!-- Categories -->
+<div class="mb-lg">
+<h3 class="text-label-lg font-label-lg text-on-surface mb-sm">Categories</h3>
+<div class="flex flex-col gap-xs">
+<label class="flex items-center gap-sm cursor-pointer group">
+<input checked="" class="rounded text-primary focus:ring-primary border-border-subtle group-hover:border-primary transition-colors" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-primary">Boutique</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary border-border-subtle group-hover:border-primary transition-colors" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-primary">Fine Jewelry</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary border-border-subtle group-hover:border-primary transition-colors" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-primary">Watch</span>
+</label>
+<label class="flex items-center gap-sm cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary border-border-subtle group-hover:border-primary transition-colors" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface-variant group-hover:text-primary">Home Decor</span>
+</label>
+</div>
+</div>
+<!-- Price -->
+<div class="mb-lg">
+<h3 class="text-label-lg font-label-lg text-on-surface mb-sm">Price Range</h3>
+<div class="flex items-center gap-sm mb-xs">
+<input class="w-full rounded border border-border-subtle p-xs text-body-sm focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Min" type="number"/>
+<span class="text-outline-variant">-</span>
+<input class="w-full rounded border border-border-subtle p-xs text-body-sm focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Max" type="number"/>
+</div>
+<input class="w-full accent-primary" max="10000" min="0" type="range"/>
+</div>
+<!-- Rating -->
+<div class="mb-lg">
+<h3 class="text-label-lg font-label-lg text-on-surface mb-sm">Rating</h3>
+<div class="flex flex-col gap-xs">
+<label class="flex items-center gap-sm cursor-pointer">
+<input class="text-primary focus:ring-primary border-border-subtle" name="rating" type="radio"/>
+<div class="flex text-warning text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</label>
+<label class="flex items-center gap-sm cursor-pointer">
+<input class="text-primary focus:ring-primary border-border-subtle" name="rating" type="radio"/>
+<div class="flex text-warning text-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="text-body-sm font-body-sm text-outline ml-xs">&amp; Up</span>
+</div>
+</label>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-sm rounded-lg text-label-md font-label-md hover:bg-opacity-90 transition-opacity">Apply Filters</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<!-- Mobile Chips (Visible only on mobile) -->
+<div class="md:hidden overflow-x-auto hide-scrollbar mb-lg flex gap-sm pb-sm">
+<button class="whitespace-nowrap px-md py-xs rounded-full border border-primary bg-primary text-white text-label-md font-label-md">Boutique</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full border border-border-subtle bg-white text-on-surface-variant text-label-md font-label-md">Fine Jewelry</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full border border-border-subtle bg-white text-on-surface-variant text-label-md font-label-md">Watch</button>
+<button class="whitespace-nowrap px-md py-xs rounded-full border border-border-subtle bg-white text-on-surface-variant text-label-md font-label-md">Home Decor</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-md md:gap-lg">
+<!-- Product Card 1 -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-light">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pristine white leather luxury handbag displayed on a minimalist cream-colored marble plinth. Soft, diffused lighting highlights the flawless texture of the leather and the gleaming rose gold hardware. The background is a subtle gradient of warm off-white, emphasizing the bag's sophisticated silhouette. The overall mood is elegant, high-end, and perfectly aligned with a light-mode, minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqUq0Z5KUerJZy8oC8EWM7VUBsAv5PcoA4EMxKFwAdGRjPeEXreTWCWDOaAQRXnt0HxA_7XcrOppVWv_Fdn9ODG31HolAwaGUmV9cj001Rhb0dBFkUAfgzPvgkrpPF4FztFaDGsuSiPDuSCGO9_Evov4Jn1Jp9PvbwF-u9niZoGddmvCOEuLjq2HY51rEXy-i6CuPdnlffuyV7sl9ZoK_SGOYnb5gxEPsce4EIREFR9RBaXtyLC78JAvBbS2TwCWNHyc1LIsOEyGw"/>
+<div class="absolute top-sm right-sm bg-white/80 backdrop-blur-sm p-xs rounded-full cursor-pointer hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-sm md:p-md">
+<h3 class="text-title-sm font-title-sm text-primary font-headline-sm truncate mb-xs">Aura Leather Tote</h3>
+<p class="text-body-sm font-body-sm text-outline mb-sm truncate">Artisan Crafted</p>
+<div class="flex justify-between items-center">
+<span class="text-title-md font-title-md text-primary">$1,250</span>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-light">
+<div class="absolute top-sm left-sm bg-secondary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider z-10">New</div>
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An exquisite rose gold mechanical watch resting delicately on a plush velvet cushion in a soft ivory shade. The intricate gears of the open-heart dial catch a warm, directional light, creating subtle reflections. The setting is clean and modern, devoid of clutter, to focus entirely on the craftsmanship. This image embodies a premium, trustworthy brand personality tailored for a luxury minimalist UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1FYGgGtozKwaMfszAU1bKyk6Poko0BZMN2yqxN-5EyoTTF73-Kc4lZY2MUuB5aZEohDUIpmaON9KDwN4Sk6PoBr_604SqFVBsYpaLBCUJKcsYPIIPqUhudrUF7VX5mLnXybj1EhM_xTw9_6gpNtS7XGK7RdAqEk3ypUTIZ-o-tWKUTNXJAg6NXMVd28apVXxhnOnPcJjQmwC3rBSPirOc4kSUoYT6phcNzL6eldol8zaJP5ODsafuQCSv7IPYBIfGhEyluszmrk"/>
+<div class="absolute top-sm right-sm bg-white/80 backdrop-blur-sm p-xs rounded-full cursor-pointer hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-sm md:p-md">
+<h3 class="text-title-sm font-title-sm text-primary font-headline-sm truncate mb-xs">Chronos Rose Gold</h3>
+<p class="text-body-sm font-body-sm text-outline mb-sm truncate">Swiss Movement</p>
+<div class="flex justify-between items-center">
+<span class="text-title-md font-title-md text-primary">$3,400</span>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-light">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate, minimalist diamond necklace presented on an abstract, matte cream geometric form. The lighting is bright and even, ensuring the sparkle of the diamonds stands out against the muted background. Shadows are soft and layered, adding depth without harshness. The visual language strictly adheres to an effortless elegance suitable for a high-end jewelry boutique's online storefront." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC32xB1DiuwkbsY7-XmHobSCuoLPiZulmadZEa7eFYdpEUzAjx86ckBAokY6MM14BFyfxjZBXXMLvRRCVAKB7rmjWAiZSXtNYdP_IokxhUwKrU0scMrQ3fvsdL8YYcBKmtNjUjfBX8nNOsSdGu0IBS4GAffwLazurTbNAG-YM2v0pj91A9WlIrKPhn4fcL-YaTyfq8BuGh01kMjZ26MFW4wlEUDCYrLXI98E6i_UH7f7ofDH6GPKtX3cRZva-Nt_OWBelqxM0cWdUo"/>
+<div class="absolute top-sm right-sm bg-white/80 backdrop-blur-sm p-xs rounded-full cursor-pointer hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-sm md:p-md">
+<h3 class="text-title-sm font-title-sm text-primary font-headline-sm truncate mb-xs">Lumina Pendant</h3>
+<p class="text-body-sm font-body-sm text-outline mb-sm truncate">18k White Gold</p>
+<div class="flex justify-between items-center">
+<span class="text-title-md font-title-md text-primary">$890</span>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden group hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-light">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A structured silk evening gown in a deep midnight navy, draped gracefully over a classic tailor's dummy. The setting is a bright, airy atelier with high ceilings and white walls, creating a sense of spaciousness. Gentle natural light from a nearby window reveals the subtle sheen of the fabric. The composition is calm, refined, and perfectly suited to represent a premium apparel selection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCszDmL3gx1y7kZXktuP1hLTOrtdlW6qiWf-QwqOHioMTnn9P1BKwNc37OXnFi0enOJbgRGYGwVarbBKMfVTxcf4d398Q8v2wZZ3j2p6SZ5Xp0rFW-0COMU2maqTMXn5gVIPMP9SeDMOQYd-bO_M0hjoMYaxIEQwzUXosWV-4ziIzj2nFyH6GitaxCe2AKfFeAmjJDFkel6VvyIcCXL-wKm4_wvkLlHw9f8zs4fsd6oSX0D4Vu3e5TD5-9GuFU1kEm24LwKwXTG8EA"/>
+<div class="absolute top-sm right-sm bg-white/80 backdrop-blur-sm p-xs rounded-full cursor-pointer hover:text-secondary transition-colors text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-sm md:p-md">
+<h3 class="text-title-sm font-title-sm text-primary font-headline-sm truncate mb-xs">Midnight Silk Gown</h3>
+<p class="text-body-sm font-body-sm text-outline mb-sm truncate">Bespoke Collection</p>
+<div class="flex justify-between items-center">
+<span class="text-title-md font-title-md text-primary">$2,100</span>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-xl flex justify-center mb-xl">
+<button class="border-2 border-primary text-primary px-lg py-sm rounded-lg text-title-sm font-title-sm hover:bg-surface-light transition-colors">Load More</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 shadow-[0_-2px_8px_rgba(0,0,0,0.08)] bg-surface dark:bg-surface-container-highest shadow-md fixed bottom-0 left-0 w-full flex justify-around items-center h-nav-height-mobile px-4 bg-surface dark:bg-surface-container-highest md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-label-md font-label-md mt-1">Boutique</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim scale-90 transition-transform duration-200 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="text-label-md font-label-md mt-1">Search</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-md font-label-md mt-1">Wishlist</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-md font-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

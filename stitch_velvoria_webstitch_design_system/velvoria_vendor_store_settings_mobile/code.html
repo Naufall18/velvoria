@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Store Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #1a1f3a;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #1a1f3a;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-surface": "#1d1b18",
+                        "border-subtle": "#E0E0E0",
+                        "surface-tint": "#585d7b",
+                        "on-tertiary-container": "#60918f",
+                        "surface-container-highest": "#e8e1dc",
+                        "inverse-on-surface": "#f6efeb",
+                        "success": "#10B981",
+                        "text-secondary": "#808080",
+                        "text-primary": "#333333",
+                        "primary": "#030722",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "surface-variant": "#e8e1dc",
+                        "secondary-container": "#ffc9b4",
+                        "on-background": "#1d1b18",
+                        "on-error": "#ffffff",
+                        "primary-container": "#1a1f3a",
+                        "primary-fixed": "#dee1ff",
+                        "background": "#fff8f3",
+                        "white": "#FFFFFF",
+                        "surface-container-high": "#eee7e2",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#7d5545",
+                        "outline-variant": "#c7c5ce",
+                        "inverse-surface": "#33302d",
+                        "inverse-primary": "#c0c4e8",
+                        "outline": "#77767e",
+                        "on-primary-fixed": "#151a34",
+                        "error": "#EF4444",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "surface-container-low": "#f9f2ed",
+                        "on-surface-variant": "#46464d",
+                        "on-primary-container": "#8286a7",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "tertiary-fixed": "#b9ece9",
+                        "warning": "#F59E0B",
+                        "on-secondary-container": "#7a5242",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container": "#f3ede8",
+                        "surface-dim": "#dfd9d4",
+                        "surface-light": "#F5F5F5",
+                        "on-secondary-fixed": "#301408",
+                        "on-primary-fixed-variant": "#404562",
+                        "tertiary-container": "#002625",
+                        "surface-bright": "#fff8f3",
+                        "tertiary": "#000d0c",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fff8f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "nav-height-desktop": "80px",
+                        "md": "16px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "4xl": "96px",
+                        "xl": "32px",
+                        "3xl": "64px"
+                    },
+                    "fontFamily": {
+                        "title-sm": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "title-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-primary font-body-md antialiased pt-nav-height-mobile pb-[calc(80px+32px)] md:pb-nav-height-desktop min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)] bg-white dark:bg-surface-dim">
+<div class="flex items-center justify-between h-nav-height-mobile px-md w-full max-w-screen-xl mx-auto">
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity duration-300 active:scale-95 transition-transform p-sm -ml-sm">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-title-lg text-title-lg text-primary dark:text-primary-fixed font-semibold tracking-tight">Store Settings</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-md py-lg flex flex-col gap-xl">
+<!-- Section 1: Brand Identity -->
+<section class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="relative w-full h-32 md:h-48 bg-surface-container-high">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A soft, out-of-focus background image of a luxurious boutique interior, featuring cream-colored walls and warm lighting, creating a calm, high-end atmosphere suitable for a premium brand banner placeholder." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATpR8KI4oiiy8EpGMsO-ULFmfs3WD4Kt-pOLB-7mUIOw13xURopJxGi_juwPxfwA-8RusD0GZpTL9z0rEF33YSVSfRaZ5zA-df_n3YNG2EH8jWyVaxQ_Ypgb2Zj2b8LQ8B5fWw-KZAPSf3eZYfNA8x8u9JI7AiG9FhqydiJGqmQq1sWIAMxytdYr1b7n1OXOjQ8Ua5yCFE8rC782SwuZDujlOEw-argM-M_1YF2QfrnKgrty-U4mdpaoegZi2qlw76FIN4oVvJoCI');"></div>
+<button aria-label="Edit Banner" class="absolute top-sm right-sm bg-white/80 backdrop-blur-sm p-sm rounded-full shadow-sm hover:bg-white transition-colors text-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<!-- Store Logo -->
+<div class="absolute -bottom-12 left-md">
+<div class="relative">
+<div class="w-24 h-24 rounded-full border-4 border-white bg-surface-container shadow-sm overflow-hidden flex items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-primary opacity-50">VL</span>
+</div>
+<button aria-label="Edit Logo" class="absolute bottom-0 right-0 bg-white p-xs rounded-full shadow-md border border-border-subtle hover:bg-surface-light transition-colors text-primary">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-md pt-16 flex flex-col gap-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary">Brand Identity</h2>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="storeName">Store Name</label>
+<input class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md" id="storeName" placeholder="Enter store name" type="text" value="Velvoria Elegance"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="storeDescription">Store Description</label>
+<textarea class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md resize-none" id="storeDescription" placeholder="Describe your brand..." rows="4">Curators of fine minimalist luxury goods, focusing on sustainable materials and timeless design.</textarea>
+</div>
+</div>
+</section>
+<!-- Section 2: Contact Information -->
+<section class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-md flex flex-col gap-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary">Contact Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="businessEmail">Business Email</label>
+<input class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md" id="businessEmail" placeholder="Enter business email" type="email" value="contact@velvoria.com"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="phoneNumber">Phone Number</label>
+<input class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md" id="phoneNumber" placeholder="Enter phone number" type="tel" value="+1 (555) 123-4567"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="businessAddress">Business Address</label>
+<textarea class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md resize-none" id="businessAddress" placeholder="Enter physical or mailing address" rows="2">123 Luxury Lane, Suite 400
+Metropolis, NY 10001</textarea>
+</div>
+</section>
+<!-- Section 3: Store Policies -->
+<section class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-md flex flex-col gap-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary">Store Policies</h2>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="shippingPolicy">Shipping Policy</label>
+<textarea class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md resize-none" id="shippingPolicy" placeholder="Detail your shipping methods and timelines..." rows="3">All orders are processed within 1-2 business days. Standard shipping typically takes 3-5 business days. Expedited options available at checkout.</textarea>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-lg text-label-lg text-text-primary" for="returnPolicy">Return &amp; Refund Policy</label>
+<textarea class="w-full border border-border-subtle rounded-md px-md py-sm bg-white text-primary focus:border-primary-container focus:ring-1 focus:ring-primary-container outline-none transition-shadow font-body-md text-body-md resize-none" id="returnPolicy" placeholder="Detail your return and refund terms..." rows="3">We accept returns within 30 days of delivery for items in their original condition. Refunds are issued to the original payment method minus return shipping costs.</textarea>
+</div>
+</section>
+<!-- Section 4: Store Status -->
+<section class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-md flex flex-col gap-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary">Store Status</h2>
+<div class="flex items-center justify-between py-sm border-b border-border-subtle last:border-0">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Online Visibility</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">When disabled, your store is placed in vacation mode.</p>
+</div>
+<!-- Toggle Switch -->
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer z-10 transition-transform duration-300" id="visibilityToggle" name="toggle" style="right: 0; border-color: #1a1f3a;" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-primary-container cursor-pointer" for="visibilityToggle"></label>
+</div>
+</div>
+</section>
+<!-- Primary CTA -->
+<div class="pt-sm">
+<button class="w-full bg-secondary-fixed-dim hover:bg-secondary-container text-primary font-title-md text-title-md py-md rounded-lg shadow-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 active:scale-95">
+                Save Changes
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-nav-height-mobile px-base bg-white dark:bg-surface-dim z-50 rounded-t-xl shadow-[0_-2px_8px_rgba(0,0,0,0.08)] md:hidden">
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-300 w-16" href="#">
+<span class="material-symbols-outlined mb-xs text-[24px]">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-300 w-16" href="#">
+<span class="material-symbols-outlined mb-xs text-[24px]">shopping_bag</span>
+<span class="font-label-md text-label-md">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-300 w-16" href="#">
+<span class="material-symbols-outlined mb-xs text-[24px]">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center justify-center text-primary font-bold bg-secondary-container rounded-xl px-3 py-1 w-20" href="#">
+<span class="material-symbols-outlined mb-xs text-[24px]" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<script>
+        // Simple toggle interaction logic for the custom CSS toggle
+        const toggleInput = document.getElementById('visibilityToggle');
+        toggleInput.addEventListener('change', function() {
+            if(this.checked) {
+                this.style.right = '0';
+                this.style.borderColor = '#1a1f3a';
+                this.nextElementSibling.style.backgroundColor = '#1a1f3a';
+            } else {
+                this.style.right = '24px';
+                this.style.borderColor = '#c7c5ce';
+                this.nextElementSibling.style.backgroundColor = '#c7c5ce';
+            }
+        });
+        
+        // Initialize state
+        if(!toggleInput.checked) {
+             toggleInput.style.right = '24px';
+             toggleInput.style.borderColor = '#c7c5ce';
+             toggleInput.nextElementSibling.style.backgroundColor = '#c7c5ce';
+        }
+    </script>
+</body></html>

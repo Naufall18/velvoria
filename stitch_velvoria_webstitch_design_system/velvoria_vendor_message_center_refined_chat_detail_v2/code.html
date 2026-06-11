@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor Message Center - Chat View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "warning": "#F59E0B",
+                        "surface-bright": "#fff8f3",
+                        "inverse-surface": "#33302d",
+                        "surface-dim": "#dfd9d4",
+                        "primary": "#030722",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary-fixed": "#151a34",
+                        "error-container": "#ffdad6",
+                        "text-secondary": "#808080",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#7d5545",
+                        "outline": "#77767e",
+                        "background": "#fff8f3",
+                        "inverse-primary": "#c0c4e8",
+                        "border-subtle": "#E0E0E0",
+                        "on-tertiary-container": "#60918f",
+                        "surface-tint": "#585d7b",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "error": "#EF4444",
+                        "secondary-container": "#ffc9b4",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "surface-container": "#f3ede8",
+                        "on-secondary-container": "#7a5242",
+                        "tertiary-fixed": "#b9ece9",
+                        "primary-container": "#1a1f3a",
+                        "on-primary-container": "#8286a7",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f6efeb",
+                        "on-primary": "#ffffff",
+                        "text-primary": "#333333",
+                        "surface-container-highest": "#e8e1dc",
+                        "primary-fixed": "#dee1ff",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "white": "#FFFFFF",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#46464d",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-light": "#F5F5F5",
+                        "surface-container-high": "#eee7e2",
+                        "on-surface": "#1d1b18",
+                        "tertiary": "#000d0c",
+                        "surface-variant": "#e8e1dc",
+                        "on-background": "#1d1b18",
+                        "tertiary-container": "#002625",
+                        "outline-variant": "#c7c5ce",
+                        "success": "#10B981",
+                        "surface": "#fff8f3",
+                        "surface-container-low": "#f9f2ed",
+                        "on-secondary-fixed": "#301408",
+                        "rose-gold": "#B76E79",
+                        "cream": "#F9F6F0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "8px": "8px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "nav-height-desktop": "80px",
+                        "4xl": "96px",
+                        "3xl": "64px",
+                        "xs": "4px",
+                        "nav-height-mobile": "64px",
+                        "md": "16px",
+                        "2xl": "48px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-text-primary antialiased h-screen flex flex-col md:flex-row overflow-hidden font-body-md">
+<!-- TopAppBar (Mobile) / NavigationDrawer (Desktop - Implicitly part of shell if needed, but keeping focused on chat view as requested) -->
+<!-- Applying Shared Component JSON for TopAppBar (Mobile only for shell context) -->
+<header class="md:hidden flex justify-between items-center px-4 h-16 w-full fixed top-0 w-full z-50 shadow-sm bg-white dark:bg-inverse-surface">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm-mobile text-primary dark:text-primary-fixed">Messages</h1>
+<button aria-label="Search" class="text-primary dark:text-primary-fixed active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Content Canvas - Chat View -->
+<main class="flex-1 flex flex-col h-full w-full max-w-[1440px] mx-auto bg-surface shadow-[0_2px_8px_rgba(0,0,0,0.08)] mt-16 md:mt-0 relative overflow-hidden">
+<!-- Chat Header -->
+<div class="h-20 border-b border-border-subtle bg-white flex items-center justify-between px-lg z-10 flex-shrink-0 shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
+<div class="flex items-center gap-md">
+<!-- Back button for mobile, potentially hidden on desktop if split-pane -->
+<button class="md:hidden text-primary hover:bg-surface-light p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="relative">
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover border border-border-subtle" data-alt="A sophisticated close-up portrait of a woman with natural makeup, looking directly at the camera with a calm expression. The lighting is soft and flattering, highlighting her features against a neutral background. The overall aesthetic is clean, modern, and elegant, fitting for a premium brand profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr4GOnsELAHwee5GR8_yFSlDHc-OJj7PHeEb05FhYMzFHgGb5WGy2zRVEuW3kbAmh0lvG03DSqzZT1XN6LeO6Z91KIYHu5fcQMZ75e7pOBWJdXLIV-NbAAop4YLU03N_CoCLL7jx_xF8mbuz5bKs3Kht-0a3Do_f_xrjvMzGzVjn7ZhHqo4hD1TGUiFKOLh5H56wBvGMzuMny-vmZcXKWkDhn8T8H_-2yvTdrZNSZRBxXxC2Z3ABWIslYiRnqtTDezOx9wZG55enA"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-success border-2 border-white rounded-full"></span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary m-0 p-0 font-display-md">Eleanor Vance</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Active now</p>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<button aria-label="More options" class="text-primary hover:bg-surface-light p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Context / Product Reference Card -->
+<div class="px-lg py-md border-b border-border-subtle z-10 flex-shrink-0 bg-surface">
+<a class="flex items-center gap-md bg-white p-sm rounded-8px shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-shadow duration-300 group" href="#">
+<img alt="Midnight Leather Tote" class="w-12 h-12 rounded-8px bg-surface object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high-quality studio shot of a luxurious black leather tote bag resting on a clean, minimal white surface. The lighting emphasizes the fine texture and craftsmanship of the leather. The mood is sophisticated and premium, characteristic of a high-end fashion boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy4Hc4hKLlIBEC5Oc4C2PrRmGM5g1QE8sZbevo_loeH8adlPL6FtUW8xbgYSUnhXew11T8lvnWpkzxkwTjUih8L3ev_gXhPu9swzYtYnk9IwXj7MyQQXgKOTpq-7gYJrkbfvRT1xH5OG0gQUlEZriKn9oWcG9R6hJ00UGTpzoae8545QkOI97SSNZh5uWiGbXTrxcIAvzf7sxJE-4zcpPeou8AwdgTcZ2hOjnzjj4JrgbmYwsdwwT65lRc_WlJWbQEH7sg6kAj-vM"/>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider">Inquiry</p>
+<p class="font-display-md text-title-md text-primary">Midnight Leather Tote</p>
+</div>
+<span class="material-symbols-outlined text-text-secondary group-hover:text-primary transition-colors">chevron_right</span>
+</a>
+</div>
+<!-- Chat Thread (Scrollable Area) -->
+<div class="flex-1 overflow-y-auto p-lg flex flex-col gap-lg bg-surface custom-scrollbar">
+<!-- Timestamp -->
+<div class="flex justify-center my-md">
+<span class="font-label-md text-label-md text-text-secondary bg-surface-light px-3 py-1 rounded-full">Today, 10:42 AM</span>
+</div>
+<!-- Customer Message (Left) -->
+<div class="flex justify-start">
+<div class="max-w-[80%] md:max-w-[65%] flex gap-sm items-end">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover hidden md:block" data-alt="A sophisticated close-up portrait of a woman with natural makeup, looking directly at the camera with a calm expression. The lighting is soft and flattering, highlighting her features against a neutral background. The overall aesthetic is clean, modern, and elegant, fitting for a premium brand profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUuObtgVvrxysAES4VhPcXtoGKxBrQPPcCInBIfa37elOXGCd6LFZHyy4Wiijw8bjPQjH0tC-dgG54T1ROdtOPmQ1vINJ94ZNFVOZhVQDx9iHUVpyB82MXflj0dpEK0RQLADMXqTCUQ8l4PKmvl5vG61CbAUIfrH9sj5HTbmwx_jUiLxLtazpYsLXnbmoJqS18YUnqcM5slfninuJ0XtWBxqduxs4aF-y7fut7NHmUH3KWRkcONlEgCaCozyyWE4iPEZSqLwXeF68"/>
+<div class="bg-white text-primary p-lg rounded-8px shadow-sm border border-border-subtle">
+<p class="font-body-md text-body-md">Hello! I'm interested in the Midnight Leather Tote. Could you tell me if the hardware is solid brass or plated?</p>
+</div>
+</div>
+</div>
+<!-- Vendor Message (Right) -->
+<div class="flex justify-end">
+<div class="max-w-[80%] md:max-w-[65%] flex gap-sm items-end flex-row-reverse">
+<div class="bg-[#1a1f3a] text-white p-lg rounded-8px shadow-sm">
+<p class="font-body-md text-body-md">Good morning, Eleanor! Thank you for your interest. The hardware on the Midnight Leather Tote is indeed solid brass with a subtle brushed finish to maintain that understated elegant look.</p>
+</div>
+</div>
+</div>
+<!-- Vendor Message (Right - consecutive) -->
+<div class="flex justify-end mt-[-16px]">
+<div class="max-w-[80%] md:max-w-[65%] flex gap-sm items-end flex-row-reverse">
+<div class="bg-[#1a1f3a] text-white p-lg rounded-8px shadow-sm">
+<p class="font-body-md text-body-md">I can send over a few close-up photos of the clasps if you'd like?</p>
+</div>
+</div>
+</div>
+<!-- Timestamp -->
+<div class="flex justify-center my-md">
+<span class="font-label-md text-label-md text-text-secondary bg-surface-light px-3 py-1 rounded-full">11:15 AM</span>
+</div>
+<!-- Customer Message (Left) -->
+<div class="flex justify-start">
+<div class="max-w-[80%] md:max-w-[65%] flex gap-sm items-end">
+<img alt="Avatar" class="w-8 h-8 rounded-full object-cover hidden md:block" data-alt="A sophisticated close-up portrait of a woman with natural makeup, looking directly at the camera with a calm expression. The lighting is soft and flattering, highlighting her features against a neutral background. The overall aesthetic is clean, modern, and elegant, fitting for a premium brand profile picture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2HZJJPTXfwC_TYciZ32YJmp48E-Kx2S8C_mXt_phxX6Vo3kdoFbVMzmkf4cRw3lTmnh66mhfYMStL8Q0CnjFf-QwdZQ8KSNZz2mcI09oG9I38kkALN14ATRj7V_ePd43ELb61x1qKcKi_4qq1wv09UqKWE2f7BoTrgOVyxUHc0pFS5h4U5uQqUlsBpG97svHRMQ3usemAkHJTdb3PvwmO1t0s2ByCMsMm558Z3tDah09rP6ApZ9jUp4KNgrj54ADb9mjvzJn7L58"/>
+<div class="bg-white text-primary p-lg rounded-8px shadow-sm border border-border-subtle">
+<p class="font-body-md text-body-md">Yes, that would be wonderful. I just want to make sure it matches my other accessories.</p>
+</div>
+</div>
+</div>
+<!-- Spacer for scrolling padding at bottom -->
+<div class="h-4"></div>
+</div>
+<!-- Message Input Area -->
+<div class="p-4 bg-white border-t border-border-subtle flex items-end gap-sm md:gap-md z-10 flex-shrink-0 shadow-[0_-2px_10px_rgba(0,0,0,0.02)]">
+<button aria-label="Attach file" class="text-text-secondary hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button aria-label="Quick replies" class="text-text-secondary hover:text-primary transition-colors p-2 hidden md:block">
+<span class="material-symbols-outlined">bolt</span>
+</button>
+<div class="flex-1 relative">
+<textarea class="w-full bg-white border border-border-subtle rounded-xl py-3 px-4 focus:ring-0 focus:border-primary focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] resize-none font-body-md text-body-md text-primary placeholder-text-secondary transition-all" placeholder="Type a message..." rows="1" style="min-height: 48px; max-height: 120px;"></textarea>
+</div>
+<button aria-label="Send message" class="bg-primary text-white rounded-full p-3 hover:bg-[#1a1f3a] transition-all active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined filled">send</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) - Using Shared Components JSON styling -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 px-2 pb-safe bg-white dark:bg-inverse-surface shadow-[0_-4px_12px_rgba(0,0,0,0.06)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-xl px-3 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label-md text-label-md">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Clients</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant px-3 py-1 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-label-md text-label-md">Store</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor Onboarding - Identity Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fff8f3",
+                        "tertiary-fixed": "#b9ece9",
+                        "error": "#EF4444",
+                        "success": "#10B981",
+                        "on-secondary-container": "#7a5242",
+                        "surface-container-low": "#f9f2ed",
+                        "surface-variant": "#e8e1dc",
+                        "secondary-fixed": "#ffdbce",
+                        "surface-container": "#f3ede8",
+                        "text-primary": "#333333",
+                        "surface-container-high": "#eee7e2",
+                        "inverse-on-surface": "#f6efeb",
+                        "tertiary": "#000d0c",
+                        "on-primary-fixed": "#151a34",
+                        "primary": "#030722",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-primary-fixed-variant": "#404562",
+                        "border-subtle": "#E0E0E0",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "on-surface": "#1d1b18",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "secondary-container": "#ffc9b4",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "outline": "#77767e",
+                        "on-surface-variant": "#46464d",
+                        "background": "#fff8f3",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fff8f3",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-light": "#F5F5F5",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1d1b18",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#8286a7",
+                        "warning": "#F59E0B",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dfd9d4",
+                        "surface-tint": "#585d7b",
+                        "white": "#FFFFFF",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "secondary": "#7d5545",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c5ce",
+                        "primary-container": "#1a1f3a",
+                        "inverse-primary": "#c0c4e8",
+                        "text-secondary": "#808080",
+                        "on-tertiary-container": "#60918f",
+                        "tertiary-container": "#002625",
+                        "on-secondary-fixed": "#301408",
+                        "inverse-surface": "#33302d",
+                        "primary-fixed": "#dee1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "4xl": "96px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "base": "8px",
+                        "xl": "32px",
+                        "2xl": "48px",
+                        "nav-height-mobile": "64px",
+                        "nav-height-desktop": "80px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "3xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "title-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fff8f3; /* surface */
+            color: #333333; /* text-primary */
+        }
+        .upload-zone:hover {
+            border-color: #030722; /* primary */
+            background-color: rgba(3, 7, 34, 0.02);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-body-md text-text-primary bg-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] sticky top-0 z-50">
+<div class="flex justify-between items-center h-nav-height-mobile md:h-nav-height-desktop px-4 md:px-lg max-w-[1440px] mx-auto w-full space-y-2xl">
+<button class="text-primary hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm-mobile md:font-headline-sm md:text-headline-sm text-primary">Vendor Onboarding</h1>
+<button class="text-primary hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-start pt-2xl px-md pb-4xl max-w-3xl mx-auto w-full">
+<!-- Progress Indicator -->
+<div class="w-full mb-xl space-y-2xl">
+<div class="flex justify-between items-center mb-sm space-y-2xl">
+<span class="font-label-lg text-label-lg text-text-secondary">Step 3 of 4</span>
+<span class="font-label-lg text-label-lg text-primary">Identity Verification</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden space-y-2xl">
+<div class="bg-primary h-full rounded-full w-3/4 transition-all duration-500 ease-out space-y-2xl"></div>
+</div>
+</div>
+<!-- Header Content -->
+<div class="text-center mb-2xl w-full space-y-2xl">
+<h2 class="font-display-md text-display-md text-primary mb-md font-headline-lg">Identity Verification</h2>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto">
+                To maintain the integrity of our marketplace and ensure a secure environment for all users, please upload a valid business license and a government-issued ID.
+            </p>
+</div>
+<!-- Form Area -->
+<div class="w-full bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-lg md:p-xl space-y-xl space-y-2xl">
+<!-- Security Badge -->
+<div class="flex items-center justify-center p-sm bg-success/5 rounded-lg border border-success/20 mb-xl space-y-2xl">
+<span class="material-symbols-outlined text-success mr-sm" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Your data is securely encrypted and stored following industry standards.</span>
+</div>
+<!-- Upload Zone 1: Business License -->
+<div class="space-y-sm space-y-2xl">
+<label class="block font-title-md text-title-md text-primary font-headline-sm">Business License</label>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Upload a clear copy of your current business registration or license.</p>
+<div class="upload-zone border-2 border-dashed border-border-subtle rounded-lg p-xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 bg-surface-container-low space-y-2xl"><span class="material-symbols-outlined text-primary/40 text-[48px] mb-md" style="font-variation-settings: 'wght' 200;">badge</span><span class="font-title-sm text-title-sm text-primary mb-xs">Upload Government ID</span><span class="font-body-sm text-body-sm text-text-secondary">Drag and drop JPG or PNG</span></div>
+</div><div class="h-px w-full bg-border-subtle my-xl space-y-2xl"></div><div class="space-y-sm space-y-2xl"><label class="block font-headline-sm text-title-md text-primary">Selfie with ID</label><p class="font-body-sm text-body-sm text-text-secondary mb-md">Please upload a photo of yourself holding your ID next to your face for verification.</p><div class="upload-zone border-2 border-dashed border-border-subtle bg-surface-container-low rounded-lg p-xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 space-y-2xl"><span class="material-symbols-outlined text-primary/40 text-[48px] mb-md" style="font-variation-settings: 'wght' 200;">face</span><span class="font-title-sm text-title-sm text-primary mb-xs">Upload Selfie</span><span class="font-body-sm text-body-sm text-text-secondary">JPG or PNG (max. 10MB)</span></div></div>
+<!-- Divider -->
+<div class="h-px w-full bg-border-subtle space-y-2xl"></div>
+<!-- Upload Zone 2: Government ID -->
+<div class="space-y-sm space-y-2xl">
+<label class="block font-title-md text-title-md text-primary font-headline-sm">Government-Issued ID</label>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">Upload a clear photo of your passport, driver's license, or national ID card.</p>
+<div class="upload-zone border-2 border-dashed border-border-subtle rounded-lg p-xl flex flex-col items-center justify-center cursor-pointer transition-all duration-300 space-y-2xl">
+<span class="material-symbols-outlined text-primary-container text-[48px] mb-md" data-icon="badge">badge</span>
+<span class="font-title-sm text-title-sm text-primary mb-xs">Click to upload or drag and drop</span>
+<span class="font-body-sm text-body-sm text-text-secondary">JPG or PNG (max. 10MB)</span>
+</div>
+</div>
+<!-- Action Area -->
+<div class="pt-lg flex flex-col md:flex-row justify-between items-center gap-md space-y-2xl">
+<button class="w-full md:w-auto px-lg py-3 rounded-lg border-2 border-primary text-primary font-title-sm text-title-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300">
+                    Save for Later
+                </button>
+<button class="w-full md:w-auto px-xl py-3 rounded-lg bg-primary text-white font-title-sm text-title-sm hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:opacity-90 transition-all duration-300 flex items-center justify-center font-title-md">
+                    Submit for Review
+                    <span class="material-symbols-outlined ml-sm text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>

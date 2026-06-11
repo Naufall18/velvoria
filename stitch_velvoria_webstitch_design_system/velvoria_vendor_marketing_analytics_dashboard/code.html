@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Marketing Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f9f2ed",
+                      "secondary-fixed": "#ffdbce",
+                      "success": "#10B981",
+                      "on-tertiary": "#ffffff",
+                      "text-secondary": "#808080",
+                      "surface": "#fff8f3",
+                      "outline": "#77767e",
+                      "inverse-on-surface": "#f6efeb",
+                      "primary-container": "#1a1f3a",
+                      "secondary-container": "#ffc9b4",
+                      "surface-light": "#F5F5F5",
+                      "on-tertiary-container": "#60918f",
+                      "text-primary": "#333333",
+                      "secondary": "#7d5545",
+                      "white": "#FFFFFF",
+                      "on-primary-fixed": "#151a34",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e8e1dc",
+                      "on-secondary-fixed": "#301408",
+                      "inverse-primary": "#c0c4e8",
+                      "primary-fixed": "#dee1ff",
+                      "tertiary-fixed": "#b9ece9",
+                      "on-tertiary-fixed": "#00201f",
+                      "on-primary-container": "#8286a7",
+                      "background": "#fff8f3",
+                      "tertiary": "#000d0c",
+                      "surface-bright": "#fff8f3",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "border-subtle": "#E0E0E0",
+                      "warning": "#F59E0B",
+                      "on-background": "#1d1b18",
+                      "outline-variant": "#c7c5ce",
+                      "surface-container-highest": "#e8e1dc",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#eee7e2",
+                      "surface-dim": "#dfd9d4",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "on-surface-variant": "#46464d",
+                      "on-secondary": "#ffffff",
+                      "error": "#EF4444",
+                      "surface-tint": "#585d7b",
+                      "on-error": "#ffffff",
+                      "on-surface": "#1d1b18",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#002625",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "surface-container": "#f3ede8",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "primary": "#030722",
+                      "on-primary-fixed-variant": "#404562",
+                      "inverse-surface": "#33302d",
+                      "on-secondary-container": "#7a5242"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "2xl": "48px",
+                      "xs": "4px",
+                      "nav-height-mobile": "64px",
+                      "base": "8px",
+                      "xl": "32px",
+                      "md": "16px",
+                      "4xl": "96px",
+                      "lg": "24px",
+                      "3xl": "64px",
+                      "sm": "8px",
+                      "nav-height-desktop": "80px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        .chart-bg {
+            background-image: radial-gradient(circle at top right, rgba(255, 201, 180, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky shadow-sm bg-white dark:bg-surface-container-lowest z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center h-[80px] px-md md:px-xl max-w-[1440px] mx-auto w-full">
+<button class="text-text-secondary dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer active:opacity-70 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase tracking-widest text-center truncate px-4">Velvoria Analytics</h1>
+<button class="w-10 h-10 rounded-full overflow-hidden border border-border-subtle cursor-pointer active:opacity-70 flex-shrink-0">
+<img alt="Vendor Profile Picture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFYRRxSx3X8hdkXpEmQYvMAoud6WbCebJ_sT8jkE9Kp1qr6L0njmUSqcsd3gxuEruIbz725rjGGkLgwiyiQ7oFxbFeHlGuAd4ezm5XevtB7ijR-capJ4f9y0qqfPsfl8W3B8g8_lhzjNgjUe0iL4kHsqAfTdY_qHfnDk2mu_1tAVvWod3TQ4E1Fp3MlQrLIvSrvWoTT5ttwo4Kw06nRUKOkypE3xxgvdo1XW4v7mgsHs02xaEERwRe9OO_73vbRs9VtfbQovCCt2I"/>
+</button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-md md:px-xl pt-lg pb-4xl flex flex-col gap-xl">
+<!-- Hero & Controls -->
+<section class="flex flex-col gap-md pt-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary">Marketing Overview</h2>
+<div class="flex items-center justify-between bg-white border border-border-subtle rounded-lg px-4 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary text-sm">calendar_today</span>
+<span class="font-body-md text-body-md text-text-primary">Last 30 Days</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary text-sm">expand_more</span>
+</div>
+</section>
+<!-- KPIs (Horizontal Scroll on Mobile) -->
+<section class="w-full overflow-x-auto no-scrollbar -mx-md px-md md:mx-0 md:px-0">
+<div class="flex md:grid md:grid-cols-4 gap-md pb-4 w-max md:w-full">
+<!-- KPI 1 -->
+<div class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] min-w-[240px] md:min-w-0 border-l-4 border-primary">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider mb-2">Total Spend</p>
+<p class="font-display-md text-display-md text-primary">$12,450</p>
+<div class="flex items-center gap-1 mt-2 text-success">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-label-md text-label-md">+8.4%</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] min-w-[240px] md:min-w-0">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider mb-2">ROAS</p>
+<p class="font-display-md text-display-md text-primary">3.2x</p>
+<div class="flex items-center gap-1 mt-2 text-success">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-label-md text-label-md">+1.1x</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] min-w-[240px] md:min-w-0">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider mb-2">New Customers</p>
+<p class="font-display-md text-display-md text-primary">428</p>
+<div class="flex items-center gap-1 mt-2 text-error">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<span class="font-label-md text-label-md">-2.4%</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] min-w-[240px] md:min-w-0">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider mb-2">Conversion Rate</p>
+<p class="font-display-md text-display-md text-primary">4.8%</p>
+<div class="flex items-center gap-1 mt-2 text-success">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="font-label-md text-label-md">+0.6%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Charts Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<!-- Line Chart: Campaign Traffic -->
+<section class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col gap-md chart-bg">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary">Traffic Sources</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Visits over time by channel</p>
+</div>
+<button class="text-text-secondary p-1"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+<!-- Mock Chart Area (CSS/HTML representation of a sophisticated line chart) -->
+<div class="h-48 w-full mt-4 relative flex items-end justify-between px-2 gap-1 pb-6 border-b border-border-subtle">
+<!-- Y-Axis labels -->
+<div class="absolute left-0 bottom-6 top-0 flex flex-col justify-between text-xs text-text-secondary pr-2">
+<span>5k</span>
+<span>2.5k</span>
+<span>0</span>
+</div>
+<!-- Data lines representation -->
+<div class="absolute inset-0 pl-8 pb-6 flex items-end">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q20,60 40,70 T80,40 T100,20" fill="none" stroke="#1a1f3a" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<path d="M0,90 Q30,85 50,70 T90,60 T100,50" fill="none" stroke="#ffc9b4" stroke-dasharray="4,4" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="absolute bottom-0 left-8 right-0 flex justify-between text-xs text-text-secondary">
+<span>W1</span>
+<span>W2</span>
+<span>W3</span>
+<span>W4</span>
+</div>
+</div>
+<!-- Legend -->
+<div class="flex gap-4 mt-2 justify-center">
+<div class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-primary-container"></div><span class="font-label-md text-label-md">Social</span></div>
+<div class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-secondary-container"></div><span class="font-label-md text-label-md">Search</span></div>
+</div>
+</section>
+<!-- Doughnut Chart: Channel Distribution -->
+<section class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col gap-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary">Channel Distribution</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">Revenue share by platform</p>
+</div>
+<button class="text-text-secondary p-1"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+<!-- Mock Doughnut -->
+<div class="flex-1 flex items-center justify-center py-4 relative">
+<div class="w-40 h-40 rounded-full border-[16px] border-primary-container relative flex items-center justify-center" style="border-right-color: #ffc9b4; border-bottom-color: #f3ede8; transform: rotate(-45deg);">
+<div class="transform rotate-45 text-center">
+<span class="font-title-lg text-title-lg text-primary block">64%</span>
+<span class="font-label-md text-label-md text-text-secondary">Instagram</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-4">
+<div class="bg-surface-light p-2 rounded flex justify-between items-center">
+<span class="font-body-sm text-body-sm">Instagram</span>
+<span class="font-title-sm text-title-sm">64%</span>
+</div>
+<div class="bg-surface-light p-2 rounded flex justify-between items-center border-l-2 border-secondary-container">
+<span class="font-body-sm text-body-sm">Pinterest</span>
+<span class="font-title-sm text-title-sm">22%</span>
+</div>
+<div class="bg-surface-light p-2 rounded flex justify-between items-center border-l-2 border-surface-container">
+<span class="font-body-sm text-body-sm">Email</span>
+<span class="font-title-sm text-title-sm">14%</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Top Campaigns List -->
+<section class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="p-lg border-b border-border-subtle flex justify-between items-center">
+<h3 class="font-title-lg text-title-lg text-primary">Top Performing Campaigns</h3>
+<button class="text-primary font-label-md text-label-md">View All</button>
+</div>
+<div class="flex flex-col">
+<!-- Row 1 -->
+<div class="p-md border-b border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">campaign</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-primary">Summer Collection '24</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Instagram Carousel</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 md:text-right">
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Clicks</p>
+<p class="font-title-sm text-title-sm">12.4k</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Conv.</p>
+<p class="font-title-sm text-title-sm">5.2%</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Rev.</p>
+<p class="font-title-sm text-title-sm">$8,240</p>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-md border-b border-border-subtle flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-secondary-container flex items-center justify-center text-secondary-fixed">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-primary">VIP Early Access</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Email Newsletter</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8 md:text-right">
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Clicks</p>
+<p class="font-title-sm text-title-sm">8.1k</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Conv.</p>
+<p class="font-title-sm text-title-sm">8.4%</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-text-secondary">Rev.</p>
+<p class="font-title-sm text-title-sm">$12,100</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-border-subtle bg-surface dark:bg-background w-full py-xl mt-4xl">
+<div class="max-w-[1440px] mx-auto px-xl flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-title-sm text-title-sm text-primary">Velvoria Luxury</span>
+<p class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed opacity-80 hover:opacity-100 transition-opacity">© 2024 Velvoria Luxury. Proprietary Vendor Data.</p>
+<div class="flex gap-4">
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Support</a>
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-text-secondary hover:text-primary transition-colors" href="#">Data Export</a>
+</div>
+</div>
+</footer>
+</body></html>

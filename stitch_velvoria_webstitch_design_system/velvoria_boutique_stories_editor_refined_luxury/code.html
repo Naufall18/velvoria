@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria Vendor Suite - Story Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#585d7b",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "surface": "#fff8f3",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#46464d",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e8e1dc",
+                        "inverse-on-surface": "#f6efeb",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "white": "#FFFFFF",
+                        "on-background": "#1d1b18",
+                        "text-secondary": "#808080",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "background": "#fff8f3",
+                        "secondary-container": "#ffc9b4",
+                        "on-tertiary-container": "#60918f",
+                        "surface-light": "#F5F5F5",
+                        "on-surface": "#1d1b18",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-container-low": "#f9f2ed",
+                        "success": "#10B981",
+                        "secondary-fixed": "#ffdbce",
+                        "tertiary-container": "#002625",
+                        "primary-container": "#1a1f3a",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dfd9d4",
+                        "tertiary": "#000d0c",
+                        "outline-variant": "#c7c5ce",
+                        "border-subtle": "#E0E0E0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e8e1dc",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-bright": "#fff8f3",
+                        "error": "#EF4444",
+                        "surface-container-high": "#eee7e2",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "primary-fixed": "#dee1ff",
+                        "on-secondary-fixed": "#301408",
+                        "on-primary-fixed": "#151a34",
+                        "on-secondary-container": "#7a5242",
+                        "inverse-surface": "#33302d",
+                        "tertiary-fixed": "#b9ece9",
+                        "surface-container": "#f3ede8",
+                        "outline": "#77767e",
+                        "on-error-container": "#93000a",
+                        "primary": "#030722",
+                        "secondary": "#7d5545",
+                        "inverse-primary": "#c0c4e8",
+                        "warning": "#F59E0B",
+                        "on-primary-container": "#8286a7",
+                        "text-primary": "#333333"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "nav-height-desktop": "80px",
+                        "nav-height-mobile": "64px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "base": "8px",
+                        "4xl": "96px",
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "3xl": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "title-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fff8f3; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editor-content:empty:before {
+            content: attr(data-placeholder);
+            color: #808080;
+            pointer-events: none;
+            display: block;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c7c5ce;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md text-on-background h-screen flex flex-col overflow-hidden bg-background">
+<!-- TopAppBar -->
+<header class="bg-surface shadow-sm h-nav-height-desktop flex justify-between items-center px-xl w-full max-w-[1440px] mx-auto shrink-0 z-20">
+<div class="flex items-center gap-md">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors duration-300 text-on-surface-variant">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary tracking-tight">Editor</h1>
+</div>
+<div class="flex items-center gap-lg">
+<span class="font-label-md text-label-md text-text-secondary">Last saved 2 mins ago</span>
+<button class="bg-primary text-white font-label-lg text-label-lg px-6 py-2.5 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                Publish
+            </button>
+</div>
+</header>
+<!-- Main Workspace -->
+<div class="flex flex-1 overflow-hidden max-w-[1440px] mx-auto w-full relative">
+<!-- NavigationDrawer (Hidden on Mobile) -->
+<aside class="hidden md:flex flex-col h-full w-72 bg-surface-container-low rounded-r-lg shadow-md py-lg px-md shrink-0 z-10">
+<div class="mb-xl px-sm">
+<h2 class="font-title-sm text-title-sm text-on-surface-variant uppercase tracking-widest">Journal Suite</h2>
+</div>
+<nav class="flex flex-col gap-sm flex-1">
+<a class="flex items-center gap-md px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-semibold transition-all duration-300" href="#">
+<span class="material-symbols-outlined icon-fill">article</span>
+<span class="font-label-lg text-label-lg">Story Overview</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard_customize</span>
+<span class="font-label-lg text-label-lg">Layouts</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span class="font-label-lg text-label-lg">Media Library</span>
+</a>
+<a class="flex items-center gap-md px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-xl border-t border-border-subtle">
+<div class="flex items-center gap-md px-2">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0U1z95SfwXyfQkzoAAPkptUTOzkHM-ze0NzBpEAM-BAp8B-_HRJ-bah0t6OzuVOOH7depT1Llf_lAjtPTUYLrv66Pa4PzoH8AiwwmaGMRZrVlhnnvvH94EXlXhaCUawFAt0NuC1Ukm2iToFYqc4tbXX4Nt_YxfWMyFLEBIG8qgZslIA2qpvYOycXLp3AkCaKWEoJXgr1uDQ-k8PDcLNcXplZWBm1Sd_8r6Q4q0-o-Ea5k1yXAFKASQMNC5pI3sFsINuSDtvqGLOU"/>
+</div>
+<div>
+<p class="font-title-sm text-title-sm text-on-background">Aria Mercer</p>
+<p class="font-body-sm text-body-sm text-text-secondary">Editor in Chief</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Editor Canvas -->
+<main class="flex-1 overflow-y-auto custom-scrollbar relative bg-background">
+<!-- Formatting Toolbar (Sticky) -->
+<div class="sticky top-0 z-30 flex justify-center py-sm pointer-events-none">
+<div class="pointer-events-auto bg-white/90 backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.12)] border border-border-subtle rounded-full px-md py-2 flex items-center gap-2 transition-all hover:shadow-[0_16px_40px_rgba(0,0,0,0.16)]">
+<select class="bg-transparent border-none font-label-lg text-label-lg text-on-background focus:ring-0 cursor-pointer pr-8 py-1">
+<option>Normal text</option>
+<option>Heading 1</option>
+<option>Heading 2</option>
+<option>Quote</option>
+</select>
+<div class="w-px h-6 bg-border-subtle mx-2"></div>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_bold</span></button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_italic</span></button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_underlined</span></button>
+<div class="w-px h-6 bg-border-subtle mx-2"></div>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">link</span></button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_align_left</span></button>
+</div>
+</div>
+<div class="max-w-[800px] mx-auto px-lg md:px-3xl py-xl md:py-4xl pb-3xl">
+<!-- Story Title -->
+<div class="mb-xl group relative">
+<textarea class="w-full bg-transparent border-none resize-none font-display-md text-display-md text-primary placeholder:text-outline-variant focus:ring-0 p-0 outline-none overflow-hidden" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'" placeholder="Enter Story Title..." rows="1"></textarea>
+</div>
+<!-- Meta/Sub -->
+<div class="flex items-center gap-md mb-2xl border-b border-border-subtle pb-xl">
+<div class="flex items-center gap-2 text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Oct 24, 2023</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-border-subtle"></div>
+<div class="flex items-center gap-2 text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">category</span>
+<span>Designer Spotlight</span>
+</div>
+</div>
+<!-- Canvas Content Blocks -->
+<div class="space-y-lg focus-within:outline-none outline-none editor-content font-body-lg text-body-lg text-on-surface leading-relaxed" contenteditable="true" data-placeholder="Start crafting your narrative...">
+<p>The latest collection from Atelier Blanc redefines modern luxury, blending sustainable materials with centuries-old craftsmanship techniques inherited from the heart of Florence. As we explore the studio space, the scent of raw leather and refined textiles fills the air, setting the stage for a revolution in minimal design.</p>
+</div>
+<!-- Add Block UI (Appears on hover/focus of empty space) -->
+<div class="mt-xl flex items-center gap-md opacity-50 hover:opacity-100 transition-opacity duration-300">
+<div class="h-px bg-border-subtle flex-1"></div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-border-subtle flex items-center justify-center text-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300" title="Add Image">
+<span class="material-symbols-outlined">image</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-border-subtle flex items-center justify-center text-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300" title="Add Text">
+<span class="material-symbols-outlined">notes</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-border-subtle flex items-center justify-center text-primary hover:scale-105 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300" title="Add Quote">
+<span class="material-symbols-outlined">format_quote</span>
+</button>
+</div>
+<div class="h-px bg-border-subtle flex-1"></div>
+</div>
+<!-- Example Block: Media Placeholder -->
+<div class="mt-xl relative group rounded-xl overflow-hidden bg-surface-container h-[400px] flex flex-col items-center justify-center border-2 border-dashed border-border-subtle hover:border-primary transition-colors duration-300 cursor-pointer">
+<img alt="High fashion editorial shot featuring a model in a minimalist beige trench coat, standing against a stark, textured concrete wall. Soft, natural light highlights the drape of the fabric. The mood is sophisticated and aloof, embodying modern luxury aesthetics. Deep shadows create contrast." class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-40" data-alt="High fashion editorial shot featuring a model in a minimalist beige trench coat, standing against a stark, textured concrete wall. Soft, natural light highlights the drape of the fabric. The mood is sophisticated and aloof, embodying modern luxury aesthetics. Deep shadows create contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvVayUCS66D2NCTTt_XDTQ9IMvkSOMA529LmcJ8X5kO5aH64rOVWx23Y9F8yoSsH_WUnz-dY5QXi7v87TxVcNqVqGuXU_w77V0WEpW66VE1IOTF39jm4kwjfGEwN5_mejlUb5RJienm9XI2tQeL3zbkUdXrnujlIcR9vIkziOrciR1a8c_QqKPdb9IGtxEDwGkz0s3nOpxpVQ12l9imyvSGZOv2JQg_FqwvhVm2YyNpPRTxTFYYMU16QpHOK7h9V2mk36FbVHdzg"/>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-white/80 backdrop-blur-sm shadow-md flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">add_a_photo</span>
+</div>
+<p class="font-title-md text-title-md text-on-surface">Click to replace image</p>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">High-resolution brand photography recommended</p>
+</div>
+</div>
+<!-- Example Block: Quote -->
+<div class="mt-2xl mb-xl border-l-4 border-secondary pl-xl py-md">
+<p class="font-headline-sm text-headline-sm text-primary italic leading-relaxed">
+                        "Elegance is not about being noticed, it's about being remembered. Our craft speaks in whispers, not shouts."
+                    </p>
+<p class="font-label-lg text-label-lg text-text-secondary mt-md">— Isabella Rossi, Creative Director</p>
+</div>
+</div>
+</main>
+<!-- Right Sidebar: Settings (Collapsible on smaller screens) -->
+<aside class="hidden lg:flex flex-col w-80 bg-white border-l border-border-subtle h-full overflow-y-auto custom-scrollbar shrink-0 z-10">
+<div class="p-lg border-b border-border-subtle">
+<h3 class="font-title-lg text-title-lg text-on-background">Story Settings</h3>
+</div>
+<div class="p-lg space-y-xl">
+<!-- Visibility -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-background mb-sm">Visibility</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-light border border-border-subtle rounded-lg px-md py-3 pr-10 font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow">
+<option>Public (Live)</option>
+<option>Draft (Hidden)</option>
+<option>Private Link</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Category -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-background mb-sm">Category</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-1.5 rounded-full border border-border-subtle text-text-secondary font-label-md text-label-md hover:border-primary hover:text-primary transition-colors bg-white">Craftsmanship</button>
+<button class="px-4 py-1.5 rounded-full border-2 border-primary text-primary font-label-md text-label-md bg-primary-fixed/20 transition-colors">Designer Spotlight</button>
+<button class="px-4 py-1.5 rounded-full border border-border-subtle text-text-secondary font-label-md text-label-md hover:border-primary hover:text-primary transition-colors bg-white">New Collection</button>
+</div>
+</div>
+<!-- Featured Image -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-background mb-sm">Featured Image</label>
+<div class="w-full h-32 rounded-lg bg-surface-container border border-dashed border-border-subtle flex items-center justify-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="text-text-secondary font-label-md text-label-md flex flex-col items-center gap-1">
+<span class="material-symbols-outlined">upload</span>
+                            Upload Cover
+                        </span>
+</div>
+</div>
+<!-- SEO Snippet -->
+<div class="p-md bg-surface-container-low rounded-lg border border-border-subtle">
+<h4 class="font-title-sm text-title-sm text-on-background mb-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">search</span>
+                        SEO Metadata
+                    </h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-md">How your story appears in search results.</p>
+<input class="w-full bg-white border border-border-subtle rounded px-3 py-2 text-sm focus:ring-1 focus:ring-primary mb-2" placeholder="Meta Title" type="text"/>
+<textarea class="w-full bg-white border border-border-subtle rounded px-3 py-2 text-sm focus:ring-1 focus:ring-primary resize-none" placeholder="Meta Description..." rows="3"></textarea>
+</div>
+</div>
+</aside>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-nav-height-mobile px-md bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">visibility</span>
+<span class="font-label-md text-label-md-mobile">Preview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">save</span>
+<span class="font-label-md text-label-md-mobile">Save Draft</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">history</span>
+<span class="font-label-md text-label-md-mobile">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1">help</span>
+<span class="font-label-md text-label-md-mobile">Help</span>
+</a>
+</nav>
+<script>
+        // Simple script to auto-resize textarea for title
+        const tx = document.getElementsByTagName("textarea");
+        for (let i = 0; i < tx.length; i++) {
+            tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+            tx[i].addEventListener("input", OnInput, false);
+        }
+        function OnInput() {
+            this.style.height = "auto";
+            this.style.height = (this.scrollHeight) + "px";
+        }
+    </script>
+</body></html>

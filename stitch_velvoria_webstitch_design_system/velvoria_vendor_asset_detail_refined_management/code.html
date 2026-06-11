@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asset Detail - Vendor Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#c0c4e8",
+                      "primary-container": "#1a1f3a",
+                      "outline": "#77767e",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#eee7e2",
+                      "surface-light": "#F5F5F5",
+                      "white": "#FFFFFF",
+                      "secondary-fixed": "#ffdbce",
+                      "on-surface-variant": "#46464d",
+                      "inverse-on-surface": "#f6efeb",
+                      "tertiary": "#000d0c",
+                      "text-primary": "#333333",
+                      "on-surface": "#1d1b18",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fff8f3",
+                      "on-background": "#1d1b18",
+                      "on-primary-container": "#8286a7",
+                      "on-error-container": "#93000a",
+                      "warning": "#F59E0B",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#dee1ff",
+                      "inverse-surface": "#33302d",
+                      "on-tertiary-fixed": "#00201f",
+                      "surface": "#fff8f3",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "error": "#EF4444",
+                      "surface-container-low": "#f9f2ed",
+                      "success": "#10B981",
+                      "secondary-container": "#ffc9b4",
+                      "on-secondary-container": "#7a5242",
+                      "on-primary-fixed": "#151a34",
+                      "on-tertiary-container": "#60918f",
+                      "secondary": "#7d5545",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#404562",
+                      "surface-tint": "#585d7b",
+                      "tertiary-fixed": "#b9ece9",
+                      "inverse-primary": "#c0c4e8",
+                      "text-secondary": "#808080",
+                      "tertiary-container": "#002625",
+                      "surface-variant": "#e8e1dc",
+                      "surface-container": "#f3ede8",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "surface-bright": "#fff8f3",
+                      "on-error": "#ffffff",
+                      "border-subtle": "#E0E0E0",
+                      "primary": "#030722",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "surface-dim": "#dfd9d4",
+                      "outline-variant": "#c7c5ce",
+                      "on-secondary-fixed": "#301408",
+                      "surface-container-highest": "#e8e1dc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "nav-height-desktop": "80px",
+                      "3xl": "64px",
+                      "xs": "4px",
+                      "nav-height-mobile": "64px",
+                      "2xl": "48px",
+                      "base": "8px",
+                      "4xl": "96px",
+                      "lg": "24px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E0E0E0;
+            border-radius: 10px;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen text-text-primary antialiased">
+<!-- Top Navigation Anchor (Task-focused, hidden shell logic applies, but providing a custom header for 'Back' action) -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-border-subtle h-nav-height-desktop flex items-center justify-between px-md md:px-2xl transition-all duration-300">
+<div class="flex items-center gap-md">
+<button class="p-2 hover:bg-surface-light rounded-full transition-colors flex items-center justify-center text-text-primary">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Asset Detail</h1>
+</div>
+<div class="flex items-center gap-md">
+<button class="px-lg py-2 rounded-lg font-label-lg text-label-lg bg-transparent border-2 border-primary text-primary hover:bg-surface-light transition-all shadow-sm">Cancel</button>
+<button class="px-lg py-2 rounded-lg font-label-lg text-label-lg bg-primary text-white hover:bg-primary/90 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.08)]">Save Changes</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[120px] pb-4xl max-w-7xl mx-auto px-md md:px-2xl grid grid-cols-1 lg:grid-cols-12 gap-2xl md:gap-3xl">
+<!-- Left Column: Asset Preview (Bento/Glassmorphism inspired) -->
+<div class="lg:col-span-7 flex flex-col gap-lg">
+<div class="relative group bg-white p-2 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<!-- Image Wrapper -->
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container flex items-center justify-center">
+<img alt="A high-fidelity editorial shot of a luxurious silk scarf draped elegantly. The scarf features intricate botanical patterns in deep navy and subtle rose gold accents against a soft cream background. The lighting is soft and directional, highlighting the smooth, premium texture of the silk. The overall aesthetic is minimalist, sophisticated, and high-end retail." class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" data-alt="A high-fidelity editorial shot of a luxurious silk scarf draped elegantly. The scarf features intricate botanical patterns in deep navy and subtle rose gold accents against a soft cream background. The lighting is soft and directional, highlighting the smooth, premium texture of the silk. The overall aesthetic is minimalist, sophisticated, and high-end retail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBje1IouuBLIOQNQ7A_AvrEky3k-Qoef355z0AZyaX1zD0NNQrR0Jsa1zJGWFVu6keWCX0S4GCyw358r03l3JdwJ8lJrj7b7Gp0whkMJf99TGXACqq8Cb4A3jd78FhTTvjY33LJ0A3_qWs7NRYGEbZwwJBgqw-9JTRIP6eX5pCtaejpfB0L18en2zD41wHjOVwVeanAduujFDVx-DF62E7R4k7sIIdmZyXLW2Zhg6qeO7Zl7mM-t3k2CmC9E8qXOVgoOqDC8nVhzFc"/>
+<!-- Overlay Actions -->
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-md backdrop-blur-[2px]">
+<button class="p-3 bg-white rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.12)] text-primary hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="crop">crop</span>
+</button>
+<button class="p-3 bg-white rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.12)] text-primary hover:scale-110 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="replace">find_replace</span>
+</button>
+</div>
+</div>
+<!-- Quick Stats Strip -->
+<div class="flex items-center justify-between mt-sm px-sm py-2">
+<div class="flex gap-lg">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-secondary uppercase tracking-widest">Resolution</span>
+<span class="font-title-sm text-title-sm text-primary">4200 x 5250 px</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-secondary uppercase tracking-widest">File Size</span>
+<span class="font-title-sm text-title-sm text-primary">8.4 MB</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-text-secondary uppercase tracking-widest">Format</span>
+<span class="font-title-sm text-title-sm text-primary">JPEG</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Metadata Form -->
+<div class="lg:col-span-5 flex flex-col gap-2xl">
+<div class="flex flex-col gap-sm border-l-4 border-secondary-container pl-lg">
+<h2 class="font-display-md text-display-md text-primary">Metadata Details</h2>
+<p class="font-body-lg text-body-lg text-text-secondary">Refine the descriptive attributes of this asset to optimize search and curation within the media library.</p>
+</div>
+<form class="flex flex-col gap-xl bg-white p-xl rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] relative overflow-hidden">
+<!-- Subtle decorative accent top-right -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed-dim/20 rounded-bl-full -mr-16 -mt-16 z-0"></div>
+<!-- Asset Title Input -->
+<div class="flex flex-col gap-xs z-10 relative">
+<label class="font-label-lg text-label-lg text-text-primary" for="asset-title">Asset Title</label>
+<input class="w-full px-md py-3 bg-white border border-border-subtle rounded-lg font-body-md text-body-md text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-[0_4px_12px_rgba(3,7,34,0.1)] transition-all placeholder:text-outline-variant" id="asset-title" name="asset-title" type="text" value="Midnight Flora Silk Scarf"/>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">A concise, descriptive name for internal organization.</p>
+</div>
+<!-- Tags Section (Chip-based) -->
+<div class="flex flex-col gap-xs z-10 relative">
+<label class="font-label-lg text-label-lg text-text-primary flex items-center justify-between">
+<span>Associated Tags</span>
+<button class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="add">add</span> New Tag
+                        </button>
+</label>
+<div class="flex flex-wrap gap-sm mt-2">
+<!-- Chips -->
+<div class="group flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-transparent hover:border-border-subtle transition-colors cursor-pointer">
+<span class="font-label-md text-label-md text-primary">Silk</span>
+<span class="material-symbols-outlined text-[14px] text-text-secondary group-hover:text-error transition-colors" data-icon="close">close</span>
+</div>
+<div class="group flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-transparent hover:border-border-subtle transition-colors cursor-pointer">
+<span class="font-label-md text-label-md text-primary">Autumn Collection</span>
+<span class="material-symbols-outlined text-[14px] text-text-secondary group-hover:text-error transition-colors" data-icon="close">close</span>
+</div>
+<div class="group flex items-center gap-2 px-3 py-1.5 bg-secondary-container/30 rounded-full border border-secondary-container transition-colors cursor-pointer">
+<span class="font-label-md text-label-md text-on-secondary-container">Campaign Hero</span>
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container group-hover:text-error transition-colors" data-icon="close">close</span>
+</div>
+<div class="group flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-transparent hover:border-border-subtle transition-colors cursor-pointer">
+<span class="font-label-md text-label-md text-primary">Accessories</span>
+<span class="material-symbols-outlined text-[14px] text-text-secondary group-hover:text-error transition-colors" data-icon="close">close</span>
+</div>
+</div>
+</div>
+<!-- Alt Text Area -->
+<div class="flex flex-col gap-xs z-10 relative">
+<label class="font-label-lg text-label-lg text-text-primary flex items-center gap-2" for="alt-text">
+                        Alt Text <span class="material-symbols-outlined text-[16px] text-text-secondary cursor-help" title="Required for web accessibility">info</span>
+</label>
+<textarea class="w-full px-md py-3 bg-white border border-border-subtle rounded-lg font-body-md text-body-md text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-[0_4px_12px_rgba(3,7,34,0.1)] transition-all custom-scrollbar resize-none placeholder:text-outline-variant" id="alt-text" name="alt-text" rows="4">A luxurious dark navy silk scarf draped over a subtle cream surface, featuring intricate rose gold botanical illustrations.</textarea>
+<div class="flex justify-between items-center mt-1">
+<p class="font-body-sm text-body-sm text-text-secondary">Describe the image for screen readers.</p>
+<p class="font-body-sm text-body-sm text-text-secondary">118 / 250</p>
+</div>
+</div>
+</form>
+<!-- Destructive Action Container -->
+<div class="mt-auto pt-2xl flex justify-end">
+<button class="flex items-center gap-2 px-lg py-3 rounded-lg font-label-lg text-label-lg text-error hover:bg-error/5 transition-colors group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" data-icon="delete">delete</span>
+                    Delete Asset Permanently
+                </button>
+</div>
+</div>
+</main>
+</body></html>

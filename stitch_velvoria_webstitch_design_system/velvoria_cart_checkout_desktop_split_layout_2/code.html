@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Checkout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#301408",
+                        "primary-fixed": "#dee1ff",
+                        "background": "#fff8f3",
+                        "text-primary": "#333333",
+                        "on-surface": "#1d1b18",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-tint": "#585d7b",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f3",
+                        "secondary": "#7d5545",
+                        "outline": "#77767e",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "on-tertiary": "#ffffff",
+                        "surface-light": "#F5F5F5",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#60918f",
+                        "on-error-container": "#93000a",
+                        "border-subtle": "#E0E0E0",
+                        "primary": "#030722",
+                        "surface-container-high": "#eee7e2",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-secondary-container": "#7a5242",
+                        "tertiary-fixed": "#b9ece9",
+                        "inverse-primary": "#c0c4e8",
+                        "surface": "#fff8f3",
+                        "secondary-container": "#ffc9b4",
+                        "outline-variant": "#c7c5ce",
+                        "surface-variant": "#e8e1dc",
+                        "primary-container": "#1a1f3a",
+                        "warning": "#F59E0B",
+                        "on-primary-fixed-variant": "#404562",
+                        "error": "#EF4444",
+                        "inverse-surface": "#33302d",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container": "#f3ede8",
+                        "on-primary-container": "#8286a7",
+                        "success": "#10B981",
+                        "on-primary-fixed": "#151a34",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-background": "#1d1b18",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "tertiary-container": "#002625",
+                        "tertiary": "#000d0c",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "text-secondary": "#808080",
+                        "white": "#FFFFFF",
+                        "surface-container-low": "#f9f2ed",
+                        "on-surface-variant": "#46464d",
+                        "surface-dim": "#dfd9d4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "nav-height-desktop": "80px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "4xl": "96px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.text-primary'); }
+        .input-premium {
+            border: 1px solid theme('colors.border-subtle');
+            border-radius: theme('borderRadius.lg');
+            background-color: theme('colors.white');
+            padding: theme('spacing.md');
+            width: 100%;
+            transition: all 300ms ease;
+        }
+        .input-premium:focus {
+            outline: none;
+            border-color: theme('colors.primary');
+            box-shadow: 0 0 0 3px rgba(3, 7, 34, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar Omitted as per instructions for Transactional pages -->
+<header class="w-full bg-white dark:bg-surface-container-lowest h-nav-height-desktop sticky top-0 z-50 shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex justify-center items-center">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed" href="/">
+            Velvoria
+        </a>
+</header>
+<main class="flex-grow max-w-[1440px] mx-auto w-full px-12 py-4xl">
+<!-- Progress Indicator -->
+<div class="mb-2xl flex items-center justify-center space-x-md">
+<div class="flex items-center text-primary">
+<span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-title-sm text-title-sm mr-2">1</span>
+<span class="font-title-sm text-title-sm">Shipping</span>
+</div>
+<div class="w-16 h-px bg-border-subtle"></div>
+<div class="flex items-center text-text-secondary">
+<span class="w-8 h-8 rounded-full border border-border-subtle flex items-center justify-center font-title-sm text-title-sm mr-2">2</span>
+<span class="font-title-sm text-title-sm">Payment</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-4xl">
+<!-- Left Column: Forms (65%) -->
+<div class="lg:w-[65%] space-y-xl">
+<div class="bg-white p-2xl rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<h2 class="font-headline-sm text-headline-sm mb-lg text-primary">Contact Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Email Address</label>
+<input class="input-premium" placeholder="Enter your email" type="email"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Phone Number</label>
+<input class="input-premium" placeholder="Enter your phone number" type="tel"/>
+</div>
+</div>
+</div>
+<div class="bg-white p-2xl rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<h2 class="font-headline-sm text-headline-sm mb-lg text-primary">Shipping Address</h2>
+<div class="space-y-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">First Name</label>
+<input class="input-premium" placeholder="First Name" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Last Name</label>
+<input class="input-premium" placeholder="Last Name" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Address Line 1</label>
+<input class="input-premium" placeholder="Street address" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Address Line 2 (Optional)</label>
+<input class="input-premium" placeholder="Apartment, suite, etc." type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">City</label>
+<input class="input-premium" placeholder="City" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">State / Province</label>
+<input class="input-premium" placeholder="State" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-label-lg text-[#333333] mb-sm">Postal Code</label>
+<input class="input-premium" placeholder="ZIP Code" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-2xl rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<h2 class="font-headline-sm text-headline-sm mb-lg text-primary">Shipping Method</h2>
+<div class="space-y-md">
+<label class="flex items-center p-md border border-border-subtle rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input checked="" class="text-primary focus:ring-primary w-5 h-5" name="shipping" type="radio"/>
+<div class="ml-md flex-grow">
+<span class="block font-title-sm text-title-sm text-primary">Standard Shipping</span>
+<span class="block font-body-sm text-body-sm text-text-secondary">3-5 Business Days</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">Free</span>
+</label>
+<label class="flex items-center p-md border border-border-subtle rounded-lg cursor-pointer hover:border-primary transition-colors">
+<input class="text-primary focus:ring-primary w-5 h-5" name="shipping" type="radio"/>
+<div class="ml-md flex-grow">
+<span class="block font-title-sm text-title-sm text-primary">Express Shipping</span>
+<span class="block font-body-sm text-body-sm text-text-secondary">1-2 Business Days</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">$25.00</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary (35%) -->
+<div class="lg:w-[35%] relative">
+<div class="sticky top-[104px] bg-surface p-2xl rounded-lg border border-border-subtle">
+<h2 class="font-headline-sm text-headline-sm mb-lg text-primary border-b border-border-subtle pb-md">Order Summary</h2>
+<div class="space-y-md mb-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 bg-surface-light rounded-md overflow-hidden relative">
+<img alt="Velvoria product" class="w-full h-full object-cover" data-alt="A luxurious minimalist perfume bottle on a cream background, soft high-key lighting, modern clean aesthetic, deep navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW0i6oeljOBOW4A6WOdPF0ziJrPdHLG--w0X8K9VVCWCHd88SUdpo3acc0-XKnsHm2YiJPqVige4J7n-5RxX8kcoiOoim5DAr05BUxmUXBOB95m7eEwLPPYDvbnfxsjNPoElGrQeb8L89cntF3ar_mRg9-luxHBPO221xMLgTKZUn3RgbsRHv0GoTptnD4Ei-hqHzLplPuZDe1nAoaJGLkLKPEuOhqSe-o5Rr4AQNRyzdO8xyvnaDeKlanPRROtlfKcuBWF9TLs_s"/>
+<span class="absolute -top-2 -right-2 bg-on-surface-variant text-white w-5 h-5 rounded-full flex items-center justify-center font-label-md text-label-md">1</span>
+</div>
+<div>
+<h3 class="font-title-sm text-title-sm text-primary">Lumina Essence</h3>
+<p class="font-body-sm text-body-sm text-text-secondary">50ml</p>
+</div>
+</div>
+<span class="font-title-sm text-title-sm text-primary">$185.00</span>
+</div>
+</div>
+<div class="space-y-sm border-t border-border-subtle pt-md mb-md">
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Subtotal</span>
+<span>$185.00</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Shipping</span>
+<span>Calculated at next step</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Taxes</span>
+<span>$14.80</span>
+</div>
+</div>
+<div class="flex justify-between items-end border-t border-border-subtle pt-lg mb-xl">
+<span class="font-title-lg text-title-lg text-primary">Total</span>
+<div class="text-right">
+<span class="font-body-sm text-body-sm text-text-secondary block">USD</span>
+<span class="font-headline-sm text-headline-sm text-primary">$199.80</span>
+</div>
+</div>
+<button class="w-full bg-primary text-white font-title-md text-title-md py-md rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-sm">
+                        Continue to Payment
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<div class="mt-md text-center flex items-center justify-center gap-xs text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+                        Secure Encrypted Checkout
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Omitted as per instructions for Transactional pages -->
+</body></html>

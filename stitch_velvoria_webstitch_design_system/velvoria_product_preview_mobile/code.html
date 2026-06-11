@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Preview - Vendor Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "text-primary": "#333333",
+                        "surface-tint": "#585d7b",
+                        "surface": "#fff8f3",
+                        "on-secondary-fixed": "#301408",
+                        "success": "#10B981",
+                        "on-surface-variant": "#46464d",
+                        "surface-container-low": "#f9f2ed",
+                        "on-background": "#1d1b18",
+                        "on-primary": "#ffffff",
+                        "text-secondary": "#808080",
+                        "secondary": "#7d5545",
+                        "inverse-primary": "#c0c4e8",
+                        "tertiary": "#000d0c",
+                        "border-subtle": "#E0E0E0",
+                        "tertiary-container": "#002625",
+                        "outline": "#77767e",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-bright": "#fff8f3",
+                        "background": "#fff8f3",
+                        "outline-variant": "#c7c5ce",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "white": "#FFFFFF",
+                        "primary-container": "#1a1f3a",
+                        "on-tertiary-fixed": "#00201f",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#7a5242",
+                        "inverse-surface": "#33302d",
+                        "primary-fixed": "#dee1ff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f6efeb",
+                        "primary": "#030722",
+                        "on-tertiary-container": "#60918f",
+                        "surface-variant": "#e8e1dc",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "surface-dim": "#dfd9d4",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "secondary-container": "#ffc9b4",
+                        "error": "#EF4444",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "secondary-fixed": "#ffdbce",
+                        "warning": "#F59E0B",
+                        "surface-container": "#f3ede8",
+                        "tertiary-fixed": "#b9ece9",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eee7e2",
+                        "on-surface": "#1d1b18",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#151a34",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-primary-container": "#8286a7",
+                        "surface-light": "#F5F5F5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "4xl": "96px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "2xl": "48px",
+                        "nav-height-mobile": "64px",
+                        "3xl": "64px",
+                        "nav-height-desktop": "80px",
+                        "md": "16px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "title-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Smooth transitions */
+        .preview-btn {
+            transition: all 0.3s ease;
+        }
+        .preview-btn:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-1px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-text-primary antialiased min-h-screen pb-2xl">
+<!-- Top Bar (Vendor Preview Controls) -->
+<header class="fixed top-0 w-full z-50 bg-white shadow-sm border-b border-border-subtle h-nav-height-mobile md:h-nav-height-desktop flex items-center justify-between px-md md:px-2xl">
+<div class="flex items-center gap-sm md:gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-sm rounded-full hover:bg-surface-light">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+<span class="font-title-lg text-title-lg text-primary hidden md:inline-block border-l border-border-subtle pl-md">Preview Mode</span>
+<span class="font-title-md text-title-md text-primary md:hidden">Preview</span>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden md:flex font-label-lg text-label-lg px-md py-sm rounded-DEFAULT border-2 border-primary text-primary hover:bg-surface-light transition-colors items-center justify-center">
+                Edit Listing
+            </button>
+<button class="preview-btn font-label-lg text-label-lg bg-primary text-white px-lg py-sm rounded-lg flex items-center gap-xs">
+                Publish Live
+                <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+</button>
+</div>
+</header>
+<!-- Preview Banner -->
+<div class="fixed top-nav-height-mobile md:top-nav-height-desktop w-full z-40 bg-secondary-container text-on-secondary-container py-xs px-md flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<p class="font-body-sm text-body-sm text-center">This is a customer preview. Your changes are saved but not yet live.</p>
+</div>
+<!-- Main Content Canvas -->
+<main class="pt-[calc(64px+32px)] md:pt-[calc(80px+40px)] max-w-[1440px] mx-auto px-md md:px-2xl grid grid-cols-1 lg:grid-cols-12 gap-xl md:gap-2xl lg:gap-4xl pb-4xl">
+<!-- Left Column: Image Gallery -->
+<div class="lg:col-span-7 flex flex-col gap-md">
+<!-- Main Hero Image -->
+<div class="w-full aspect-[4/5] bg-white rounded-xl shadow-md overflow-hidden relative group">
+<img alt="Aura Diamond Ring" class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="A stunning macro shot of a luxury diamond ring resting on softly draped cream silk. The high-key lighting creates brilliant specular highlights on the multifaceted diamond, emphasizing its clarity and premium quality. The depth of field is shallow, blurring the luxurious textile background to ensure the jewelry piece remains the hero. The overall aesthetic is elegant, minimal, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHGoBKD8gsqVd22smcchH_YbWZZoutlg_np9FsUlNgvE4V-NN3FP8MtFKLMI8JqykBO7ZeMKUUtya0ZpL4tsu6GEdW4bl7OmvT7gv6k6PwNbjpJfLPS9gVC5FSMjdEW3ED2LeS4ZVJWA5E0szYLcDy-BTXEZP7qXHII4GyEPDUKmQ8srFyZhB12xR5Cwc6zfKYxaCV2ioljWLeWeqnQyvOnkruKlRZg4aVFTAv9ET0SvlgRCycnFZV5E0XFuQaP0Iudl6SwTmliQA"/>
+<!-- Zoom Hint -->
+<button class="absolute bottom-md right-md bg-white/80 backdrop-blur-sm p-sm rounded-full shadow-sm text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+</div>
+<!-- Thumbnail Strip -->
+<div class="flex gap-md overflow-x-auto pb-sm scrollbar-hide">
+<button class="w-[80px] md:w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary/20 bg-white">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="A small thumbnail showing the main view of a luxury diamond ring on silk. The high-key lighting and cream background match the brand's aesthetic. The diamond is prominently featured." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfD7DSbG7yOWVar6IUc8QVaVxDBoCYtf1l3OQuACmibSMJJbszQ2ueBJy-VZRhv9n6PDPsFqAbH2UBuEw1GZLK41_l16G-E1kUcZzaYt86y3ToXXRMHVzvo7i89TPo_WJLDIx2bBUaX-uImowx9mlXn1Ii71-rWbbhOvXARE122KXCycGbIImQEYcCebGRq5kar2fVixIsJGbSOtgNhswDQSMXw6lNJOyxQtLNsr_gVdsgT23NKXXmKBa2Uue2AGfhuPvpKHAwyLk"/>
+</button>
+<button class="w-[80px] md:w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden border border-border-subtle hover:border-primary/50 transition-colors bg-white opacity-70 hover:opacity-100">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="A side profile view of a diamond ring showing the intricate setting details. The background is a clean, minimal cream color to focus attention on the craftsmanship. Soft lighting highlights the metallic sheen of the band." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcxdgC2JmOjvkqCRxNU-rwxSb4uKtcUrAngoS0gOq8SFRJoappiBrCerGCtaj2v6zBxILIIn8PKhhjScs6vnPV1J_EgIZgA_yG9snkEs1Zl0tlkRX2ejph81yQzAYVjqf27dTUos4zwMwaN2XYquETHSD2WQV6F2eGh2Hlsejrxxnq24-wUfTleMS0YFd36M6V7_4cUjUN05dbEP16aonfCNSgQfiE79Q8z-8xfMxdHVS8WB5xxYlTUT11yur3LQrhPx6kpx6q6pw"/>
+</button>
+<button class="w-[80px] md:w-[100px] aspect-square flex-shrink-0 rounded-lg overflow-hidden border border-border-subtle hover:border-primary/50 transition-colors bg-white flex items-center justify-center text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">add_photo_alternate</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Product Details & Actions -->
+<div class="lg:col-span-5 flex flex-col pt-md lg:pt-0">
+<!-- Breadcrumbs -->
+<nav class="flex text-label-md font-label-md text-text-secondary mb-md uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="mx-xs material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Fine Jewelry</a>
+<span class="mx-xs material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Rings</span>
+</nav>
+<!-- Title & Price -->
+<div class="mb-lg">
+<h1 class="font-display-md text-display-md text-primary mb-sm">Aura Diamond Ring</h1>
+<div class="flex items-center gap-sm mb-md">
+<div class="flex text-border-subtle">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary">0 reviews (New Listing)</span>
+</div>
+<p class="font-headline-md text-headline-md text-primary font-bold">$1,250.00</p>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">Taxes &amp; duties included</p>
+</div>
+<!-- Divider -->
+<hr class="border-border-subtle mb-lg"/>
+<!-- Variants Selector -->
+<div class="mb-lg">
+<div class="flex justify-between items-center mb-sm">
+<label class="font-title-sm text-title-sm text-primary uppercase tracking-wide">Ring Size (US)</label>
+<button class="font-label-sm text-body-sm text-secondary underline hover:no-underline">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-sm">
+<button class="py-sm border border-border-subtle rounded-DEFAULT font-label-lg text-label-lg text-text-primary hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary transition-colors">5</button>
+<button class="py-sm border-2 border-primary rounded-DEFAULT font-label-lg text-label-lg text-primary font-semibold bg-primary/5 transition-colors">6</button>
+<button class="py-sm border border-border-subtle rounded-DEFAULT font-label-lg text-label-lg text-text-primary hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary transition-colors">7</button>
+<button class="py-sm border border-border-subtle rounded-DEFAULT font-label-lg text-label-lg text-text-primary hover:border-primary focus:border-primary focus:ring-1 focus:ring-primary transition-colors">8</button>
+</div>
+</div>
+<!-- Metal Type -->
+<div class="mb-xl">
+<label class="font-title-sm text-title-sm text-primary uppercase tracking-wide mb-sm block">Metal Type: <span class="font-normal text-text-secondary normal-case">18k White Gold</span></label>
+<div class="flex gap-md">
+<button aria-label="White Gold" class="w-[40px] h-[40px] rounded-full bg-[#E6E8FA] border-2 border-primary ring-2 ring-primary/20 shadow-sm"></button>
+<button aria-label="Yellow Gold" class="w-[40px] h-[40px] rounded-full bg-[#FFD700] border border-border-subtle opacity-50 hover:opacity-100 hover:border-primary transition-all shadow-sm"></button>
+<button aria-label="Rose Gold" class="w-[40px] h-[40px] rounded-full bg-[#B76E79] border border-border-subtle opacity-50 hover:opacity-100 hover:border-primary transition-all shadow-sm"></button>
+</div>
+</div>
+<!-- Call to Action (Disabled for Preview) -->
+<div class="flex flex-col gap-sm mb-xl relative group">
+<button class="w-full bg-primary text-white font-label-lg text-label-lg py-md rounded-lg opacity-50 cursor-not-allowed flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Cart
+                </button>
+<button class="w-full border-2 border-primary text-primary font-label-lg text-label-lg py-md rounded-lg opacity-50 cursor-not-allowed">
+                    Add to Wishlist
+                </button>
+<!-- Tooltip Overlay -->
+<div class="absolute inset-0 hidden group-hover:flex items-center justify-center bg-white/60 backdrop-blur-[2px] rounded-lg">
+<span class="bg-primary text-white font-label-md text-label-md px-sm py-xs rounded shadow-lg">Checkout actions disabled in Preview Mode</span>
+</div>
+</div>
+<!-- Product Accordions -->
+<div class="border-t border-border-subtle divide-y divide-border-subtle">
+<!-- Description -->
+<details class="group py-md" open="">
+<summary class="flex justify-between items-center font-title-md text-title-md text-primary cursor-pointer list-none">
+                        Description
+                        <span class="material-symbols-outlined text-text-secondary group-open:rotate-180 transition-transform">keyboard_arrow_down</span>
+</summary>
+<div class="pt-sm text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                        The Aura Diamond Ring is a masterpiece of modern luxury. Featuring a brilliant-cut center stone encircled by a delicate pavé halo, it captures light from every angle. Handcrafted in 18k White Gold, this piece is designed to be cherished for generations.
+                    </div>
+</details>
+<!-- Specifications -->
+<details class="group py-md">
+<summary class="flex justify-between items-center font-title-md text-title-md text-primary cursor-pointer list-none">
+                        Specifications
+                        <span class="material-symbols-outlined text-text-secondary group-open:rotate-180 transition-transform">keyboard_arrow_down</span>
+</summary>
+<div class="pt-sm text-body-md font-body-md text-on-surface-variant">
+<ul class="list-disc pl-md space-y-xs">
+<li>Center Stone: 1.0 Carat Diamond (VS1 clarity, G color)</li>
+<li>Setting: 18k White Gold</li>
+<li>Band Width: 1.8mm</li>
+<li>Certification: GIA Certified</li>
+</ul>
+</div>
+</details>
+<!-- Shipping -->
+<details class="group py-md">
+<summary class="flex justify-between items-center font-title-md text-title-md text-primary cursor-pointer list-none">
+                        Shipping &amp; Returns
+                        <span class="material-symbols-outlined text-text-secondary group-open:rotate-180 transition-transform">keyboard_arrow_down</span>
+</summary>
+<div class="pt-sm text-body-md font-body-md text-on-surface-variant">
+                        Complimentary insured shipping on all orders. Returns are accepted within 14 days of delivery in unworn condition.
+                    </div>
+</details>
+</div>
+<!-- Vendor Branding -->
+<div class="mt-xl p-md bg-surface-container-low rounded-lg border-l-4 border-secondary flex items-start gap-md">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border-subtle shadow-sm flex-shrink-0">
+<span class="font-display-sm text-title-lg text-primary">A</span>
+</div>
+<div>
+<p class="font-label-sm text-body-sm text-text-secondary uppercase tracking-widest mb-xs">Sold By</p>
+<p class="font-title-md text-title-md text-primary">Aurelius Boutique</p>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">verified</span> Trusted Premium Vendor
+                    </p>
+</div>
+</div>
+</div>
+</main>
+</body></html>

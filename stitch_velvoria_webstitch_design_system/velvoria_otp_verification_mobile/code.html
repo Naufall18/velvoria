@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - OTP Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "border-subtle": "#E0E0E0",
+                    "text-primary": "#333333",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "surface": "#fff8f3",
+                    "surface-container": "#f3ede8",
+                    "on-background": "#1d1b18",
+                    "on-error": "#ffffff",
+                    "primary": "#030722",
+                    "on-tertiary-fixed": "#00201f",
+                    "tertiary-fixed": "#b9ece9",
+                    "background": "#fff8f3",
+                    "on-surface-variant": "#46464d",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "on-secondary-fixed": "#301408",
+                    "on-tertiary-container": "#60918f",
+                    "on-surface": "#1d1b18",
+                    "error-container": "#ffdad6",
+                    "warning": "#F59E0B",
+                    "surface-variant": "#e8e1dc",
+                    "inverse-surface": "#33302d",
+                    "tertiary": "#000d0c",
+                    "surface-container-low": "#f9f2ed",
+                    "outline": "#77767e",
+                    "surface-light": "#F5F5F5",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#002625",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e8e1dc",
+                    "on-primary-container": "#8286a7",
+                    "text-secondary": "#808080",
+                    "success": "#10B981",
+                    "on-secondary": "#ffffff",
+                    "error": "#EF4444",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#1a1f3a",
+                    "inverse-primary": "#c0c4e8",
+                    "inverse-on-surface": "#f6efeb",
+                    "surface-tint": "#585d7b",
+                    "on-primary-fixed-variant": "#404562",
+                    "surface-dim": "#dfd9d4",
+                    "primary-fixed": "#dee1ff",
+                    "secondary": "#7d5545",
+                    "outline-variant": "#c7c5ce",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "surface-container-high": "#eee7e2",
+                    "secondary-container": "#ffc9b4",
+                    "white": "#FFFFFF",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-container": "#7a5242",
+                    "surface-bright": "#fff8f3",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#151a34",
+                    "accent-gold": "#E8B4A0" // Added from prompt
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "xl": "32px",
+                    "nav-height-mobile": "64px",
+                    "2xl": "48px",
+                    "3xl": "64px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "nav-height-desktop": "80px",
+                    "4xl": "96px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-lg": [
+                            "Inter"
+                    ],
+                    "display-md": [
+                            "Playfair Display"
+                    ],
+                    "title-md": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "title-sm": [
+                            "Inter"
+                    ],
+                    "headline-sm": [
+                            "Playfair Display"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "title-lg": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.25px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-lg": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-md": [
+                            "40px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "-0.5px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.15px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "title-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.1px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.4px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-lg": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.5px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "letterSpacing": "0px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "58px",
+                                    "letterSpacing": "-0.5px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E0E0E0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c0c0c0;
+        }
+        
+        /* Remove arrows from number input */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-text-primary min-h-screen flex flex-col font-body-md antialiased overflow-x-hidden selection:bg-accent-gold selection:text-white">
+<!-- TopAppBar -->
+<!-- Transactional screen: suppressed bottom nav -->
+<header class="bg-surface dark:bg-on-background text-primary dark:text-primary-fixed fixed top-0 left-0 w-full h-[80px] flex items-center justify-between px-md z-50 shadow-sm dark:shadow-none transition-all duration-300">
+<button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-display-md text-display-md text-primary dark:text-white tracking-tight absolute left-1/2 -translate-x-1/2 text-2xl">Verification</h1>
+<div class="w-12 h-12"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-nav-height-desktop flex flex-col items-center justify-center px-lg pb-3xl max-w-md mx-auto w-full relative">
+<!-- Subtle background decoration -->
+<div class="absolute top-1/4 left-0 w-full h-1/2 bg-accent-gold/5 blur-[100px] -z-10 rounded-full pointer-events-none"></div>
+<div class="w-full flex flex-col items-center animate-[fadeInUp_0.6s_ease-out_forwards] opacity-0 translate-y-4" style="animation-delay: 0.1s;">
+<!-- Icon -->
+<div class="w-20 h-20 rounded-full bg-white shadow-lg flex items-center justify-center mb-lg border border-border-subtle relative group">
+<div class="absolute inset-0 rounded-full bg-accent-gold opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+<span class="material-symbols-outlined text-primary text-[36px]" data-icon="shield_lock" style="font-variation-settings: 'FILL' 0;">shield_lock</span>
+</div>
+<!-- Headers -->
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary text-center mb-sm">Verify Your Identity</h2>
+<p class="font-body-md text-body-md text-text-secondary text-center mb-2xl max-w-[300px]">
+                We've sent a 4-digit code to your email address <span class="text-primary font-medium">eleanor.vance@example.com</span>. Please enter it below to continue.
+            </p>
+<!-- OTP Input Form -->
+<form class="w-full flex flex-col items-center" id="otp-form">
+<div class="flex gap-4 justify-center mb-xl w-full" id="otp-container">
+<input aria-label="Digit 1" class="w-16 h-16 text-center font-display-md text-headline-lg bg-white border border-border-subtle rounded-lg focus:outline-none focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all duration-300 shadow-sm hover:shadow-md" inputmode="numeric" maxlength="1" pattern="[0-9]" placeholder="-" type="text"/>
+<input aria-label="Digit 2" class="w-16 h-16 text-center font-display-md text-headline-lg bg-white border border-border-subtle rounded-lg focus:outline-none focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all duration-300 shadow-sm hover:shadow-md" disabled="" inputmode="numeric" maxlength="1" pattern="[0-9]" placeholder="-" type="text"/>
+<input aria-label="Digit 3" class="w-16 h-16 text-center font-display-md text-headline-lg bg-white border border-border-subtle rounded-lg focus:outline-none focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all duration-300 shadow-sm hover:shadow-md" disabled="" inputmode="numeric" maxlength="1" pattern="[0-9]" placeholder="-" type="text"/>
+<input aria-label="Digit 4" class="w-16 h-16 text-center font-display-md text-headline-lg bg-white border border-border-subtle rounded-lg focus:outline-none focus:border-primary focus:ring-0 focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all duration-300 shadow-sm hover:shadow-md" disabled="" inputmode="numeric" maxlength="1" pattern="[0-9]" placeholder="-" type="text"/>
+</div>
+<!-- Timer/Resend -->
+<div class="font-body-md text-body-md text-text-secondary text-center mb-2xl flex items-center justify-center gap-1">
+                    Didn't receive the code? 
+                    <button class="text-primary font-title-sm font-semibold hover:opacity-80 transition-opacity focus:outline-none" disabled="" id="resend-btn" type="button">
+                        Resend in <span class="tabular-nums" id="timer">00:58</span>
+</button>
+</div>
+<!-- CTA Button -->
+<button class="w-full py-4 px-6 bg-accent-gold text-white font-title-md text-title-md rounded-lg shadow-md hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:opacity-90 active:scale-[0.98] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent-gold focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed" disabled="" id="verify-btn" type="submit">
+                    Verify &amp; Proceed
+                </button>
+</form>
+</div>
+</main>
+<style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('#otp-container input');
+            const verifyBtn = document.getElementById('verify-btn');
+            const timerSpan = document.getElementById('timer');
+            const resendBtn = document.getElementById('resend-btn');
+            
+            // Timer logic
+            let timeLeft = 58;
+            const timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    timerSpan.textContent = '';
+                    resendBtn.textContent = 'Resend Now';
+                    resendBtn.disabled = false;
+                    resendBtn.classList.remove('opacity-50');
+                } else {
+                    timerSpan.textContent = `00:${timeLeft.toString().padStart(2, '0')}`;
+                }
+            }, 1000);
+
+            // OTP Input logic
+            inputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    const value = e.target.value;
+                    
+                    // Allow only numbers
+                    if (!/^\d$/.test(value)) {
+                        e.target.value = '';
+                        return;
+                    }
+
+                    // Move to next input
+                    if (value !== '' && index < inputs.length - 1) {
+                        inputs[index + 1].disabled = false;
+                        inputs[index + 1].focus();
+                    }
+
+                    checkIfComplete();
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace') {
+                        if (input.value === '' && index > 0) {
+                            inputs[index - 1].focus();
+                            inputs[index - 1].value = '';
+                        }
+                        checkIfComplete();
+                    }
+                });
+
+                // Paste event for OTP
+                input.addEventListener('paste', (e) => {
+                    e.preventDefault();
+                    const pastedData = e.clipboardData.getData('text/plain').slice(0, 4);
+                    
+                    if (/^\d+$/.test(pastedData)) {
+                        const digits = pastedData.split('');
+                        digits.forEach((digit, i) => {
+                            if (i < inputs.length) {
+                                inputs[i].value = digit;
+                                inputs[i].disabled = false;
+                            }
+                        });
+                        
+                        // Focus the next empty input or the last one
+                        const nextIndex = Math.min(digits.length, inputs.length - 1);
+                        inputs[nextIndex].focus();
+                        checkIfComplete();
+                    }
+                });
+            });
+
+            function checkIfComplete() {
+                const isComplete = Array.from(inputs).every(input => input.value !== '');
+                verifyBtn.disabled = !isComplete;
+                if(isComplete) {
+                    verifyBtn.classList.add('shadow-[0_8px_24px_rgba(232,180,160,0.3)]');
+                } else {
+                    verifyBtn.classList.remove('shadow-[0_8px_24px_rgba(232,180,160,0.3)]');
+                }
+            }
+
+            // Initially focus first input
+            inputs[0].focus();
+        });
+    </script>
+</body></html>

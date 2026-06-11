@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Method - Velvoria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "border-subtle": "#E0E0E0",
+                    "on-background": "#1d1b18",
+                    "tertiary-fixed": "#b9ece9",
+                    "tertiary-container": "#002625",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "background": "#fff8f3",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dfd9d4",
+                    "surface": "#fff8f3",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "text-primary": "#333333",
+                    "inverse-primary": "#c0c4e8",
+                    "surface-container-highest": "#e8e1dc",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dee1ff",
+                    "outline-variant": "#c7c5ce",
+                    "error": "#EF4444",
+                    "surface-tint": "#585d7b",
+                    "inverse-surface": "#33302d",
+                    "outline": "#77767e",
+                    "on-primary-fixed": "#151a34",
+                    "on-tertiary-container": "#60918f",
+                    "on-primary-container": "#8286a7",
+                    "on-secondary-container": "#7a5242",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#00201f",
+                    "on-surface": "#1d1b18",
+                    "on-secondary": "#ffffff",
+                    "success": "#10B981",
+                    "primary-container": "#1a1f3a",
+                    "tertiary": "#000d0c",
+                    "on-primary-fixed-variant": "#404562",
+                    "secondary-fixed": "#ffdbce",
+                    "secondary-container": "#ffc9b4",
+                    "surface-variant": "#e8e1dc",
+                    "secondary": "#7d5545",
+                    "surface-bright": "#fff8f3",
+                    "surface-container-high": "#eee7e2",
+                    "surface-container-low": "#f9f2ed",
+                    "error-container": "#ffdad6",
+                    "text-secondary": "#808080",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "surface-light": "#F5F5F5",
+                    "surface-container": "#f3ede8",
+                    "inverse-on-surface": "#f6efeb",
+                    "warning": "#F59E0B",
+                    "white": "#FFFFFF",
+                    "primary": "#030722",
+                    "on-secondary-fixed": "#301408",
+                    "on-surface-variant": "#46464d",
+                    "rose-gold": "#E8B4A0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "2xl": "48px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "nav-height-mobile": "64px",
+                    "4xl": "96px",
+                    "xl": "32px",
+                    "3xl": "64px",
+                    "nav-height-desktop": "80px",
+                    "sm": "8px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "title-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "title-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "display-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .input-focus-ring:focus-within {
+            border-color: #1A1F3A;
+            box-shadow: 0 0 0 3px rgba(26, 31, 58, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-rose-gold selection:text-white">
+<!-- Top Navigation (Transactional Layout - Simplified) -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center px-4 h-nav-height-mobile md:h-nav-height-desktop max-w-[1440px] mx-auto">
+<button aria-label="Go Back" class="text-primary hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight">Velvoria</h1>
+<div class="w-6"></div> <!-- Spacer for center alignment -->
+</div>
+</header>
+<main class="pt-[calc(var(--spacing-nav-height-mobile)+32px)] md:pt-[calc(var(--spacing-nav-height-desktop)+48px)] pb-4xl px-4 md:px-2xl max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl md:gap-2xl">
+<!-- Left Column: Main Form Area -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-xl">
+<!-- Progress Stepper -->
+<div class="flex items-center justify-between max-w-md mx-auto w-full mb-lg text-body-sm font-body-sm text-outline">
+<div class="flex flex-col items-center gap-2">
+<div class="w-6 h-6 rounded-full border-2 border-primary-container flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[14px]">check</span></div>
+<span>Cart</span>
+</div>
+<div class="flex-1 h-px bg-border-subtle mx-2"></div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-6 h-6 rounded-full border-2 border-primary-container flex items-center justify-center text-primary-container"><span class="material-symbols-outlined text-[14px]">check</span></div>
+<span>Shipping</span>
+</div>
+<div class="flex-1 h-px bg-border-subtle mx-2"></div>
+<div class="flex flex-col items-center gap-2 text-primary-container">
+<div class="w-6 h-6 rounded-full bg-rose-gold text-white flex items-center justify-center font-title-sm">3</div>
+<span class="font-medium">Payment</span>
+</div>
+<div class="flex-1 h-px bg-border-subtle mx-2"></div>
+<div class="flex flex-col items-center gap-2 opacity-50">
+<div class="w-6 h-6 rounded-full border-2 border-outline flex items-center justify-center">4</div>
+<span>Success</span>
+</div>
+</div>
+<div class="text-center md:text-left mb-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-container">Payment Method</h2>
+<p class="font-body-md text-body-md text-text-secondary mt-2">All transactions are secure and encrypted.</p>
+</div>
+<!-- Digital Wallets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 w-full py-4 border border-border-subtle rounded-lg bg-white hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-title-md text-title-md text-primary-container">Apple Pay</span>
+</button>
+<button class="flex items-center justify-center gap-2 w-full py-4 border border-border-subtle rounded-lg bg-white hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-title-md text-title-md text-primary-container">PayPal</span>
+</button>
+</div>
+<div class="flex items-center gap-4 my-4">
+<div class="flex-1 h-px bg-border-subtle"></div>
+<span class="font-body-sm text-body-sm text-text-secondary uppercase tracking-widest">Or pay with card</span>
+<div class="flex-1 h-px bg-border-subtle"></div>
+</div>
+<!-- Credit Card Form -->
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+<div class="flex items-center justify-between mb-2">
+<span class="font-title-md text-title-md text-primary-container">Credit Card</span>
+<div class="flex gap-2 text-outline">
+<span class="material-symbols-outlined" title="Visa">credit_card</span>
+<span class="material-symbols-outlined" title="Mastercard">credit_score</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Card Number -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-[#333333]" for="cardNumber">Card Number</label>
+<div class="relative input-focus-ring rounded-lg border border-[#E0E0E0] bg-white transition-all duration-300">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">credit_card</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border-none focus:ring-0 font-body-md text-body-md text-primary-container placeholder:text-outline" id="cardNumber" placeholder="0000 0000 0000 0000" required="" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Expiry -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-[#333333]" for="expiry">Expiry Date</label>
+<div class="relative input-focus-ring rounded-lg border border-[#E0E0E0] bg-white transition-all duration-300">
+<input class="w-full px-4 py-3 rounded-lg border-none focus:ring-0 font-body-md text-body-md text-primary-container placeholder:text-outline" id="expiry" placeholder="MM / YY" required="" type="text"/>
+</div>
+</div>
+<!-- CVV -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-[#333333] flex items-center gap-1" for="cvv">
+                                CVV 
+                                <span class="material-symbols-outlined text-[16px] text-outline cursor-help" title="3 digits on back of card">info</span>
+</label>
+<div class="relative input-focus-ring rounded-lg border border-[#E0E0E0] bg-white transition-all duration-300">
+<input class="w-full px-4 py-3 rounded-lg border-none focus:ring-0 font-body-md text-body-md text-primary-container placeholder:text-outline" id="cvv" placeholder="123" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Name on Card -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-[#333333]" for="cardName">Name on Card</label>
+<div class="relative input-focus-ring rounded-lg border border-[#E0E0E0] bg-white transition-all duration-300">
+<input class="w-full px-4 py-3 rounded-lg border-none focus:ring-0 font-body-md text-body-md text-primary-container placeholder:text-outline" id="cardName" placeholder="Full Name" required="" type="text"/>
+</div>
+</div>
+</div>
+<label class="flex items-start gap-3 mt-2 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 mt-0.5 border border-outline rounded bg-white group-hover:border-primary-container transition-colors">
+<input checked="" class="absolute opacity-0 w-full h-full cursor-pointer peer" type="checkbox"/>
+<span class="material-symbols-outlined text-[16px] text-white opacity-0 peer-checked:opacity-100 bg-primary-container w-full h-full rounded flex items-center justify-center transition-opacity">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-secondary leading-tight">Save this card for future purchases securely.</span>
+</label>
+</div>
+</div>
+<!-- Right Column: Order Summary & CTA -->
+<div class="lg:col-span-5 xl:col-span-4 mt-xl lg:mt-0">
+<div class="sticky top-[calc(var(--spacing-nav-height-desktop)+24px)] bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-6 md:p-8 flex flex-col gap-6">
+<h3 class="font-headline-sm text-headline-sm text-primary-container border-b border-border-subtle pb-4">Order Summary</h3>
+<!-- Items Preview -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container-high rounded overflow-hidden relative">
+<img alt="Minimalist leather handbag in cream color." class="object-cover w-full h-full" data-alt="A minimalist, premium leather handbag presented against a stark white background in a studio setting. The soft, diffuse lighting highlights the flawless texture of the cream-colored leather and subtle rose gold hardware. The composition is clean and elegant, embodying a luxury aesthetic with generous negative space. The mood is sophisticated and highly curated, fitting for a high-end fashion e-commerce site." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNGdvsd5PZL3qjAmSquTwFsS10TYEwaMN1T7wwoJJUBeSGu9HmwPIE65sHOs04E52iA3SkUZMw1tiOXgg37xQYvTlEnz4bWaDFXty68xpHHUGOiPsiUHJLhfOaWd9WUVmtSdwafjS2ZxfJ3DYdYBuDPO_enB7mGZUTJQh5xsfgqb4z-bLEOw2r6mZuGkY6aDBRAOdATI1iC7FgveMQK96b9zGo4eLtvXjZTNi9AD33tYtukOlwN-Jr-tyfuszypHIvNPjRd-v-xLg"/>
+</div>
+<div class="flex-1">
+<h4 class="font-title-sm text-title-sm text-primary-container">The Classic Tote</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Cream / OS</p>
+</div>
+<span class="font-title-sm text-title-sm text-primary-container">$895.00</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-20 bg-surface-container-high rounded overflow-hidden relative">
+<img alt="Silk scarf with abstract pattern." class="object-cover w-full h-full" data-alt="A luxurious silk scarf draped elegantly, featuring a subtle abstract pattern in deep navy and soft rose gold tones. The lighting is soft and cinematic, casting delicate shadows that emphasize the fabric's smooth, reflective texture. The background is a warm, neutral cream to maintain focus on the premium quality of the item. The overall aesthetic is refined and upscale, evoking a sense of effortless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-XRWIDN-j_7qMPJebBWzn07-_fVt0knvBOyhuESLS2NxY1UZNXdntYQovWK8P-KH7cwgObWRUHg-PmpmdgAII4oXP2UumgV5lPYMgYIB0Kh9XPoF8npgyPAub9RR73IEIvQEI0xehGEPk0oz85JPAJgbVTyA819phjYEubMuKhwRYrCPtM2GaPBeobl5DVVujns19ldAAuWr3ciJ4U2KgkKtxIQCSPCIPVH38vLFy14joKSuwXInaUTRrcPOp4CVYakCOps8TGRQ"/>
+</div>
+<div class="flex-1">
+<h4 class="font-title-sm text-title-sm text-primary-container">Silk Scarf</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mt-1">Midnight / OS</p>
+</div>
+<span class="font-title-sm text-title-sm text-primary-container">$250.00</span>
+</div>
+</div>
+<!-- Totals -->
+<div class="flex flex-col gap-3 pt-4 border-t border-border-subtle">
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Subtotal</span>
+<span>$1,145.00</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Shipping</span>
+<span>Complimentary</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-text-secondary">
+<span>Taxes</span>
+<span>Calculated at checkout</span>
+</div>
+</div>
+<div class="flex justify-between items-end pt-4 border-t border-border-subtle">
+<span class="font-title-md text-title-md text-primary-container">Total</span>
+<span class="font-headline-sm text-headline-sm text-primary-container">$1,145.00</span>
+</div>
+<!-- Pay Button -->
+<button class="w-full bg-rose-gold text-white font-title-md text-title-md py-4 rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:opacity-90 active:scale-[0.98] transition-all duration-300 mt-2 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+                    Pay Now
+                </button>
+<!-- Trust Signal -->
+<div class="flex items-center justify-center gap-2 text-success font-body-sm text-body-sm mt-2">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Secure SSL Encryption</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>

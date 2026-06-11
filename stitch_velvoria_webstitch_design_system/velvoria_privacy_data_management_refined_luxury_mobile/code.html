@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy &amp; Data - Velvoria</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1a1f3a",
+                        "surface-dim": "#dfd9d4",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "on-tertiary-container": "#60918f",
+                        "tertiary-fixed": "#b9ece9",
+                        "surface-tint": "#585d7b",
+                        "primary-fixed": "#dee1ff",
+                        "border-subtle": "#E0E0E0",
+                        "error": "#EF4444",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-tertiary-fixed": "#00201f",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "error-container": "#ffdad6",
+                        "background": "#fff8f3",
+                        "surface-container-lowest": "#ffffff",
+                        "success": "#10B981",
+                        "warning": "#F59E0B",
+                        "on-secondary-container": "#7a5242",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#002625",
+                        "outline-variant": "#c7c5ce",
+                        "surface-container": "#f3ede8",
+                        "outline": "#77767e",
+                        "secondary-container": "#ffc9b4",
+                        "surface-light": "#F5F5F5",
+                        "primary": "#030722",
+                        "tertiary": "#000d0c",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-primary-fixed-variant": "#404562",
+                        "on-background": "#1d1b18",
+                        "surface-container-low": "#f9f2ed",
+                        "on-primary-fixed": "#151a34",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#c0c4e8",
+                        "text-secondary": "#808080",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#33302d",
+                        "white": "#FFFFFF",
+                        "on-surface-variant": "#46464d",
+                        "inverse-on-surface": "#f6efeb",
+                        "on-surface": "#1d1b18",
+                        "on-primary-container": "#8286a7",
+                        "surface-bright": "#fff8f3",
+                        "secondary-fixed": "#ffdbce",
+                        "text-primary": "#333333",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e8e1dc",
+                        "surface": "#fff8f3",
+                        "surface-container-high": "#eee7e2",
+                        "secondary": "#7d5545",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#301408"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "md": "16px",
+                        "3xl": "64px",
+                        "sm": "8px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "nav-height-desktop": "80px",
+                        "xs": "4px",
+                        "4xl": "96px",
+                        "xl": "32px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #030722;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #030722;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen pb-nav-height-mobile">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 bg-surface dark:bg-surface border-b border-border-subtle dark:border-outline-variant shadow-sm flex justify-between items-center w-full px-md h-nav-height-mobile z-40 fixed">
+<button class="w-10 h-10 flex items-center justify-center text-primary dark:text-primary-fixed hover:bg-surface-container-high transition-colors duration-300 active:scale-95 transition-transform rounded-full">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Privacy Settings</h1>
+<button class="w-10 h-10 flex items-center justify-center text-primary dark:text-primary-fixed hover:bg-surface-container-high transition-colors duration-300 active:scale-95 transition-transform rounded-full">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="pt-[80px] px-md max-w-3xl mx-auto space-y-lg md:space-y-xl pb-2xl">
+<!-- Overview Section -->
+<section class="bg-surface-container-lowest rounded-xl p-lg shadow-sm border border-border-subtle/50 mt-lg">
+<div class="flex items-start gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<div>
+<h2 class="font-title-lg text-title-lg text-primary mb-sm">Your Data, Your Control</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        At Velvoria, we prioritize your privacy. Review and adjust your data preferences to tailor your luxury shopping experience exactly how you want it.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Profile Visibility -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-border-subtle/50 overflow-hidden">
+<div class="p-md border-b border-border-subtle/50 bg-surface-container-low flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+<h3 class="font-title-md text-title-md text-primary">Profile Visibility</h3>
+</div>
+<div class="p-md space-y-md">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-primary">Public Profile</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Allow other users to see your curated collections.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-tint" id="toggle_public" name="toggle_public" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-tint cursor-pointer" for="toggle_public"></label>
+</div>
+</div>
+<hr class="border-border-subtle/30"/>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between">
+<div>
+<p class="font-label-lg text-label-lg text-primary">Show Purchase History</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Display verified purchase badges on reviews.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-surface-tint" id="toggle_history" name="toggle_history" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-tint cursor-pointer" for="toggle_history"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Management -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-border-subtle/50 overflow-hidden">
+<div class="p-md border-b border-border-subtle/50 bg-surface-container-low flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="manage_accounts">manage_accounts</span>
+<h3 class="font-title-md text-title-md text-primary">Account Management</h3>
+</div>
+<div class="flex flex-col">
+<button class="flex items-center justify-between p-md hover:bg-surface-light transition-colors text-left w-full border-b border-border-subtle/30">
+<div>
+<p class="font-label-lg text-label-lg text-primary">Download My Data</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Get a copy of your personal data archive.</p>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-md hover:bg-error-container/20 transition-colors text-left w-full group">
+<div>
+<p class="font-label-lg text-label-lg text-error">Request Data Deletion</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs group-hover:text-error/80 transition-colors">Permanently remove your account and data.</p>
+</div>
+<span class="material-symbols-outlined text-error" data-icon="delete">delete</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-white dark:bg-primary-container shadow-[0_-2px_8px_rgba(0,0,0,0.08)] shadow-lg md:hidden">
+<div class="flex justify-around items-center px-4 py-2">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="storefront">storefront</span>
+<span class="font-label-md text-label-md">Boutique</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-md text-label-md">Curated</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 hover:opacity-80 transition-opacity active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-md text-label-md font-medium">Account</span>
+</button>
+</div>
+</nav>
+<script>
+        // Simple toggle logic for visual feedback
+        document.querySelectorAll('.toggle-checkbox').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                // Logic would go here for real app
+            });
+        });
+    </script>
+</body></html>

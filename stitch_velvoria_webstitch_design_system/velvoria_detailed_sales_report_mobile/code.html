@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sales Report - Velvoria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#46464d",
+                    "secondary": "#7d5545",
+                    "border-subtle": "#E0E0E0",
+                    "inverse-surface": "#33302d",
+                    "primary": "#030722",
+                    "success": "#10B981",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#151a34",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#c7c5ce",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "outline": "#77767e",
+                    "white": "#FFFFFF",
+                    "inverse-on-surface": "#f6efeb",
+                    "tertiary-fixed": "#b9ece9",
+                    "on-primary-container": "#8286a7",
+                    "on-tertiary-fixed": "#00201f",
+                    "on-surface": "#1d1b18",
+                    "on-error-container": "#93000a",
+                    "error": "#EF4444",
+                    "surface-bright": "#fff8f3",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "on-tertiary-container": "#60918f",
+                    "background": "#fff8f3",
+                    "secondary-fixed": "#ffdbce",
+                    "on-secondary-fixed": "#301408",
+                    "secondary-container": "#ffc9b4",
+                    "text-secondary": "#808080",
+                    "warning": "#F59E0B",
+                    "tertiary": "#000d0c",
+                    "on-primary-fixed-variant": "#404562",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#eee7e2",
+                    "primary-fixed": "#dee1ff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#7a5242",
+                    "surface-tint": "#585d7b",
+                    "surface-dim": "#dfd9d4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "surface-light": "#F5F5F5",
+                    "inverse-primary": "#c0c4e8",
+                    "text-primary": "#333333",
+                    "surface-container-low": "#f9f2ed",
+                    "on-background": "#1d1b18",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e8e1dc",
+                    "primary-container": "#1a1f3a",
+                    "surface-container": "#f3ede8",
+                    "tertiary-container": "#002625",
+                    "surface-container-highest": "#e8e1dc",
+                    "surface": "#fff8f3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "3xl": "64px",
+                    "4xl": "96px",
+                    "base": "8px",
+                    "nav-height-mobile": "64px",
+                    "lg": "24px",
+                    "2xl": "48px",
+                    "sm": "8px",
+                    "nav-height-desktop": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "display-md": ["Playfair Display"],
+                    "label-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "title-lg": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E0E0E0;
+            border-radius: 4px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-[80px] custom-scrollbar">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-inverse-surface text-primary dark:text-primary-fixed w-full top-0 sticky shadow-sm dark:bg-surface-container-high z-40">
+<div class="flex justify-between items-center h-[80px] px-lg w-full max-w-[1440px] mx-auto">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors duration-300 active:scale-95 text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Sales Report</h1>
+<button aria-label="More options" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-low transition-colors duration-300 active:scale-95 text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-4 md:px-lg py-xl space-y-xl">
+<!-- Time Filter -->
+<section aria-label="Time Filter" class="flex overflow-x-auto custom-scrollbar pb-2 gap-sm">
+<button class="px-4 py-2 rounded-full border border-border-subtle bg-white font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors whitespace-nowrap">7D</button>
+<button class="px-4 py-2 rounded-full bg-primary text-white font-label-lg text-label-lg shadow-sm whitespace-nowrap">30D</button>
+<button class="px-4 py-2 rounded-full border border-border-subtle bg-white font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors whitespace-nowrap">90D</button>
+<button class="px-4 py-2 rounded-full border border-border-subtle bg-white font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors whitespace-nowrap">All Time</button>
+</section>
+<!-- Revenue Overview -->
+<section aria-label="Revenue Overview" class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-white p-lg rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col gap-2 relative overflow-hidden group">
+<div class="absolute w-1 h-full bg-secondary left-0 top-0"></div>
+<h2 class="font-title-sm text-title-sm text-on-surface-variant uppercase tracking-wider">Total Revenue</h2>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">$12,450.50</span>
+<span class="flex items-center text-success font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +12%
+                    </span>
+</div>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col gap-2">
+<h2 class="font-title-sm text-title-sm text-on-surface-variant uppercase tracking-wider">Net Profit</h2>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">$9,820.00</span>
+<span class="flex items-center text-success font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +8%
+                    </span>
+</div>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col gap-2">
+<h2 class="font-title-sm text-title-sm text-on-surface-variant uppercase tracking-wider">Avg Order Value</h2>
+<div class="flex items-end gap-3">
+<span class="font-headline-lg text-headline-lg text-primary">$155.60</span>
+<span class="flex items-center text-on-surface-variant font-label-md text-label-md mb-1">
+<span class="material-symbols-outlined text-[16px]">trending_flat</span> 0%
+                    </span>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-xl">
+<!-- Sales Performance Chart Area -->
+<section aria-label="Sales Performance" class="lg:col-span-2 bg-white p-lg rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center mb-md">
+<h2 class="font-headline-sm text-headline-sm text-primary">Sales Performance</h2>
+<button class="text-secondary font-title-sm text-title-sm flex items-center hover:opacity-80 transition-opacity">
+                        Details <span class="material-symbols-outlined text-[16px] ml-1">chevron_right</span>
+</button>
+</div>
+<!-- Simulated Chart Area -->
+<div class="h-[300px] w-full flex items-end justify-between gap-2 border-b border-border-subtle pb-2 relative">
+<!-- Y Axis Labels -->
+<div class="absolute left-0 top-0 h-full flex flex-col justify-between text-on-surface-variant font-body-sm text-body-sm pb-6 pointer-events-none">
+<span>$5k</span>
+<span>$4k</span>
+<span>$3k</span>
+<span>$2k</span>
+<span>$1k</span>
+</div>
+<!-- Bars -->
+<div class="w-full h-full flex items-end justify-around pl-8">
+<div class="w-8 md:w-12 bg-primary rounded-t-md h-[40%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$2,100</div>
+</div>
+<div class="w-8 md:w-12 bg-secondary rounded-t-md h-[60%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$3,200</div>
+</div>
+<div class="w-8 md:w-12 bg-primary rounded-t-md h-[50%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$2,800</div>
+</div>
+<div class="w-8 md:w-12 bg-primary rounded-t-md h-[80%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$4,100</div>
+</div>
+<div class="w-8 md:w-12 bg-primary rounded-t-md h-[45%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$2,300</div>
+</div>
+<div class="w-8 md:w-12 bg-primary rounded-t-md h-[70%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$3,800</div>
+</div>
+<div class="w-8 md:w-12 bg-secondary rounded-t-md h-[95%] hover:opacity-90 transition-opacity cursor-pointer group relative">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">$4,900</div>
+</div>
+</div>
+</div>
+<!-- X Axis Labels -->
+<div class="flex justify-around pl-8 mt-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</section>
+<!-- Category Breakdown -->
+<section aria-label="Sales by Category" class="bg-white p-lg rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-lg">Category Split</h2>
+<div class="flex-1 flex flex-col justify-center gap-md">
+<!-- Jewelry -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between font-title-sm text-title-sm text-primary">
+<span>Jewelry</span>
+<span>45%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Apparel -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between font-title-sm text-title-sm text-primary">
+<span>Apparel</span>
+<span>35%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 35%"></div>
+</div>
+</div>
+<!-- Home Decor -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between font-title-sm text-title-sm text-primary">
+<span>Home Decor</span>
+<span>20%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Recent Transactions -->
+<section aria-label="Recent Transactions" class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="p-lg border-b border-border-subtle flex justify-between items-center">
+<h2 class="font-headline-sm text-headline-sm text-primary">Recent Transactions</h2>
+<button class="text-secondary font-title-sm text-title-sm hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-light border-b border-border-subtle font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">
+<th class="p-4 font-medium">Customer</th>
+<th class="p-4 font-medium">Date</th>
+<th class="p-4 font-medium">Amount</th>
+<th class="p-4 font-medium">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-primary">
+<tr class="border-b border-border-subtle hover:bg-surface-container-low transition-colors">
+<td class="p-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-title-sm text-primary">EA</div>
+<span>Eleanor Atwood</span>
+</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023</td>
+<td class="p-4 font-semibold">$1,250.00</td>
+<td class="p-4">
+<span class="px-2 py-1 bg-green-100 text-success rounded-md font-label-sm text-xs">Success</span>
+</td>
+</tr>
+<tr class="border-b border-border-subtle hover:bg-surface-container-low transition-colors">
+<td class="p-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-title-sm text-primary">JW</div>
+<span>Jameson Wells</span>
+</td>
+<td class="p-4 text-on-surface-variant">Oct 24, 2023</td>
+<td class="p-4 font-semibold">$450.50</td>
+<td class="p-4">
+<span class="px-2 py-1 bg-yellow-100 text-warning rounded-md font-label-sm text-xs">Pending</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-4 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-title-sm text-primary">CH</div>
+<span>Clara Hughes</span>
+</td>
+<td class="p-4 text-on-surface-variant">Oct 23, 2023</td>
+<td class="p-4 font-semibold">$3,100.00</td>
+<td class="p-4">
+<span class="px-2 py-1 bg-green-100 text-success rounded-md font-label-sm text-xs">Success</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white dark:bg-inverse-surface fixed bottom-0 w-full z-50 rounded-t-xl shadow-[0_-2px_8px_rgba(0,0,0,0.08)] flex justify-around items-center h-[64px] px-md pb-safe md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all duration-300 active:scale-90 group w-16">
+<span class="material-symbols-outlined text-[24px] mb-1 group-hover:fill-current">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all duration-300 active:scale-90 group w-16">
+<span class="material-symbols-outlined text-[24px] mb-1 group-hover:fill-current">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-2xl px-4 py-1 active:scale-90 transition-transform duration-150 w-20">
+<span class="material-symbols-outlined text-[24px] mb-1" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-label-md text-label-md">Sales</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all duration-300 active:scale-90 group w-16">
+<span class="material-symbols-outlined text-[24px] mb-1 group-hover:fill-current">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</button>
+</nav>
+</body></html>

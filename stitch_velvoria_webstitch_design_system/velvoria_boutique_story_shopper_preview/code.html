@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VELVORIA - The New Minimalist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,700;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "surface-container-low": "#f9f2ed",
+                        "on-surface": "#1d1b18",
+                        "on-primary-fixed": "#151a34",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#60918f",
+                        "surface-tint": "#585d7b",
+                        "surface-container-high": "#eee7e2",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "primary-fixed": "#dee1ff",
+                        "text-secondary": "#808080",
+                        "on-secondary-container": "#7a5242",
+                        "surface-light": "#F5F5F5",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f3",
+                        "success": "#10B981",
+                        "background": "#fff8f3",
+                        "on-primary-container": "#8286a7",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "outline-variant": "#c7c5ce",
+                        "on-secondary-fixed": "#301408",
+                        "inverse-on-surface": "#f6efeb",
+                        "text-primary": "#333333",
+                        "on-primary": "#ffffff",
+                        "warning": "#F59E0B",
+                        "secondary-container": "#ffc9b4",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "surface": "#fff8f3",
+                        "error": "#EF4444",
+                        "tertiary": "#000d0c",
+                        "inverse-surface": "#33302d",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1d1b18",
+                        "tertiary-container": "#002625",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#1a1f3a",
+                        "on-surface-variant": "#46464d",
+                        "secondary": "#7d5545",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "tertiary-fixed": "#b9ece9",
+                        "outline": "#77767e",
+                        "white": "#FFFFFF",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-dim": "#dfd9d4",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container": "#f3ede8",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "primary": "#030722",
+                        "inverse-primary": "#c0c4e8",
+                        "surface-variant": "#e8e1dc",
+                        "on-secondary": "#ffffff",
+                        "border-subtle": "#E0E0E0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "nav-height-desktop": "80px",
+                        "sm": "8px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "nav-height-mobile": "64px",
+                        "base": "8px",
+                        "4xl": "96px"
+                    },
+                    "fontFamily": {
+                        "display-md": ["Playfair Display"],
+                        "title-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar JSON Translation -->
+<header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-[80px] px-8 max-w-[1440px] mx-auto">
+<button class="text-primary hover:opacity-70 transition-opacity duration-300 flex items-center justify-center p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-display-md text-display-md tracking-widest text-primary">VELVORIA</h1>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300 flex items-center justify-center p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-[80px] pb-[80px] md:pb-0 mx-auto max-w-[1440px]">
+<!-- Hero Section -->
+<article class="w-full">
+<div class="w-full h-[530px] md:h-[663px] overflow-hidden relative bg-surface-container-high">
+<img alt="Hero Image" class="w-full h-full object-cover object-center transform transition-transform duration-[10s] hover:scale-105 ease-out" data-alt="A striking, high-fashion editorial photograph of a minimalist luxury coat draped elegantly over a sculpted marble chair. The setting is an expansive, sunlit atelier with pristine white walls and warm hardwood floors. The lighting is soft and diffused, creating a serene, high-end light-mode aesthetic with a refined palette of creamy whites, subtle beiges, and deep navy accents. The mood is sophisticated, calm, and effortlessly elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoHB9IPTEOMgbgZsMaL9mYRTwd8nekAlKRc7KB7WRbW0cmYrmTFlTGlJQQEg29XCA0qsAvexpZk28gsNp_EcdEG4cpBCUURo311yxrjYgS_t3zD5xZUocRcI_gM4vlbnb9RrEyeMoNw-wXdgzy-ez6K3KYYADSP9Dds_I4fpGGQ60NiTXqwXWKsHC_BOiBbWwqNEnZ67TzoDHQO5igT_3ZsAd8TlXoitSMB_BlKezk1EUMsWW7bbi0sV3ycuPYuwX29PcwSurei9s"/>
+</div>
+<!-- Article Header & Content Wrapper -->
+<div class="px-4 md:px-2xl max-w-4xl mx-auto mt-xl md:mt-4xl mb-4xl">
+<header class="text-center mb-xl">
+<p class="font-label-lg text-label-lg text-text-secondary uppercase tracking-widest mb-sm">Oct 24, 2023 • Atelier Blanc</p>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-lg">The New Minimalist</h2>
+<div class="w-12 h-1 bg-secondary-container mx-auto"></div>
+</header>
+<div class="prose prose-lg max-w-none text-on-surface-variant font-body-lg text-body-lg leading-relaxed space-y-lg">
+<p class="first-letter:font-display-md first-letter:text-[48px] first-letter:float-left first-letter:mr-3 first-letter:text-primary first-letter:leading-[40px]">
+                        In a world increasingly cluttered by noise, the pursuit of elegance has shifted towards quiet confidence. The new season at Velvoria embraces this philosophy, distilling luxury down to its purest essence. We explore silhouettes that speak softly but resonate deeply, crafted from materials that demand to be touched rather than merely seen.
+                    </p>
+<p>
+                        This transition isn't about stark deprivation; it's about curated abundance. It is the careful selection of an impeccably tailored wool coat or the subtle gleam of a perfectly understated accessory. The minimalist approach requires flawless execution, as there is nowhere for poor craftsmanship to hide.
+                    </p>
+</div>
+<!-- Pull Quote -->
+<blockquote class="my-4xl text-center relative px-xl">
+<span class="material-symbols-outlined text-[48px] text-surface-container-high absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/4 select-none">format_quote</span>
+<p class="font-headline-md text-headline-md italic text-primary leading-snug relative z-10">
+                        "True luxury is an experience of ease. It is finding the sublime in the structural, the poetic in the practical."
+                    </p>
+</blockquote>
+<!-- Secondary Image Block -->
+<div class="my-4xl relative group">
+<img alt="Secondary Editorial Image" class="w-full h-[500px] object-cover rounded-lg shadow-sm" data-alt="A close-up, highly textured macro photograph of premium ivory woven fabric, showcasing intricate threads and organic imperfections. The textile is draped softly, creating gentle shadows that emphasize its luxurious weight and quality. The lighting is warm and directional, typical of high-end studio product photography, highlighting a sophisticated, tactile aesthetic in a light-mode color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo4ddJFdSecLBuY_7vrjvDhb_t4YToBJkU947oFEfJznlOLSsXsdSnrYORBFO0m3gHLIY71uoNwRkNfxy_mV7ulkTSPnTPrOy3V0Dkjs0SSPstu2oUBHxoXnOaPLtTdeOUDjK8V3kCiynosx9H1jMEdd9DSF-5joo56DU6fA1tZpEJGp8VbKZO3706F1mt84yPY8UMwSZzKGFxFObiycZrCzdt0GiIjk6wvqRsktv-Uc9ryHAs6hJt2NDSR0_WeW6aS5K28yWJDFg"/>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-DEFAULT text-sm font-label-md text-primary shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Textile Focus: Cashmere Blend
+                    </div>
+</div>
+<!-- Featured Products Inline -->
+<div class="mt-4xl pt-xl border-t border-border-subtle">
+<h3 class="font-title-lg text-title-lg text-primary mb-lg flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">sell</span>
+                        Featured in this Story
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg border border-border-subtle overflow-hidden hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-row">
+<div class="w-1/3 overflow-hidden bg-surface-container-low">
+<img alt="Midnight Tote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pristine, minimalist midnight navy leather tote bag sitting on a smooth cream pedestal. The studio lighting is soft and perfectly balanced, casting a gentle drop shadow that grounds the product. The scene embodies premium luxury e-commerce aesthetics with generous whitespace, high visual clarity, and a strict deep navy and cream color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM9N9GrWkNEeKjFvLLNkJXWr4D09Q6KnMnOx2v-GdLwzQipC87L95kI6wOxRjF8WohTYsQVjit4oiN6NJF0ZfY4ltF4IvIJrUusLNyIbpnHD40EJAR0CzH364IKD1OhVGJBsL9ZUoM1KIIh654jt1U4L-p0LO9BQ9oEzO2MEJI52GdyH-7NJ7GJlO_b1IT9zPo83LCm9QeAI27bPFMFTsiqlYM9JwICD3JNjTjQcpwvET3XVhoYxoOS_9RMcsnbptSXEowIcC01fw"/>
+</div>
+<div class="w-2/3 p-md flex flex-col justify-center">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-xs">Essentials</span>
+<h4 class="font-title-md text-title-md text-primary mb-sm">The Midnight Tote</h4>
+<a class="font-label-md text-label-md text-primary underline decoration-border-subtle hover:decoration-primary underline-offset-4 mt-auto w-fit transition-colors" href="#">Shop Now</a>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest rounded-lg border border-border-subtle overflow-hidden hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 flex flex-row relative">
+<!-- Rose Gold Highlight Accent -->
+<div class="absolute left-0 top-0 bottom-0 w-[4px] bg-secondary-container z-10"></div>
+<div class="w-1/3 overflow-hidden bg-surface-container-low pl-[4px]">
+<img alt="Aura Necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate, sophisticated rose-gold pendant necklace displayed elegantly on a smooth, slightly textured cream surface. The jewelry catches a subtle glint of warm light, highlighting its refined craftsmanship. The composition is highly minimalist, utilizing extensive negative space to evoke a feeling of exclusivity and calm, high-end luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyHw4lXaiLvVEGwmvHnPJZLlE5LkXhwtcvedG-bazXc6RPlZpfR_EVzmzYCjJSpk6ErevcuSsgzt-IMuSVBrw_m-Pb3W8Dc0-EUSKvONbKMOXBZlx3LTQq88l--ILju4dYyQPgT8kyRLyZ-Up2fUItOrU_422qrf6G5MA4Wr9s1iWx9lc98UCHkxKa3ll_v8rV6ThDm_N-ooBPRl5TRk8ShV43YapyORay-nOpMAKkP3Hi6kROmyrsUnESyM_XLDdGXG7HnmiTQms"/>
+</div>
+<div class="w-2/3 p-md flex flex-col justify-center">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-xs">Curated</span>
+<h4 class="font-title-md text-title-md text-primary mb-sm">Aura Necklace</h4>
+<a class="font-label-md text-label-md text-primary underline decoration-border-subtle hover:decoration-primary underline-offset-4 mt-auto w-fit transition-colors" href="#">Shop Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+<!-- BottomNavBar JSON Translation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center h-[64px] px-4">
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors scale-95 active:scale-90 w-[72px]">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-label-md text-[10px] leading-tight">Shop Story</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors scale-95 active:scale-90 w-[72px]">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-label-md text-[10px] leading-tight">Collection</span>
+</button>
+<!-- Active Navigation Item: Stories -->
+<button class="flex flex-col items-center justify-center text-primary font-bold hover:text-primary transition-colors scale-95 active:scale-90 w-[72px] relative">
+<div class="absolute -top-3 w-8 h-1 bg-primary rounded-full"></div>
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-md text-[10px] leading-tight">Stories</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors scale-95 active:scale-90 w-[72px]">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-[10px] leading-tight">Account</span>
+</button>
+</div>
+</nav>
+</body></html>

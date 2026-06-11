@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Live Chat</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#030722",
+                        "surface-container-high": "#eee7e2",
+                        "on-tertiary-container": "#60918f",
+                        "on-error-container": "#93000a",
+                        "border-subtle": "#E0E0E0",
+                        "surface-light": "#F5F5F5",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e8e1dc",
+                        "outline": "#77767e",
+                        "surface-bright": "#fff8f3",
+                        "secondary": "#7d5545",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-tint": "#585d7b",
+                        "on-error": "#ffffff",
+                        "on-surface": "#1d1b18",
+                        "background": "#fff8f3",
+                        "text-primary": "#333333",
+                        "on-secondary-fixed": "#301408",
+                        "primary-fixed": "#dee1ff",
+                        "text-secondary": "#808080",
+                        "white": "#FFFFFF",
+                        "surface-container-low": "#f9f2ed",
+                        "on-surface-variant": "#46464d",
+                        "surface-dim": "#dfd9d4",
+                        "tertiary-container": "#002625",
+                        "tertiary": "#000d0c",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary-fixed": "#151a34",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-background": "#1d1b18",
+                        "surface-container": "#f3ede8",
+                        "on-primary-container": "#8286a7",
+                        "success": "#10B981",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#00201f",
+                        "inverse-surface": "#33302d",
+                        "error-container": "#ffdad6",
+                        "error": "#EF4444",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface-variant": "#e8e1dc",
+                        "primary-container": "#1a1f3a",
+                        "warning": "#F59E0B",
+                        "secondary-container": "#ffc9b4",
+                        "outline-variant": "#c7c5ce",
+                        "inverse-primary": "#c0c4e8",
+                        "surface": "#fff8f3",
+                        "tertiary-fixed": "#b9ece9",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-secondary-container": "#7a5242"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "nav-height-desktop": "80px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "sm": "8px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "4xl": "96px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "title-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #E0E0E0;
+            border-radius: 10px;
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-text-primary h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-surface-container-lowest shadow-sm flex justify-between items-center px-lg w-full max-w-[1440px] mx-auto w-full h-[80px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] dark:shadow-none z-10 hidden md:flex">
+<button aria-label="menu" class="text-primary dark:text-primary-fixed cursor-pointer transition-transform active:scale-95 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-display-md text-display-md uppercase tracking-widest text-primary dark:text-primary-fixed">VELVORIA</div>
+<button aria-label="shopping_bag" class="text-primary dark:text-primary-fixed cursor-pointer transition-transform active:scale-95 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</header>
+<!-- Main Chat Layout -->
+<main class="flex-grow flex justify-center items-center p-md md:p-xl h-full overflow-hidden bg-surface">
+<div class="w-full max-w-3xl bg-white rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.12)] flex flex-col h-full border border-border-subtle relative overflow-hidden">
+<!-- Chat Header -->
+<div class="px-lg py-md border-b border-border-subtle flex items-center justify-between bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.04)] z-10">
+<div class="flex items-center gap-md">
+<div class="relative">
+<img alt="Isabella" class="w-12 h-12 rounded-full object-cover border border-border-subtle" data-alt="A professional headshot of a sophisticated boutique concierge named Isabella. She is wearing an elegant dark navy blazer over a crisp white blouse. The lighting is soft and flattering, creating a premium light-mode aesthetic. The background is a blurred luxury boutique interior. The mood is welcoming and refined." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ90dpcI16jherMFF3sIOo2aoqQbZ62cxCNm11YPWaQ6YkwX4AOh7lNGRJZT_DH4B2gPgCklZP5V-HVuvpThUrR3Y3-6TdZ-iCN-Wn5-Er28-sVh59KoqbI7wJp4mKJ9QeKaNx217RRMTvb9466bWwX695Chm8HfFeJbeKYGWMExETuUladjvKKqBpMmbwUBEfKJIK07VFiR1vZd6V4pLGfQxrck-QeuC8W7aslna6SzsMt9hk_h1cNzlKWjk0_wVHaTRgOcsy2OQ"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-success rounded-full border-2 border-white"></div>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-primary flex items-center gap-xs">
+                            Isabella - Boutique Concierge
+                            <span class="material-symbols-outlined text-success text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</h2>
+<p class="font-body-sm text-body-sm text-text-secondary">Typically replies in a few minutes</p>
+</div>
+</div>
+<div class="flex gap-sm">
+<button class="p-2 text-text-secondary hover:text-primary transition-colors rounded-full hover:bg-surface-light">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+<button class="p-2 text-text-secondary hover:text-primary transition-colors rounded-full hover:bg-surface-light md:hidden">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="flex-grow p-lg overflow-y-auto custom-scrollbar flex flex-col gap-lg bg-[#FAFAFA]">
+<!-- Timestamp -->
+<div class="flex justify-center fade-in">
+<span class="font-label-md text-label-md text-text-secondary bg-surface-light px-3 py-1 rounded-full">Today, 10:42 AM</span>
+</div>
+<!-- Assistant Message -->
+<div class="flex items-end gap-sm fade-in delay-100 max-w-[80%]">
+<img alt="Isabella" class="w-8 h-8 rounded-full object-cover flex-shrink-0" data-alt="A small circular avatar of a sophisticated female boutique concierge wearing a dark navy blazer. The image has a clean, light-mode background. The styling is elegant and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZByncuKXS9xhtsGWl4oTQexcNrLexDnYrnz2H6wOj1ECW2DQNvudRNo6rAoLXQ0294vRgyWwwiX1cqtJ66BkGoBoKFdFuArZPi44HNEnStYIZA2BoRUu-vkU3S654ao6Y_LQoWb4KQ-aVO5MOGG1cedG4JCcq69JFvqnaKFCAhW1TVV25TdqyvmbOUe-dlGNOQCpC7jtc9lSGdaf7wxiKg4LmNTH_B61K4dfVpu1pmqzHb2rJOtv4obXMDNUjpKYNavSl5J5Mahc"/>
+<div class="bg-white border border-border-subtle text-text-primary px-lg py-md rounded-2xl rounded-bl-none shadow-sm">
+<p class="font-body-md text-body-md">Good morning! Welcome to Velvoria. I'm Isabella, your personal concierge. How may I assist you with finding the perfect piece today?</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex items-end justify-end gap-sm fade-in delay-200 max-w-[80%] self-end">
+<div class="bg-primary text-white px-lg py-md rounded-2xl rounded-br-none shadow-sm">
+<p class="font-body-md text-body-md">Hi Isabella. I'm looking for a silk scarf to pair with a navy evening gown. Something subtle but elegant.</p>
+</div>
+</div>
+<!-- Assistant Message (Typing) -->
+<div class="flex items-end gap-sm fade-in delay-300 max-w-[80%]">
+<img alt="Isabella" class="w-8 h-8 rounded-full object-cover flex-shrink-0" data-alt="A small circular avatar of a sophisticated female boutique concierge wearing a dark navy blazer. The image has a clean, light-mode background. The styling is elegant and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKCJ4TrzzOx-IFOW0ofqDPcSO104RRMv5fu6gxko8SXqHLFcmKtPduNKR5iSp2LgYuR40FnFQ-iipX58-HKfmkLIDqER0aMMZw0muQne6Mr7sO8_HraxWM7td1r2MXFFvLXDuE-2Tn9z3fmFuHbUtPFsbVCSw67L03X_HzGhYBTH3BPZKxTnIpu2otREtYJkiFn0pLH2cX029nsa8S4wIROsaCLDrWBxwwKQOx75ZgDzwyh9yGSJ5BUiDzueQniXIX2jBeCUh0ct8"/>
+<div class="bg-white border border-border-subtle px-md py-sm rounded-2xl rounded-bl-none shadow-sm flex items-center gap-1 h-[42px]">
+<div class="w-2 h-2 bg-text-secondary rounded-full animate-pulse"></div>
+<div class="w-2 h-2 bg-text-secondary rounded-full animate-pulse delay-75"></div>
+<div class="w-2 h-2 bg-text-secondary rounded-full animate-pulse delay-150"></div>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="px-lg py-md bg-white border-t border-border-subtle z-10">
+<div class="flex items-center gap-sm bg-surface-light rounded-full border border-border-subtle focus-within:border-primary focus-within:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all duration-300 px-md py-2">
+<button class="p-2 text-text-secondary hover:text-primary transition-colors flex-shrink-0 rounded-full hover:bg-border-subtle/50">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+</button>
+<input class="flex-grow bg-transparent border-none focus:ring-0 font-body-md text-body-md text-text-primary placeholder-text-secondary h-full py-2" placeholder="Type a message..." type="text"/>
+<button class="p-2 text-text-secondary hover:text-primary transition-colors flex-shrink-0 rounded-full hover:bg-border-subtle/50">
+<span class="material-symbols-outlined text-[20px]">mood</span>
+</button>
+<button class="p-2 bg-primary text-white hover:opacity-90 transition-opacity flex-shrink-0 rounded-full ml-xs">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+<div class="text-center mt-xs">
+<span class="font-label-md text-label-md text-text-secondary text-[10px]">Powered by Velvoria Concierge</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="bg-white dark:bg-surface-container-lowest fixed bottom-0 w-full z-50 rounded-t-xl shadow-[0_-2px_10px_rgba(0,0,0,0.05)] shadow-lg fixed bottom-0 w-full z-50 flex justify-around items-center h-nav-height-mobile bg-white px-md pb-safe md:hidden">
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-md text-label-md mt-1">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors duration-200 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

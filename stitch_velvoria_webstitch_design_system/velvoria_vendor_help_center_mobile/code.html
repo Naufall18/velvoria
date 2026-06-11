@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria Vendor - Help Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-content {
+            max-height: 200px; /* Arbitrary max height for animation */
+            padding-bottom: 16px;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#000d0c",
+                    "text-primary": "#333333",
+                    "secondary": "#7d5545",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#33302d",
+                    "surface-container": "#f3ede8",
+                    "inverse-primary": "#c0c4e8",
+                    "secondary-fixed": "#ffdbce",
+                    "on-background": "#1d1b18",
+                    "on-secondary-container": "#7a5242",
+                    "on-secondary-fixed": "#301408",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#60918f",
+                    "surface-light": "#F5F5F5",
+                    "on-primary-fixed": "#151a34",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#46464d",
+                    "surface": "#fff8f3",
+                    "surface-variant": "#e8e1dc",
+                    "secondary-container": "#ffc9b4",
+                    "on-primary-container": "#8286a7",
+                    "on-tertiary-fixed": "#00201f",
+                    "primary": "#030722",
+                    "inverse-on-surface": "#f6efeb",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f9f2ed",
+                    "primary-fixed": "#dee1ff",
+                    "tertiary-fixed-dim": "#9dd0cd",
+                    "text-secondary": "#808080",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#623e2f",
+                    "tertiary-fixed": "#b9ece9",
+                    "outline": "#77767e",
+                    "warning": "#F59E0B",
+                    "on-primary-fixed-variant": "#404562",
+                    "on-tertiary-fixed-variant": "#1a4e4c",
+                    "border-subtle": "#E0E0E0",
+                    "primary-container": "#1a1f3a",
+                    "surface-bright": "#fff8f3",
+                    "outline-variant": "#c7c5ce",
+                    "white": "#FFFFFF",
+                    "success": "#10B981",
+                    "surface-container-highest": "#e8e1dc",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#c0c4e8",
+                    "background": "#fff8f3",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1d1b18",
+                    "error": "#EF4444",
+                    "secondary-fixed-dim": "#f0bba7",
+                    "surface-dim": "#dfd9d4",
+                    "tertiary-container": "#002625",
+                    "surface-container-high": "#eee7e2",
+                    "surface-tint": "#585d7b",
+                    "rose-gold": "#b76e79"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "3xl": "64px",
+                    "4xl": "96px",
+                    "xl": "32px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "nav-height-mobile": "64px",
+                    "sm": "8px",
+                    "md": "16px",
+                    "lg": "24px",
+                    "nav-height-desktop": "80px",
+                    "2xl": "48px"
+            },
+            "fontFamily": {
+                    "title-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "body-sm": ["Inter"],
+                    "title-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "display-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                    "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                    "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                    "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-text-primary font-body-md antialiased pb-nav-height-mobile md:pb-0 pt-nav-height-mobile md:pt-nav-height-desktop min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-lg h-nav-height-mobile md:h-nav-height-desktop shadow-sm dark:shadow-none bg-surface dark:bg-surface-dim">
+<div class="flex items-center gap-md">
+<button class="text-primary dark:text-primary-fixed hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-300 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-display-md text-display-md text-primary dark:text-primary-fixed tracking-tight hidden md:block">Velvoria Vendor</h1>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed md:hidden">Help Center</h1>
+</div>
+<!-- Desktop Nav Items -->
+<nav class="hidden md:flex items-center gap-lg h-full">
+<a class="h-full flex items-center px-md text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-300" href="#">
+<span class="font-label-lg text-label-lg">Dashboard</span>
+</a>
+<a class="h-full flex items-center px-md text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-300" href="#">
+<span class="font-label-lg text-label-lg">Inventory</span>
+</a>
+<a class="h-full flex items-center px-md text-on-surface-variant dark:text-outline hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-300" href="#">
+<span class="font-label-lg text-label-lg">Sales</span>
+</a>
+<a class="h-full flex items-center px-md text-primary dark:text-primary-fixed font-bold border-b-2 border-primary hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors duration-300" href="#">
+<span class="font-label-lg text-label-lg">Settings</span>
+</a>
+</nav>
+<div class="flex items-center gap-sm">
+<img alt="Vendor Profile Picture" class="w-10 h-10 rounded-full object-cover border border-border-subtle" data-alt="A close-up portrait of a sophisticated woman representing a high-end luxury boutique vendor profile picture. The lighting is soft and natural, highlighting an elegant aesthetic suitable for a premium e-commerce platform. The image exudes professionalism and effortless elegance in a light-mode context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcw3EFa-otASfnK9C79r-pB3fYJQBlKd72OlROpi0WBqu6rb6Q_ODjwbjBmbzemxl0pxln58H1DKNreEAenxX6vYEPsFY5Cpkyw4iLF1ab2UuGTDdoe-T9k6nveHLTgwn60JJGlJlGf1Ir2BkhPMGifxzqPtzbIJKFci6PYJIwqPcRZutLOAkAWObjVYxbvQ355At9joT1D84TCJ3pfErM_V7SrIdcI0wM8rU_JZJw22Ig1ykDbofiiiDngT6l4hATJIAM88rD9A0"/>
+</div>
+</header>
+<main class="flex-grow max-w-[1440px] mx-auto w-full px-md md:px-2xl py-xl md:py-3xl flex flex-col gap-3xl">
+<!-- Search Section -->
+<section class="w-full max-w-3xl mx-auto text-center flex flex-col gap-lg">
+<h2 class="font-headline-lg text-headline-lg md:font-display-lg md:text-display-lg text-primary">How can we assist you?</h2>
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full pl-3xl pr-md py-lg bg-surface-light border border-border-subtle rounded-lg font-body-md text-text-primary focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-[0_0_0_3px_rgba(3,7,34,0.1)] transition-all" placeholder="Search for help, guides, or contact support..." type="text"/>
+</div>
+</section>
+<!-- Category Grid -->
+<section class="flex flex-col gap-lg">
+<h3 class="font-headline-sm text-headline-sm text-primary border-b border-border-subtle pb-sm">Help Categories</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- Card 1 -->
+<a class="category-card bg-white rounded-xl p-lg flex flex-col gap-md shadow-[0_2px_8px_rgba(0,0,0,0.08)] border-l-4 border-rose-gold" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-rose-gold">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Selling on Velvoria</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Listing best practices, boutique optimization, and premium merchandising.</p>
+</div>
+</a>
+<!-- Card 2 -->
+<a class="category-card bg-white rounded-xl p-lg flex flex-col gap-md shadow-[0_2px_8px_rgba(0,0,0,0.08)]" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Payments &amp; Earnings</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Withdrawals, fee structures, and managing your financial dashboard.</p>
+</div>
+</a>
+<!-- Card 3 -->
+<a class="category-card bg-white rounded-xl p-lg flex flex-col gap-md shadow-[0_2px_8px_rgba(0,0,0,0.08)]" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Shipping &amp; Logistics</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">International fulfillment, tracking updates, and packaging standards.</p>
+</div>
+</a>
+<!-- Card 4 -->
+<a class="category-card bg-white rounded-xl p-lg flex flex-col gap-md shadow-[0_2px_8px_rgba(0,0,0,0.08)]" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Account Security</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Password management, 2FA, and protecting your vendor profile.</p>
+</div>
+</a>
+<!-- Card 5 -->
+<a class="category-card bg-white rounded-xl p-lg flex flex-col gap-md shadow-[0_2px_8px_rgba(0,0,0,0.08)]" href="#">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary mb-xs">Policy &amp; Legal</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">Terms of service, return policies, and intellectual property guidelines.</p>
+</div>
+</a>
+</div>
+</section>
+<!-- FAQs Section -->
+<section class="flex flex-col gap-lg bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-md">Frequently Asked Questions</h3>
+<div class="flex flex-col border-t border-border-subtle">
+<!-- FAQ Item 1 -->
+<div class="faq-item border-b border-border-subtle">
+<button class="w-full py-md flex justify-between items-center text-left focus:outline-none focus:bg-surface-container-low transition-colors px-sm rounded-md" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-title-md text-title-md text-primary">How do I withdraw my earnings?</span>
+<span class="material-symbols-outlined text-outline faq-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="faq-content px-sm">
+<p class="font-body-md text-body-md text-text-secondary">Earnings can be withdrawn navigating to the Sales dashboard and selecting 'Initiate Transfer'. Funds are typically processed within 2-3 business days to your connected bank account.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item border-b border-border-subtle">
+<button class="w-full py-md flex justify-between items-center text-left focus:outline-none focus:bg-surface-container-low transition-colors px-sm rounded-md" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-title-md text-title-md text-primary">Setting up international shipping</span>
+<span class="material-symbols-outlined text-outline faq-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="faq-content px-sm">
+<p class="font-body-md text-body-md text-text-secondary">To enable international shipping, go to Settings &gt; Logistics. You will need to define your shipping zones and configure carrier rates for each region to ensure accurate checkout pricing.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item border-b border-border-subtle">
+<button class="w-full py-md flex justify-between items-center text-left focus:outline-none focus:bg-surface-container-low transition-colors px-sm rounded-md" onclick="this.parentElement.classList.toggle('active')">
+<span class="font-title-md text-title-md text-primary">Managing boutique reviews</span>
+<span class="material-symbols-outlined text-outline faq-icon transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</button>
+<div class="faq-content px-sm">
+<p class="font-body-md text-body-md text-text-secondary">Reviews can be monitored from your Dashboard. You can respond publicly to feedback to maintain your brand reputation. For inappropriate reviews, use the 'Report' flag for our moderation team to review.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Support -->
+<section class="flex flex-col gap-lg items-center text-center py-xl bg-surface-container-low rounded-xl border border-border-subtle">
+<h3 class="font-headline-sm text-headline-sm text-primary">Still need help?</h3>
+<p class="font-body-md text-body-md text-text-secondary max-w-lg">Our dedicated vendor support team is available to assist you with any inquiries regarding your premium boutique experience.</p>
+<div class="flex flex-wrap justify-center gap-md mt-sm">
+<button class="bg-primary text-white font-label-lg text-label-lg px-xl py-sm rounded-[8px] hover:bg-opacity-90 hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="chat">chat</span> Live Chat
+                </button>
+<button class="bg-transparent border-2 border-primary text-primary font-label-lg text-label-lg px-xl py-sm rounded-[8px] hover:bg-surface-container hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span> Email Support
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-md pb-safe h-nav-height-mobile shadow-lg dark:shadow-none bg-white dark:bg-surface-container-lowest rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-md py-xs hover:bg-surface-container-high dark:hover:bg-primary-container/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-xs" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-md py-xs hover:bg-surface-container-high dark:hover:bg-primary-container/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-xs" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-md text-label-md">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-md py-xs hover:bg-surface-container-high dark:hover:bg-primary-container/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined mb-xs" data-icon="payments">payments</span>
+<span class="font-label-md text-label-md">Sales</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-primary-container text-on-secondary-container dark:text-on-primary-container rounded-full px-md py-xs scale-90 duration-200 ease-in-out hover:bg-surface-container-high dark:hover:bg-primary-container/50 transition-all" href="#">
+<span class="material-symbols-outlined mb-xs" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Account Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#fff8f3",
+                      "inverse-surface": "#33302d",
+                      "white": "#FFFFFF",
+                      "secondary": "#7d5545",
+                      "tertiary": "#000d0c",
+                      "surface-container-highest": "#e8e1dc",
+                      "text-secondary": "#808080",
+                      "surface-light": "#F5F5F5",
+                      "warning": "#F59E0B",
+                      "border-subtle": "#E0E0E0",
+                      "on-secondary-fixed": "#301408",
+                      "primary-fixed": "#dee1ff",
+                      "surface-dim": "#dfd9d4",
+                      "text-primary": "#333333",
+                      "on-surface-variant": "#46464d",
+                      "on-background": "#1d1b18",
+                      "success": "#10B981",
+                      "outline": "#77767e",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#eee7e2",
+                      "error-container": "#ffdad6",
+                      "background": "#fff8f3",
+                      "tertiary-fixed": "#b9ece9",
+                      "tertiary-container": "#002625",
+                      "on-primary-fixed": "#151a34",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f6efeb",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "surface-bright": "#fff8f3",
+                      "on-tertiary-fixed": "#00201f",
+                      "error": "#EF4444",
+                      "surface-variant": "#e8e1dc",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f9f2ed",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#404562",
+                      "secondary-container": "#ffc9b4",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "on-primary-container": "#8286a7",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#60918f",
+                      "surface-container": "#f3ede8",
+                      "primary-container": "#1a1f3a",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed": "#ffdbce",
+                      "outline-variant": "#c7c5ce",
+                      "inverse-primary": "#c0c4e8",
+                      "primary": "#030722",
+                      "on-secondary-container": "#7a5242",
+                      "on-surface": "#1d1b18",
+                      "surface-tint": "#585d7b",
+                      "primary-fixed-dim": "#c0c4e8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "2xl": "48px",
+                      "nav-height-mobile": "64px",
+                      "lg": "24px",
+                      "xl": "32px",
+                      "base": "8px",
+                      "4xl": "96px",
+                      "nav-height-desktop": "80px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "3xl": "64px",
+                      "xs": "4px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-text-primary font-body-lg min-h-screen pb-4xl antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white shadow-sm flex items-center justify-between px-md h-nav-height-mobile transition-opacity duration-300 ease-in-out">
+<button aria-label="Back" class="w-10 h-10 flex items-center justify-center text-primary hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm-mobile text-primary tracking-tight">Account Settings</h1>
+<div class="w-10 h-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="pt-nav-height-mobile px-md mt-lg">
+<!-- User Summary -->
+<section class="flex flex-col items-center mb-xl">
+<div class="relative w-24 h-24 mb-md">
+<img alt="Profile Picture of Julianne Vane" class="w-full h-full rounded-full object-cover shadow-sm border-2 border-white" data-alt="A close-up portrait of an elegant woman with subtle, refined makeup, set against a warm, light-mode background. The lighting is soft and high-key, casting gentle shadows that emphasize a sense of effortless luxury and sophistication. The overall palette features creamy undertones, subtle rose gold highlights, and deep navy contrasts, aligning with a premium, minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8bfxpkpc52hAihGjG6WXwqmKnNcou7Arr94GX84X1tgAkGYg0czdnN0PZPgNBVaDaNGrtwkv3ip83X9R8NbvyhNTGAB2bM_WJwoP2xBnrCZm0rXnezd5EirsYtCHoa2Dtzj0cAdwDsS4w68Pp0gX6umXXexZK898WZIKrVdMPczExduWJQP4ZhsneVAMtFLgZ3rtxwMV4bcJYSZTiUWw9ZmvLAx388-qtEkHKf1N-SaMY_RA9bTv7bowqbYGC17Clg18u288KLww"/>
+<button aria-label="Edit Profile Picture" class="absolute bottom-0 right-0 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white shadow-md hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-xs">Julianne Vane</h2>
+<div class="inline-flex items-center px-3 py-1 bg-secondary-container rounded-full">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container mr-1 fill">workspace_premium</span>
+<span class="font-label-md text-label-md text-on-secondary-container uppercase tracking-wider">Premium Member</span>
+</div>
+</section>
+<!-- Settings Groups -->
+<div class="space-y-lg">
+<!-- Personal Information -->
+<section>
+<h3 class="font-title-lg text-title-lg text-primary mb-md ml-xs border-l-4 border-secondary-container pl-2">Personal Information</h3>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<ul class="divide-y divide-border-subtle">
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">person</span>
+<span class="font-body-md text-body-md text-text-primary">Name</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">Julianne Vane</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">mail</span>
+<span class="font-body-md text-body-md text-text-primary">Email</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">j.vane@example.com</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">phone</span>
+<span class="font-body-md text-body-md text-text-primary">Phone</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">+1 (555) 123-4567</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">home</span>
+<span class="font-body-md text-body-md text-text-primary">Address</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm truncate max-w-[120px]">123 Luxury Ln, NY</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</section>
+<!-- Security -->
+<section>
+<h3 class="font-title-lg text-title-lg text-primary mb-md ml-xs border-l-4 border-secondary-container pl-2">Security</h3>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<ul class="divide-y divide-border-subtle">
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">lock</span>
+<span class="font-body-md text-body-md text-text-primary">Change Password</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">verified_user</span>
+<span class="font-body-md text-body-md text-text-primary">Two-Factor Auth</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-success mr-sm">Enabled</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</section>
+<!-- Notifications -->
+<section>
+<h3 class="font-title-lg text-title-lg text-primary mb-md ml-xs border-l-4 border-secondary-container pl-2">Notifications</h3>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<ul class="divide-y divide-border-subtle">
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">email</span>
+<span class="font-body-md text-body-md text-text-primary">Email</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">notifications_active</span>
+<span class="font-body-md text-body-md text-text-primary">Push Notifications</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">sms</span>
+<span class="font-body-md text-body-md text-text-primary">SMS</span>
+</div>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</a>
+</li>
+</ul>
+</div>
+</section>
+<!-- Preferences -->
+<section>
+<h3 class="font-title-lg text-title-lg text-primary mb-md ml-xs border-l-4 border-secondary-container pl-2">Preferences</h3>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<ul class="divide-y divide-border-subtle">
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">language</span>
+<span class="font-body-md text-body-md text-text-primary">Language</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">English (US)</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">payments</span>
+<span class="font-body-md text-body-md text-text-primary">Currency</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">USD ($)</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between p-md hover:bg-surface-light transition-colors group" href="#">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-text-secondary mr-md group-hover:text-primary transition-colors">palette</span>
+<span class="font-body-md text-body-md text-text-primary">Theme</span>
+</div>
+<div class="flex items-center">
+<span class="font-body-sm text-body-sm text-text-secondary mr-sm">Light</span>
+<span class="material-symbols-outlined text-text-secondary">chevron_right</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+<!-- Sign Out Action -->
+<div class="mt-xl mb-2xl flex justify-center">
+<button class="flex items-center justify-center px-xl py-3 border-2 border-primary rounded-lg text-primary font-title-sm text-title-sm hover:bg-primary/5 transition-colors duration-300 w-full max-w-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface">
+<span class="material-symbols-outlined mr-sm text-[20px]">logout</span>
+                Sign Out
+            </button>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on this transactional/focused screen as per instructions, but included in structure if needed globally, suppressed here via display:none logic or omission. We omit it here because Settings implies a task-focused screen) -->
+</body></html>

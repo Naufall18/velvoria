@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE Product Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "warning": "#F59E0B",
+                        "text-secondary": "#808080",
+                        "on-secondary": "#ffffff",
+                        "border-subtle": "#E0E0E0",
+                        "secondary-fixed": "#ffdbce",
+                        "white": "#FFFFFF",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "secondary-container": "#ffc9b4",
+                        "error": "#EF4444",
+                        "inverse-surface": "#33302d",
+                        "inverse-primary": "#c0c4e8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f9f2ed",
+                        "surface": "#fff8f3",
+                        "surface-container-high": "#eee7e2",
+                        "surface-container": "#f3ede8",
+                        "on-secondary-container": "#7a5242",
+                        "on-primary-fixed-variant": "#404562",
+                        "on-error-container": "#93000a",
+                        "secondary": "#7d5545",
+                        "tertiary-container": "#002625",
+                        "on-surface-variant": "#46464d",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "outline-variant": "#c7c5ce",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "primary": "#030722",
+                        "on-primary-fixed": "#151a34",
+                        "surface-bright": "#fff8f3",
+                        "surface-variant": "#e8e1dc",
+                        "error-container": "#ffdad6",
+                        "outline": "#77767e",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-dim": "#dfd9d4",
+                        "tertiary": "#000d0c",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "success": "#10B981",
+                        "primary-container": "#1a1f3a",
+                        "on-secondary-fixed": "#301408",
+                        "on-surface": "#1d1b18",
+                        "background": "#fff8f3",
+                        "surface-tint": "#585d7b",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "on-primary-container": "#8286a7",
+                        "text-primary": "#333333",
+                        "tertiary-fixed": "#b9ece9",
+                        "surface-container-highest": "#e8e1dc",
+                        "surface-light": "#F5F5F5",
+                        "on-background": "#1d1b18",
+                        "on-tertiary-container": "#60918f",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dee1ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#00201f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "nav-height-mobile": "64px",
+                        "nav-height-desktop": "80px",
+                        "lg": "24px",
+                        "4xl": "96px",
+                        "sm": "8px",
+                        "3xl": "64px",
+                        "2xl": "48px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary min-h-screen pt-[80px] font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-12 max-w-[1440px] mx-auto bg-white shadow-sm h-[80px]">
+<!-- Search -->
+<div class="flex items-center">
+<button class="text-text-secondary hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+<!-- Logo -->
+<div class="absolute left-1/2 transform -translate-x-1/2 font-display-md text-display-md text-primary">
+            LUXE
+        </div>
+<!-- Navigation Links (Centered) -->
+<ul class="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center gap-xl top-[80px] w-full justify-center pb-4 border-b border-border-subtle bg-white">
+<li><a class="text-text-secondary hover:text-primary transition-colors duration-300 font-title-md text-title-md" href="#">Collections</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors duration-300 font-title-md text-title-md" href="#">Designers</a></li>
+<li><a class="text-primary font-bold border-b-2 border-primary pb-1 font-title-md text-title-md" href="#">Ready-to-Wear</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors duration-300 font-title-md text-title-md" href="#">Accessories</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors duration-300 font-title-md text-title-md" href="#">Lifestyle</a></li>
+<li><a class="text-text-secondary hover:text-primary transition-colors duration-300 font-title-md text-title-md" href="#">Bespoke</a></li>
+</ul>
+<!-- Actions -->
+<div class="flex items-center gap-lg">
+<button class="text-text-secondary hover:text-primary transition-all duration-300 scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="text-text-secondary hover:text-primary transition-all duration-300 scale-100 active:scale-95 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-text-secondary hover:text-primary transition-all duration-300 scale-100 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+<div class="h-12 w-full"></div> <!-- Spacer for second nav row -->
+<!-- Main Content Layout -->
+<main class="max-w-[1440px] mx-auto px-2xl py-2xl grid grid-cols-12 gap-xl">
+<!-- Left: Image Gallery (60% -> 7 columns approx) -->
+<div class="col-span-12 lg:col-span-7 flex gap-lg h-[800px] sticky top-[160px]">
+<!-- Vertical Thumbnails -->
+<div class="w-20 flex flex-col gap-base overflow-y-auto hide-scrollbar">
+<button class="w-full h-24 rounded border-2 border-primary overflow-hidden relative opacity-100 transition-opacity">
+<img alt="Thumbnail 1" class="object-cover w-full h-full" data-alt="A close-up high-resolution macro shot of the textured weave of a luxury cream-colored linen fabric. The lighting is soft, natural, and directional, highlighting the organic irregularities and premium quality of the material. The background is slightly out of focus, emphasizing the tactile textile feel indicative of high-end minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmB-QdfZmtPNm_EjbaVAoXY4NWoMXI-XcCyFszwaZwrk0ljWKyePe7jIM9xGvtxfrKsEhOfIiBrWVTGDWE38ZXQDm1WuD03VxKTL3ihBjBCPn5lS6haFRXz9CYI8onrisBYQxxU5IrtebksSxQlDqtZBbZr--1UaqMizK9IB4SOOCyNla8vz90tcXR192krBtvaWu5WbBTHIB2WW718PDcCa56jPSBn6drzMgkua0u15sF8uXnCGSIQUskvu8ZZOvy3v-XzsBxKVw"/>
+</button>
+<button class="w-full h-24 rounded border border-border-subtle overflow-hidden relative opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Thumbnail 2" class="object-cover w-full h-full" data-alt="A detail shot showing the precise stitching and edge finishing of a luxury garment. The focus is on a rose gold zipper pull contrasting against deep navy fabric. The lighting is studio-quality, casting subtle drop shadows that elevate the perceived value. The aesthetic is clean, modern, and highly polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANyRkEtHJrzs8lO1hc8ZqUHz6AKWs0pSxbQ446URFYUS4DelBmiOjk5_pLNIcNZouKX4MHZe9_7hJFpgSMcqUUkawHLuz9VWLkJ81hyJRbgHRTM6Bsvghomqhwv0kUixQ9rSJTfPlhEen07Pghw4lTD_Uc8WSJsL-SUTqTZaQeWinOeYU3bKJkB5fqf303KyRwKCpFPlhjIGYqFAnlrmrCOKig71JiKHQutBSeP0Tg4rNlHblxDxfg_Nmco8x4v6CYtZblZC-QIp0"/>
+</button>
+<button class="w-full h-24 rounded border border-border-subtle overflow-hidden relative opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Thumbnail 3" class="object-cover w-full h-full" data-alt="A full-length editorial fashion photograph featuring a model wearing an elegant, flowing cream-colored dress. The model is posed dramatically in a minimalist, light-drenched studio space with vast whitespace surrounding her. The mood is sophisticated and effortless, capturing the essence of luxury minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZkK6Z18g6Z_9XHJ0z421iNxTCsMomdlRigIZuQ3iUblsFPfnbwkmc36vBZ3zNKW6VWpm0E6RX4wcUtBUXXRh4pKC_cVpIPz30TTBapDjOVSrZLrIPPuE6I8UnXOl9NbS1Ju99rQVP93KGlWOcd-bQXlFFr6V_Dc1iWvk2R3NWHQae5RisqpxDN0Jpi7gLNsoJZoKJsHIBuWkiC0Bj88Nnb0Am0RXiXed92rbB5wR6wFvidmsSvylDE9XVkjL2RjNMr0Mvh45goGw"/>
+</button>
+</div>
+<!-- Main High-Res Image -->
+<div class="flex-1 rounded-lg overflow-hidden relative bg-surface-container-low cursor-zoom-in group">
+<img alt="Main Product View" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="A wide, high-resolution lifestyle photograph of an exquisite silk and linen blend blouse in a soft cream color. It is draped elegantly over a minimal wire hanger against a stark white backdrop. Generous whitespace surrounds the garment, allowing the intricate drape and premium texture to command attention. The lighting is bright and diffuse, creating a serene, upscale boutique atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4pB7Zx9zu9jihATF3-lCP-OG4NDvH1iqzriVr5NXxuNZDRZPJ9vkb4wrQgiD6fj4n48KpPOcClLqUr_XZMNoUOOb5Ake1BhYDVP2e1T1nTsNOPFOwmzGjvlST1v8tEB1MjbE-THt24axwxbbFzIFFSkbhKLY2KyrZ_LSZ2zaqtIDj6UneMhrcW94-g-gi4009wblxmPiyb7bm4WE3tF-1tSBhcAIi0CSNaGDBfGe0XofJVwM3Ql6mBle-8hL8jlm4sFyJ3WApJdE"/>
+<!-- Floating Action over image -->
+<button class="absolute top-md right-md w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm text-text-secondary hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="fullscreen">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Right: Product Info Panel (40% -> 5 columns approx) -->
+<div class="col-span-12 lg:col-span-5 px-xl lg:px-2xl flex flex-col py-lg">
+<!-- Breadcrumbs -->
+<nav class="font-body-sm text-body-sm text-text-secondary mb-xl">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ready-to-Wear</a></li>
+<li><span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span></li>
+<li class="text-primary">Dresses</li>
+</ol>
+</nav>
+<!-- Brand / Title -->
+<h2 class="font-title-sm text-title-sm text-text-secondary tracking-widest uppercase mb-xs">Maison L'Éternel</h2>
+<h1 class="font-display-md text-display-md text-primary mb-md">The Alabaster Silk Column Dress</h1>
+<!-- Price & Rating -->
+<div class="flex items-center justify-between mb-2xl">
+<div class="font-headline-sm text-headline-sm text-primary">$1,250.00</div>
+<div class="flex items-center gap-xs text-warning">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" data-icon="star_half" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="font-body-sm text-body-sm text-text-secondary ml-sm">(24 reviews)</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-text-secondary mb-2xl leading-relaxed">
+                A study in effortless elegance. Crafted from pure Italian mulberry silk, this column dress features a fluid drape that moves gracefully with the body. The minimalist silhouette is defined by subtle architectural seams and a sophisticated high neckline.
+            </p>
+<hr class="border-border-subtle mb-2xl"/>
+<!-- Color Selector -->
+<div class="mb-xl">
+<div class="flex justify-between items-center mb-md">
+<span class="font-title-sm text-title-sm text-primary">Color: <span class="font-body-md text-text-secondary ml-xs">Alabaster Cream</span></span>
+</div>
+<div class="flex gap-md">
+<button class="w-10 h-10 rounded-full bg-[#f9f2ed] border-2 border-primary shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex items-center justify-center relative focus:outline-none focus:ring-4 focus:ring-primary/10">
+<span class="w-8 h-8 rounded-full bg-[#f9f2ed]"></span>
+</button>
+<button class="w-10 h-10 rounded-full bg-[#030722] border border-border-subtle flex items-center justify-center relative focus:outline-none focus:ring-4 focus:ring-primary/10 hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-shadow">
+<span class="w-8 h-8 rounded-full bg-[#030722]"></span>
+</button>
+<button class="w-10 h-10 rounded-full bg-[#7d5545] border border-border-subtle flex items-center justify-center relative focus:outline-none focus:ring-4 focus:ring-primary/10 hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-shadow">
+<span class="w-8 h-8 rounded-full bg-[#7d5545]"></span>
+</button>
+</div>
+</div>
+<!-- Size Selector -->
+<div class="mb-2xl">
+<div class="flex justify-between items-center mb-md">
+<span class="font-title-sm text-title-sm text-primary">Size</span>
+<button class="font-body-sm text-body-sm text-text-secondary underline hover:text-primary transition-colors">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-md">
+<button class="py-md border border-border-subtle rounded font-body-md text-body-md text-text-secondary hover:border-primary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/10">34</button>
+<button class="py-md border-2 border-primary rounded font-title-md text-title-md text-primary shadow-[0_2px_8px_rgba(0,0,0,0.08)] focus:outline-none">36</button>
+<button class="py-md border border-border-subtle rounded font-body-md text-body-md text-text-secondary hover:border-primary hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/10">38</button>
+<button class="py-md border border-border-subtle rounded font-body-md text-body-md text-text-secondary opacity-50 cursor-not-allowed line-through">40</button>
+</div>
+</div>
+<!-- CTA -->
+<div class="flex gap-md mb-2xl">
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-title-md text-title-md py-lg rounded-lg hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-sm">
+                    Add to Cart
+                    <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="w-16 flex-shrink-0 border-2 border-primary rounded-lg flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<!-- Accordions for Details -->
+<div class="border-t border-border-subtle">
+<details class="group py-md border-b border-border-subtle cursor-pointer" open="">
+<summary class="flex justify-between items-center font-title-sm text-title-sm text-primary list-none">
+                        Details &amp; Care
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-md text-body-md text-text-secondary leading-relaxed space-y-2">
+<ul class="list-disc pl-5 space-y-1">
+<li>100% Mulberry Silk</li>
+<li>Concealed back zip closure</li>
+<li>Fully lined</li>
+<li>Dry clean only</li>
+<li>Made in Italy</li>
+</ul>
+</div>
+</details>
+<details class="group py-md border-b border-border-subtle cursor-pointer">
+<summary class="flex justify-between items-center font-title-sm text-title-sm text-primary list-none">
+                        Shipping &amp; Returns
+                        <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-md text-body-md text-text-secondary leading-relaxed">
+<p>Complimentary express shipping on all orders. Returns accepted within 14 days of delivery. Items must be in original condition with tags attached.</p>
+</div>
+</details>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface py-4xl px-12 grid grid-cols-4 gap-xl max-w-[1440px] mx-auto border-t border-border-subtle mt-4xl">
+<div class="col-span-1 flex flex-col gap-xl">
+<div class="font-headline-md text-headline-md text-primary">LUXE</div>
+<p class="font-body-md text-body-md text-text-secondary max-w-xs">Elevating the everyday through uncompromising quality and timeless design.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider">Explore</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Careers</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Store Locator</a>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider">Customer Care</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Contact</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Size Guide</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">FAQ</a>
+</div>
+<div class="col-span-1 flex flex-col gap-md">
+<h4 class="font-title-sm text-title-sm text-primary uppercase tracking-wider">Legal</h4>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a>
+<div class="mt-xl text-body-sm text-text-secondary">
+                © 2024 LUXE MULTI-VENDOR. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

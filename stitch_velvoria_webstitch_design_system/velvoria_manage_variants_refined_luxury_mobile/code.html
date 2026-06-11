@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Manage Variants - Velvoria</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "success": "#10B981",
+                        "surface-variant": "#e8e1dc",
+                        "tertiary": "#000d0c",
+                        "on-primary-container": "#8286a7",
+                        "surface": "#fff8f3",
+                        "surface-tint": "#585d7b",
+                        "surface-container-low": "#f9f2ed",
+                        "border-subtle": "#E0E0E0",
+                        "tertiary-fixed": "#b9ece9",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fff8f3",
+                        "inverse-surface": "#33302d",
+                        "on-background": "#1d1b18",
+                        "on-surface": "#1d1b18",
+                        "outline": "#77767e",
+                        "on-primary-fixed-variant": "#404562",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary-fixed": "#301408",
+                        "white": "#FFFFFF",
+                        "primary-fixed": "#dee1ff",
+                        "surface-container-high": "#eee7e2",
+                        "on-tertiary-container": "#60918f",
+                        "surface-container": "#f3ede8",
+                        "text-secondary": "#808080",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c5ce",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "surface-dim": "#dfd9d4",
+                        "inverse-primary": "#c0c4e8",
+                        "warning": "#F59E0B",
+                        "text-primary": "#333333",
+                        "on-surface-variant": "#46464d",
+                        "surface-bright": "#fff8f3",
+                        "inverse-on-surface": "#f6efeb",
+                        "on-primary": "#ffffff",
+                        "surface-light": "#F5F5F5",
+                        "surface-container-highest": "#e8e1dc",
+                        "primary": "#030722",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "error": "#EF4444",
+                        "tertiary-container": "#002625",
+                        "primary-container": "#1a1f3a",
+                        "on-primary-fixed": "#151a34",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#ffc9b4",
+                        "on-error": "#ffffff",
+                        "secondary": "#7d5545",
+                        "on-secondary-container": "#7a5242",
+                        "on-tertiary-fixed": "#00201f",
+                        "on-secondary-fixed-variant": "#623e2f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "nav-height-mobile": "64px",
+                        "md": "16px",
+                        "2xl": "48px",
+                        "nav-height-desktop": "80px",
+                        "3xl": "64px",
+                        "xl": "32px",
+                        "base": "8px",
+                        "4xl": "96px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "title-md": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "title-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                        "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom scrollbar for horizontal lists */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Tonal Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #1a1f3a;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #1a1f3a;
+        }
+        .toggle-checkbox:checked + .toggle-label:before {
+            transform: translateX(100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-text-primary antialiased min-h-screen pb-nav-height-mobile md:pb-0">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 sticky z-50 shadow-sm bg-surface dark:bg-inverse-surface flex justify-between items-center px-md h-nav-height-mobile lg:h-nav-height-desktop w-full max-w-7xl mx-auto">
+<button class="text-primary dark:text-primary-fixed-dim scale-95 active:opacity-80 transition-all p-sm rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-sm text-headline-sm tracking-tight text-primary dark:text-primary-fixed">
+            Maison Vendor
+        </div>
+<button class="text-primary dark:text-primary-fixed-dim scale-95 active:opacity-80 transition-all p-sm rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors duration-300">
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Vendor Profile Avatar" class="w-full h-full object-cover" data-alt="A sophisticated vendor profile avatar showing a professional person in a light, elegant setting. The lighting is soft and flattering, aligning with a premium luxury aesthetic. Deep navy and rose gold tones subtly present in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5iQskTrGYx5CjygtPR7DoomaLe-E2Nk4FVUDfpxiUGlD5IrJsrPt3ST7H9-sEqyh2-0XGYYG7o3QUDa6E6PhuSrO7ohqjTSUXgF3_aFDHVqC2qiPsF01a8MqMjVGNaF0kvAKMJwW5rwAWe4tnylJ_VjtbXotFLjlKd7_LJVS4o6R6SV7ZdpjhSXgfp1TNwJcZ4YAn37Y6K1JD6miBZNpp8hvxjwONU51uV3lL2zWB2gcq0Ru5O-w-L5denKaqKCK9OeYAukn3xzU"/>
+</div>
+</button>
+</header>
+<main class="max-w-7xl mx-auto px-md md:px-lg py-lg space-y-xl">
+<!-- Product Header Section -->
+<section class="bg-white rounded-lg p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex gap-md items-center">
+<div class="w-20 h-24 md:w-24 md:h-32 rounded bg-surface-container overflow-hidden flex-shrink-0">
+<img alt="Midnight Silk Gown Thumbnail" class="w-full h-full object-cover" data-alt="A close-up fashion photography shot of a luxurious midnight blue silk gown. The fabric drapes elegantly, catching soft, high-key studio lighting. The setting is minimal and clean, emphasizing the premium quality and rich texture of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2z1DmMBa-K_h91QJnd-M8KWGh2fNHJknLolgUqzAs1GlvieU1dCb76WZKVGX43ITlh3ob2TTjWsO7B-USkKcuWmu2UxoY_Cf6qjeNlPKUxzqa_YSBu00r00XTLVkbOFTcaZK4p6aiSWcCtWunB3RXaC-XBNP6gL0TwHgVsmJ9vQ_AlHkzZFtkNWyRv4kPrX452MB0mK_UVBwMQ-c8QJtO5lMGi42jpbs7hS4_9RhB3yG9dsGwRiR6DYEAEyzlZmxSDxyjj9IUDAk"/>
+</div>
+<div class="flex-grow">
+<p class="font-label-md text-label-md text-text-secondary uppercase tracking-wider mb-xs">Managing Variants</p>
+<h1 class="font-headline-sm text-headline-sm text-primary mb-sm">Midnight Silk Gown</h1>
+<div class="flex items-center gap-xs text-text-secondary">
+<span class="material-symbols-outlined text-[16px]">inventory_2</span>
+<span class="font-body-sm text-body-sm">Parent SKU: MS-001</span>
+</div>
+</div>
+</section>
+<!-- Search & Actions -->
+<section class="flex flex-col md:flex-row gap-md justify-between items-center">
+<div class="w-full md:w-96 relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-text-secondary">search</span>
+<input class="w-full pl-xl pr-sm py-sm rounded-lg border border-border-subtle bg-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] font-body-md text-body-md text-text-primary placeholder:text-text-secondary transition-all" placeholder="Search variants..." type="text"/>
+</div>
+<div class="flex gap-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-xs px-md py-sm bg-white border border-border-subtle rounded-lg font-label-lg text-label-lg text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filter
+                </button>
+<button class="flex-1 md:flex-none flex items-center justify-center gap-xs px-md py-sm bg-white border border-border-subtle rounded-lg font-label-lg text-label-lg text-primary shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition-all">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+                    Bulk Actions
+                </button>
+</div>
+</section>
+<!-- Variants List -->
+<section class="space-y-md">
+<!-- Group: Midnight / S -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-surface-container-high"></div>
+<div class="p-md md:p-lg flex flex-col md:flex-row gap-md md:items-center">
+<div class="flex-grow pl-xs">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Midnight / S</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">SKU: MS-001-MD-S</p>
+</div>
+<!-- Status Toggle -->
+<div class="flex items-center">
+<div class="relative inline-block w-10 h-5 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 border-surface-container appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out peer" id="toggle1" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container cursor-pointer transition-colors duration-200 ease-in-out" for="toggle1"></label>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md mt-md pt-md border-t border-border-subtle">
+<!-- Price Control -->
+<div>
+<label class="block font-label-sm text-label-sm text-text-secondary mb-xs">Price</label>
+<div class="relative">
+<span class="absolute left-sm top-1/2 -translate-y-1/2 font-body-md text-text-secondary">$</span>
+<input class="w-full pl-lg pr-sm py-sm rounded border border-border-subtle bg-white font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors" type="text" value="850.00"/>
+</div>
+</div>
+<!-- Stock Control -->
+<div>
+<label class="block font-label-sm text-label-sm text-text-secondary mb-xs">Stock</label>
+<div class="flex items-center border border-border-subtle rounded bg-white">
+<button class="px-sm py-sm text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-full text-center border-none py-sm font-body-md text-body-md focus:ring-0 appearance-none m-0 p-0 hide-scrollbar" type="number" value="12"/>
+<button class="px-sm py-sm text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Group: Midnight / M -->
+<div class="bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-surface-container-high"></div>
+<div class="p-md md:p-lg flex flex-col md:flex-row gap-md md:items-center">
+<div class="flex-grow pl-xs">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Midnight / M</h3>
+<p class="font-body-sm text-body-sm text-text-secondary mt-xs">SKU: MS-001-MD-M</p>
+</div>
+<!-- Status Toggle -->
+<div class="flex items-center">
+<div class="relative inline-block w-10 h-5 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 border-surface-container appearance-none cursor-pointer z-10 transition-transform duration-200 ease-in-out peer" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-5 rounded-full bg-surface-container cursor-pointer transition-colors duration-200 ease-in-out" for="toggle2"></label>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md mt-md pt-md border-t border-border-subtle">
+<!-- Price Control -->
+<div>
+<label class="block font-label-sm text-label-sm text-text-secondary mb-xs">Price</label>
+<div class="relative">
+<span class="absolute left-sm top-1/2 -translate-y-1/2 font-body-md text-text-secondary">$</span>
+<input class="w-full pl-lg pr-sm py-sm rounded border border-border-subtle bg-white font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-colors" type="text" value="850.00"/>
+</div>
+</div>
+<!-- Stock Control -->
+<div>
+<label class="block font-label-sm text-label-sm text-text-secondary mb-xs">Stock</label>
+<div class="flex items-center border border-border-subtle rounded bg-white">
+<button class="px-sm py-sm text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-full text-center border-none py-sm font-body-md text-body-md focus:ring-0 appearance-none m-0 p-0 hide-scrollbar" type="number" value="8"/>
+<button class="px-sm py-sm text-text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Add New Variant Button -->
+<button class="w-full py-md border-2 border-dashed border-border-subtle rounded-lg flex items-center justify-center gap-sm text-text-secondary hover:text-primary hover:border-primary transition-colors hover:bg-white bg-transparent">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-label-lg text-label-lg">Add New Variant</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-border-subtle dark:border-outline-variant bg-surface dark:bg-inverse-surface shadow-lg md:hidden">
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center h-nav-height-mobile px-4 bg-surface dark:bg-inverse-surface">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed bg-secondary-fixed dark:bg-secondary-container rounded-lg px-4 py-1 hover:bg-surface-container dark:hover:bg-surface-container-high transition-all Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-weight="fill">layers</span>
+<span class="font-label-md text-label-md mt-1">Variants</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-md text-label-md mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-all p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md mt-1">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

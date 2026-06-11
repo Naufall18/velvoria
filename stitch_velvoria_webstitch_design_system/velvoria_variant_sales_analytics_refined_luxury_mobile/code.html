@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sales Analytics - Velvoria Vendor Suite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "border-subtle": "#E0E0E0",
+                        "outline": "#77767e",
+                        "white": "#FFFFFF",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f9f2ed",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1d1b18",
+                        "on-tertiary-container": "#60918f",
+                        "outline-variant": "#c7c5ce",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "tertiary-container": "#002625",
+                        "success": "#10B981",
+                        "inverse-surface": "#33302d",
+                        "primary-container": "#1a1f3a",
+                        "warning": "#F59E0B",
+                        "background": "#fff8f3",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dfd9d4",
+                        "on-secondary-container": "#7a5242",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#301408",
+                        "inverse-primary": "#c0c4e8",
+                        "on-tertiary-fixed": "#00201f",
+                        "text-primary": "#333333",
+                        "text-secondary": "#808080",
+                        "surface-container-high": "#eee7e2",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "on-primary-fixed": "#151a34",
+                        "tertiary-fixed": "#b9ece9",
+                        "surface-light": "#F5F5F5",
+                        "secondary-container": "#ffc9b4",
+                        "inverse-on-surface": "#f6efeb",
+                        "on-primary-container": "#8286a7",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "tertiary": "#000d0c",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fff8f3",
+                        "surface-container": "#f3ede8",
+                        "secondary-fixed": "#ffdbce",
+                        "secondary": "#7d5545",
+                        "surface-container-highest": "#e8e1dc",
+                        "primary-fixed": "#dee1ff",
+                        "surface-tint": "#585d7b",
+                        "error": "#EF4444",
+                        "surface-variant": "#e8e1dc",
+                        "surface": "#fff8f3",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-primary-fixed-variant": "#404562",
+                        "on-surface": "#1d1b18",
+                        "primary": "#030722",
+                        "on-surface-variant": "#46464d",
+                        "rose-gold": "#e8b4a0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "3xl": "64px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "nav-height-desktop": "80px",
+                        "xl": "32px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "4xl": "96px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-lg": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-md": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md antialiased pb-safe min-h-screen flex flex-col">
+<!-- Top Navigation (Desktop) -->
+<header class="hidden md:flex justify-between items-center h-[80px] px-lg max-w-[1440px] mx-auto w-full top-0 sticky bg-white dark:bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.08)] dark:bg-surface-container z-40 transition-all duration-300 ease-in-out shadow-sm">
+<div class="flex items-center gap-md">
+<button class="text-primary dark:text-on-surface hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="font-display-md text-display-md tracking-tight text-primary dark:text-white">AURELIAN VENDOR</span>
+</div>
+<nav class="flex h-full">
+<a class="h-full px-md flex items-center text-outline hover:opacity-80 transition-opacity font-title-lg text-title-lg" href="#">Dashboard</a>
+<a class="h-full px-md flex items-center text-primary border-b-2 border-primary hover:opacity-80 transition-opacity font-title-lg text-title-lg" href="#">Analytics</a>
+<a class="h-full px-md flex items-center text-outline hover:opacity-80 transition-opacity font-title-lg text-title-lg" href="#">Inventory</a>
+<a class="h-full px-md flex items-center text-outline hover:opacity-80 transition-opacity font-title-lg text-title-lg" href="#">Store</a>
+</nav>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Vendor Profile Avatar" class="w-full h-full object-cover" data-alt="A sophisticated vendor profile avatar portrait of an elegant woman with minimalist styling, clean lighting, and a soft cream background, reflecting luxury fashion ecommerce aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkIHw_JerFEWDfyBEFTIjVqQ9roh49crg6hCsb3RQ_wQYjzAWn0JIcu9H3ZtnQhTfWpKDaVqq-PVKFnl9yF4hEyuxJZDy2xecdxMBOeh7uSvNIptMw-R5iCg2fI5lZ6yoyspHpQhQKK0213V9MO727BWgGJ96zIM8BagaFvQSBi7MElvi0MXBt4xJ4IniMJJBrrgoavu_lzdfsgiFFWs8kaFPsXngjTxHXkfHS9YDUeJLriYMX3JPd6BQ7gFLB23-FV9tOyyWn3I"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-md md:px-2xl py-lg md:py-2xl mb-nav-height-mobile md:mb-0">
+<!-- Header Section -->
+<div class="mb-xl">
+<div class="flex items-center gap-sm mb-xs text-text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<a class="hover:text-primary transition-colors" href="#">Manage Variants</a>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-md">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-xs">Midnight Silk Gown</h1>
+<p class="font-body-md text-body-md text-text-secondary">SKU: VLV-MSG-001 • Variant Sales Analytics</p>
+</div>
+<!-- Timeframe Filter -->
+<div class="flex bg-surface-container-high rounded-full p-1 border border-border-subtle">
+<button class="px-md py-sm rounded-full font-label-md text-label-md text-text-secondary hover:text-primary transition-colors">7D</button>
+<button class="px-md py-sm rounded-full font-label-md text-label-md bg-white text-primary shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-all">30D</button>
+<button class="px-md py-sm rounded-full font-label-md text-label-md text-text-secondary hover:text-primary transition-colors">90D</button>
+<button class="px-md py-sm rounded-full font-label-md text-label-md text-text-secondary hover:text-primary transition-colors">ALL</button>
+</div>
+</div>
+</div>
+<!-- Performance Overview Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg mb-2xl">
+<!-- Total Sales Value -->
+<div class="bg-white rounded-xl p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col justify-between h-[160px] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-rose-gold rounded-l-xl"></div>
+<div>
+<h3 class="font-title-sm text-title-sm text-text-secondary mb-xs">Total Sales Value</h3>
+<div class="font-headline-md text-headline-md text-primary">$124,500</div>
+</div>
+<div class="flex items-center gap-sm font-label-md text-label-md">
+<span class="text-success flex items-center"><span class="material-symbols-outlined text-[14px]">trending_up</span> +12.4%</span>
+<span class="text-text-secondary">vs prev 30 days</span>
+</div>
+</div>
+<!-- Total Units Sold -->
+<div class="bg-white rounded-xl p-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] flex flex-col justify-between h-[160px] relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container rounded-l-xl"></div>
+<div>
+<h3 class="font-title-sm text-title-sm text-text-secondary mb-xs">Total Units Sold</h3>
+<div class="font-headline-md text-headline-md text-primary">312</div>
+</div>
+<div class="flex items-center gap-sm font-label-md text-label-md">
+<span class="text-success flex items-center"><span class="material-symbols-outlined text-[14px]">trending_up</span> +8.2%</span>
+<span class="text-text-secondary">vs prev 30 days</span>
+</div>
+</div>
+</div>
+<!-- Variant Sales List -->
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="px-lg py-md border-b border-border-subtle bg-surface-container-lowest">
+<h2 class="font-title-md text-title-md text-primary">Variant Breakdown</h2>
+</div>
+<div class="divide-y divide-border-subtle">
+<!-- Variant Row 1 -->
+<div class="px-lg py-md flex flex-col md:flex-row items-start md:items-center justify-between gap-md hover:bg-surface-container-lowest hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group">
+<div class="flex items-center gap-md w-full md:w-auto">
+<div class="w-16 h-20 bg-surface-container rounded-md overflow-hidden flex-shrink-0">
+<img alt="Midnight Silk Gown Small" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed close-up shot of a luxurious dark navy silk gown on a mannequin, softly lit in a minimalist studio setting with cream background, highlighting the fabric's rich texture and premium quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhciCeL456_CLFH50UXFdmLrDzY50BU9IiX6usWcauZ1bU9OlfTt90xUJYp2xURLUJXWoWqQ4IvB0g7eny97GrA2vXHJ1bXAXy-OVmFuHlZcdTQo009Z1JQVTaqFeZeIZOJha-yku0Gzc2wHuw59JbzJtN8BjzXYzxtN3pjBavbMrsJMj-L4-cJuApUw7p0iNxV5QJ6XEQ2BQQwVVpWl63vI0Paq25cHexjuY7MTzZZwOW5XjT5uPWF-uC483x0coPefLCX631BhQ"/>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary">Midnight / S</div>
+<div class="font-body-sm text-body-sm text-text-secondary">SKU: VLV-MSG-001-S</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-xl">
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-primary">$45,200</div>
+<div class="font-body-sm text-body-sm text-text-secondary">113 Units</div>
+</div>
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-success">4.2% CR</div>
+<div class="font-body-sm text-body-sm text-text-secondary">High Turnover</div>
+</div>
+<div class="w-24 h-8 bg-surface-container-high rounded flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+<!-- Placeholder for Sparkline -->
+<span class="material-symbols-outlined text-rose-gold text-[20px]">show_chart</span>
+</div>
+</div>
+</div>
+<!-- Variant Row 2 -->
+<div class="px-lg py-md flex flex-col md:flex-row items-start md:items-center justify-between gap-md hover:bg-surface-container-lowest hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group">
+<div class="flex items-center gap-md w-full md:w-auto">
+<div class="w-16 h-20 bg-surface-container rounded-md overflow-hidden flex-shrink-0">
+<img alt="Midnight Silk Gown Medium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium medium shot of a dark blue silk gown displayed elegantly on a hanger against an off-white minimalist wall, soft diffuse lighting emphasizing the smooth drape and luxurious material of the dress." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd4zbIViJC5W4tTWe8P3OmTvGlpkHlmyf26TI-vXl8OhXfTqBbBYOX_60qz2Dj0j-peaUTmCIKI_OguTD1Dr-qWJZHwoY1R9w579KrdL-lfRh7EcT3DpjWZmeFrhhYd5eg5I4IHfdZ5i0Pi0wHHILf8ncmVdigNPQgkiHJ0ooqXyGNAe5-o6OUrP1rpRWFSdQur416-EpX0uSFw-UE4e28dG59a4zj2SRRlqjFvWdTWi-1eMXYWmMk3AARFDoQr0ISRqnAEko-LuU"/>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary">Midnight / M</div>
+<div class="font-body-sm text-body-sm text-text-secondary">SKU: VLV-MSG-001-M</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-xl">
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-primary">$58,000</div>
+<div class="font-body-sm text-body-sm text-text-secondary">145 Units</div>
+</div>
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-success">5.1% CR</div>
+<div class="font-body-sm text-body-sm text-text-secondary">Very High Turnover</div>
+</div>
+<div class="w-24 h-8 bg-surface-container-high rounded flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+<!-- Placeholder for Sparkline -->
+<span class="material-symbols-outlined text-rose-gold text-[20px]">show_chart</span>
+</div>
+</div>
+</div>
+<!-- Variant Row 3 -->
+<div class="px-lg py-md flex flex-col md:flex-row items-start md:items-center justify-between gap-md hover:bg-surface-container-lowest hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 group">
+<div class="flex items-center gap-md w-full md:w-auto">
+<div class="w-16 h-20 bg-surface-container rounded-md overflow-hidden flex-shrink-0">
+<img alt="Midnight Silk Gown Large" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylized editorial fashion detail shot of a navy silk dress flowing gracefully, captured under bright, clean white light in a modern, uncluttered luxury studio environment, focusing on the fabric movement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV9UQSRuVN0sFMPVizaVYMo0T1r-OdFwsDnWl5fc4s7hVMWa-ctPSPW563dcfUBw3XrwsN_GIeHwaHtV16oBMUH5HODakDHcVRuXjE0BLwJULI6_wKAZ1jT8RwuUHnBtLjHvt2sbpepPNdAXkuyw2Dj9y8WdCTxoWLhqUTm0MhPPc0--lPtLRlSYIsX6mi27jkdpDMcRMrA4LS0A8D5L9CzsoZ7x4qMJquySxUujmcum31w0U6-iaQjjAMWRsVED4frG75pKjB5Ow"/>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-primary">Midnight / L</div>
+<div class="font-body-sm text-body-sm text-text-secondary">SKU: VLV-MSG-001-L</div>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:w-auto gap-xl">
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-primary">$21,300</div>
+<div class="font-body-sm text-body-sm text-text-secondary">54 Units</div>
+</div>
+<div class="text-left md:text-right">
+<div class="font-title-sm text-title-sm text-warning">2.8% CR</div>
+<div class="font-body-sm text-body-sm text-text-secondary">Stable Turnover</div>
+</div>
+<div class="w-24 h-8 bg-surface-container-high rounded flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+<!-- Placeholder for Sparkline -->
+<span class="material-symbols-outlined text-outline text-[20px]">trending_flat</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-[64px] flex justify-around items-center px-md pb-safe bg-white dark:bg-surface-container-lowest shadow-[0_-2px_12px_rgba(0,0,0,0.05)] z-50 rounded-t-xl transition-all duration-300 ease-in-out">
+<a class="flex flex-col items-center justify-center text-outline hover:bg-surface-container-low transition-colors w-full h-full" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md mt-xs">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-xl px-4 py-1 hover:bg-surface-container-low transition-colors scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-md text-label-md mt-xs">Analytics</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline hover:bg-surface-container-low transition-colors w-full h-full" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md mt-xs">Inventory</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline hover:bg-surface-container-low transition-colors w-full h-full" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md mt-xs">Store</span>
+</a>
+</nav>
+</body></html>

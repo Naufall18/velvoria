@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Premium Marketplace</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#151a34",
+                      "on-primary-container": "#8286a7",
+                      "on-tertiary-container": "#60918f",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "tertiary": "#000d0c",
+                      "primary-container": "#1a1f3a",
+                      "surface": "#fff8f3",
+                      "warning": "#F59E0B",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "success": "#10B981",
+                      "secondary": "#7d5545",
+                      "tertiary-fixed": "#b9ece9",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "on-primary-fixed-variant": "#404562",
+                      "on-secondary-container": "#7a5242",
+                      "primary-fixed": "#dee1ff",
+                      "error": "#EF4444",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "surface-light": "#F5F5F5",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dfd9d4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f6efeb",
+                      "tertiary-container": "#002625",
+                      "on-secondary-fixed": "#301408",
+                      "surface-tint": "#585d7b",
+                      "secondary-container": "#ffc9b4",
+                      "inverse-surface": "#33302d",
+                      "inverse-primary": "#c0c4e8",
+                      "surface-bright": "#fff8f3",
+                      "primary": "#030722",
+                      "border-subtle": "#E0E0E0",
+                      "text-primary": "#333333",
+                      "on-tertiary-fixed": "#00201f",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "background": "#fff8f3",
+                      "text-secondary": "#808080",
+                      "surface-container-low": "#f9f2ed",
+                      "surface-container-highest": "#e8e1dc",
+                      "on-surface-variant": "#46464d",
+                      "secondary-fixed": "#ffdbce",
+                      "on-surface": "#1d1b18",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e8e1dc",
+                      "surface-container": "#f3ede8",
+                      "outline-variant": "#c7c5ce",
+                      "on-background": "#1d1b18",
+                      "outline": "#77767e",
+                      "on-error-container": "#93000a",
+                      "white": "#FFFFFF",
+                      "surface-container-high": "#eee7e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "md": "16px",
+                      "lg": "24px",
+                      "sm": "8px",
+                      "xl": "32px",
+                      "nav-height-desktop": "80px",
+                      "4xl": "96px",
+                      "2xl": "48px",
+                      "base": "8px",
+                      "3xl": "64px",
+                      "nav-height-mobile": "64px"
+              },
+              "fontFamily": {
+                      "label-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "display-md": ["Playfair Display"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "title-md": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "title-sm": ["Inter"],
+                      "headline-md": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                      "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400"}],
+                      "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600"}],
+                      "display-md": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                      "display-lg": ["48px", {"lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                      "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700"}],
+                      "title-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            background-color: theme('colors.surface');
+            color: theme('colors.on-surface');
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased pb-nav-height-mobile">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-primary fixed top-0 w-full z-50 shadow-sm dark:border-b dark:border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center h-nav-height-mobile px-md w-full">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Velvoria</h1>
+<button aria-label="Cart" class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity duration-300 active:scale-95">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-nav-height-mobile">
+<!-- Hero Section -->
+<section class="relative h-[530px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A luxurious fashion flatlay featuring high-end accessories, a designer handbag, and delicate gold jewelry resting on a pristine, textured cream-colored silk fabric. The lighting is soft and natural, casting gentle shadows that emphasize the premium materials and textures. The overall mood is sophisticated, elegant, and aspirational, perfectly aligning with a high-end fashion aesthetic. Deep navy accents subtly contrast with warm rose gold tones, creating a cohesive luxury feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDm0zfl5ojun5Ff9ok1zaMEgSOG7fy1mfrGP4mceJl2mKcUG0cB-iREpQGYSlH-qNvHX4lXn1PC8ihZQzN7XcWK2OG2Ob7XrEI23jEakMaNQq8WNycNgyqgk0C7JQHrfzdUJ3bPsAx3z4zuSgksQn0CxjkrC9uFpMGV5ghLa0-rwdfHn3Cp9P_7hODHY5KHbcFxh7FJc9oFAWkelMSVDwo9JFchENA7TEBbEE6tlmWjQFZQim6Dfi5k0ZZRlvusHDAMPflml6hRmSU');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="relative z-10 text-center px-lg flex flex-col items-center">
+<h2 class="font-display-md text-display-md text-white mb-sm">Discover Premium Luxury</h2>
+<p class="font-body-lg text-body-lg text-white/90 mb-lg max-w-sm">Curated collection from exclusive vendors.</p>
+<button class="bg-[#E8B4A0] text-white font-title-sm text-title-sm px-xl py-md rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 active:scale-95">
+                    Shop Now
+                </button>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="py-xl px-md">
+<div class="grid grid-cols-4 gap-sm">
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-xs group-hover:bg-[#E8B4A0] group-hover:text-white transition-colors duration-300 text-primary">
+<span class="material-symbols-outlined">diamond</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Jewelry</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-xs group-hover:bg-[#E8B4A0] group-hover:text-white transition-colors duration-300 text-primary">
+<span class="material-symbols-outlined">checkroom</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Fashion</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-xs group-hover:bg-[#E8B4A0] group-hover:text-white transition-colors duration-300 text-primary">
+<span class="material-symbols-outlined">chair</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Home</span>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-xs group-hover:bg-[#E8B4A0] group-hover:text-white transition-colors duration-300 text-primary">
+<span class="material-symbols-outlined">face_retouching_natural</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Beauty</span>
+</div>
+</div>
+</section>
+<!-- Featured Products Carousel -->
+<section class="py-xl pl-md">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-lg pr-md">Featured Pieces</h3>
+<div class="flex overflow-x-auto hide-scrollbar gap-md pb-sm pr-md">
+<!-- Product Card 1 -->
+<div class="min-w-[240px] bg-white rounded-lg shadow-sm border border-border-subtle overflow-hidden flex-shrink-0 relative group hover:shadow-md transition-shadow">
+<div class="h-64 bg-surface-container relative overflow-hidden">
+<img alt="Elegant designer handbag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-fashion product shot of a sleek, structural designer handbag in a rich deep navy leather. The bag sits on a polished marble pedestal against a minimalist cream-colored background. Soft, directional studio lighting highlights the flawless texture of the leather and the gleaming rose gold hardware clasps. The composition is clean, centered, and embodies a luxurious, modern aesthetic suitable for a high-end marketplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrPdHZ-bCI3xWuZBqyFi8gcfmW6-mQvY0JoBmHUxU4HCm2EPJwgwcdOp_0xE2keTMH3BN_3tnX6-ZR03HH7ejJCXwICzmRF2i4hCTsS27qYb8Db9qydNGKC72ETyQUL2yOuCOYkQ_euRYlD2EbSZbtqDnAneLsDmNu1W918StgslDpzFyKP1wuO3phs6pPCb-_9ZKO1u5ulrkTvHHg4bgl737y6GgCS3yEOEuA_VBgf1cF3ZMQLYRMwmwY-5Jz_YCmJaxKxu4i_GU"/>
+<div class="absolute top-sm right-sm bg-white/90 p-xs rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Aura Leather</p>
+<h4 class="font-title-md text-title-md text-primary mb-sm truncate">Midnight Tote</h4>
+<p class="font-title-lg text-title-lg text-primary">$1,250</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[240px] bg-white rounded-lg shadow-sm border border-border-subtle overflow-hidden flex-shrink-0 relative group hover:shadow-md transition-shadow">
+<div class="h-64 bg-surface-container relative overflow-hidden">
+<img alt="Diamond necklace" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stunning macro photograph of a delicate rose gold necklace featuring a brilliant-cut diamond pendant. The jewelry is elegantly draped across a soft, folded piece of dark navy velvet. The lighting is precise, creating brilliant sparkles on the gemstone while leaving the background in a subtle, moody shadow. The image exudes sophistication, high-value, and minimalist luxury, perfectly tailored for a premium marketplace presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjL9SLSHT06C5G9JoQF5MaamXU-ph8aFUlFNFW6nNb_PpaMCLfgSrH55UuCgazMypBcWU0ghqtIStRINg2bFpp0nBdKdqDbk5NZIvR24yrMCVxE0XuKD3BKHSI3Bjp6YNibHmX3ys6Fr8TRJg_JAaNL85MiOJ2VPQn5glPpBCxj2np7GqiVqo55Y0-h5XfqaP29HNjmKpeRv82j8NIa7an5G8TPiv_1fikzDO95IzjlakbachBnQxDEbsWsKoSGI47zgs0Kbaqo6w"/>
+<div class="absolute top-sm left-sm bg-[#E8B4A0] text-white px-sm py-xs rounded text-xs font-bold">
+                            Rare
+                        </div>
+<div class="absolute top-sm right-sm bg-white/90 p-xs rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-xs">Lumina Gems</p>
+<h4 class="font-title-md text-title-md text-primary mb-sm truncate">Rose Diamond Pendant</h4>
+<p class="font-title-lg text-title-lg text-primary">$3,400</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface dark:bg-primary fixed bottom-0 left-0 w-full h-nav-height-mobile flex justify-around items-center px-sm pb-safe shadow-lg dark:border-t dark:border-outline-variant rounded-t-xl z-50">
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md mt-xs">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="font-label-md text-label-md mt-xs">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-label-md text-label-md mt-xs">Vendors</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md mt-xs">Profile</span>
+</a>
+</nav>
+</body></html>

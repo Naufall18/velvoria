@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Order Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-dim": "#dfd9d4",
+                        "success": "#10B981",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "on-surface": "#1d1b18",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#b9ece9",
+                        "on-secondary-container": "#7a5242",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#ffc9b4",
+                        "outline": "#77767e",
+                        "on-primary-fixed": "#151a34",
+                        "surface-light": "#F5F5F5",
+                        "on-error-container": "#93000a",
+                        "secondary": "#7d5545",
+                        "border-subtle": "#E0E0E0",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#002625",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-secondary-fixed": "#301408",
+                        "inverse-primary": "#c0c4e8",
+                        "tertiary": "#000d0c",
+                        "primary": "#030722",
+                        "surface-tint": "#585d7b",
+                        "inverse-surface": "#33302d",
+                        "primary-container": "#1a1f3a",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "white": "#FFFFFF",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eee7e2",
+                        "on-surface-variant": "#46464d",
+                        "error": "#EF4444",
+                        "on-tertiary-container": "#60918f",
+                        "surface-bright": "#fff8f3",
+                        "surface-variant": "#e8e1dc",
+                        "background": "#fff8f3",
+                        "warning": "#F59E0B",
+                        "surface-container": "#f3ede8",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdbce",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "primary-fixed": "#dee1ff",
+                        "on-background": "#1d1b18",
+                        "on-tertiary-fixed": "#00201f",
+                        "on-primary-fixed-variant": "#404562",
+                        "surface": "#fff8f3",
+                        "text-secondary": "#808080",
+                        "text-primary": "#333333",
+                        "surface-container-low": "#f9f2ed",
+                        "outline-variant": "#c7c5ce",
+                        "on-primary-container": "#8286a7",
+                        "surface-container-highest": "#e8e1dc",
+                        "on-secondary-fixed-variant": "#623e2f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "nav-height-mobile": "64px",
+                        "base": "8px",
+                        "3xl": "64px",
+                        "2xl": "48px",
+                        "xl": "32px",
+                        "nav-height-desktop": "80px",
+                        "4xl": "96px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }],
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fade-in-up-delay-1 { animation-delay: 0.2s; }
+        .fade-in-up-delay-2 { animation-delay: 0.4s; }
+        .fade-in-up-delay-3 { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-primary shadow-sm dark:border-b dark:border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center h-nav-height-mobile px-md w-full">
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity duration-300 active:scale-95 flex items-center justify-center p-sm rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-display-md text-display-md text-primary dark:text-primary-fixed tracking-tight">Velvoria</div>
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity duration-300 active:scale-95 flex items-center justify-center p-sm rounded-full focus:outline-none focus:ring-2 focus:ring-primary/20 relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-nav-height-mobile pb-nav-height-mobile md:pb-xl flex items-center justify-center px-md lg:px-2xl w-full max-w-[1440px] mx-auto">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-xl lg:p-3xl my-xl fade-in-up">
+<!-- Success Header -->
+<div class="text-center mb-2xl">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#E8B4A0] text-white mb-lg shadow-[0_12px_32px_rgba(232,180,160,0.4)]">
+<span class="material-symbols-outlined text-[40px]" data-icon="check_circle">check_circle</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-sm font-display-md">Thank You</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Your order has been placed successfully.</p>
+<div class="mt-md inline-block bg-surface-container py-sm px-lg rounded-full"><span class="font-display-md text-title-md text-primary tracking-wider">Order #VL-82934</span></div>
+</div>
+<!-- Order Summary -->
+<div class="mb-2xl fade-in-up fade-in-up-delay-1">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg border-b border-border-subtle pb-sm">Order Summary</h2>
+<div class="space-y-md mb-xl">
+<!-- Item 1 -->
+<div class="flex items-start gap-md p-md rounded-xl bg-surface-container-low border border-border-subtle/50 hover:shadow-sm transition-all duration-300">
+<div class="w-24 h-24 rounded-lg bg-surface-variant flex-shrink-0 overflow-hidden relative">
+<img alt="The Monaco Leather Tote" class="w-full h-full object-cover" data-alt="A luxurious, minimalist leather tote bag in a deep, rich brown color, showcased against a pristine cream background. The lighting is soft and high-key, highlighting the premium texture of the leather and the subtle, elegant stitching. The composition is clean and modern, evoking a sense of high-end fashion and sophisticated minimalism. The mood is refined and aspirational." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbW731CH8P7KIqzqXFhrPVM31Gpsh-nvRl3p_NsN_9KmceGvhF4EiT6Gw0KbXWgbitZeK041ALFg-__QcBHjdONMizotC_PQAIAfRk8x-5BDIip4kgXOVogHny2TX36YI5NLn5zDt5QCL4CbyW2XVnPQW_fF8q8_Ym343dpGVYn2t3oA-jgfdCLKj4wahhz12mUF1FsinifvZjLV-55m708fAGzJGuH7hLA50yFmdbJTFzoj_dsc6-fHCqHLyFENdExars3AJTOXE"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-24 py-xs">
+<div>
+<h3 class="font-title-md text-title-md text-primary">The Monaco Leather Tote</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Color: Cognac | Qty: 1</p>
+</div>
+<p class="font-title-sm text-title-sm text-primary">$1,250.00</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-md p-md rounded-xl bg-surface-container-low border border-border-subtle/50 hover:shadow-sm transition-all duration-300">
+<div class="w-24 h-24 rounded-lg bg-surface-variant flex-shrink-0 overflow-hidden relative">
+<img alt="Aura Mesh Timepiece" class="w-full h-full object-cover" data-alt="A sleek, modern mesh watch with a rose gold finish, displayed on a smooth, light cream surface. The watch features a minimalist dial with no numbers, just elegant hands. The lighting is bright and diffuse, creating a luxurious, airy atmosphere that emphasizes the metallic sheen and the precise craftsmanship of the timepiece. The aesthetic is clean, contemporary, and high-end." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChnClI_nNvI5JSQzMsVGsh5h8lFbPfGzoWK3CCnMhKgoZz6FcM9uw69x1JI3jWvnCCwWj3CE7Z7W0865J_HXQRuYAZPmGLoOHjjfL-B7ri1YLzPzbN37uQ3d87TWLbHll1vP62mBrk0u46ClgcAkP8Gq8U_IdzcPoDB3nD3n6NWnu-1RquAosGgeKKyEIHVm153tIvhAPRMrqVBUA2E6PsyOfJGMz010nfU7AIj9UzIL9MhBva4kMbqaQoNSI0LCPGYzEcrYc_N_M"/>
+</div>
+<div class="flex-grow flex flex-col justify-between h-24 py-xs">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Aura Mesh Timepiece</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Color: Rose Gold | Qty: 1</p>
+</div>
+<p class="font-title-sm text-title-sm text-primary">$895.00</p>
+</div>
+</div>
+</div>
+<div class="border-t border-border-subtle pt-md flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary">Total</span>
+<span class="font-headline-sm text-headline-sm text-primary font-display-md">$2,145.00</span>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg mb-3xl fade-in-up fade-in-up-delay-2">
+<div class="bg-white p-lg rounded-xl border border-border-subtle shadow-sm">
+<div class="flex items-center gap-sm mb-sm text-primary">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<h3 class="font-title-sm text-title-sm">Estimated Delivery</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Thursday, Oct 26</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Standard Premium Shipping</p>
+</div>
+<div class="bg-white p-lg rounded-xl border border-border-subtle shadow-sm">
+<div class="flex items-center gap-sm mb-sm text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<h3 class="font-title-sm text-title-sm">Shipping Address</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Eleanor Vance</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">123 Luxury Lane, Apt 4B<br/>New York, NY 10012</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-md justify-center fade-in-up fade-in-up-delay-3">
+<button class="w-full sm:w-auto px-xl py-4 bg-[#E8B4A0] text-white font-title-md text-title-md rounded-lg shadow-[0_4px_12px_rgba(232,180,160,0.3)] hover:bg-[#d6a28d] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="my_location">my_location</span>
+                    Track Order
+                </button>
+<button class="w-full sm:w-auto px-xl py-4 bg-transparent border-2 border-primary text-primary font-title-md text-title-md rounded-lg hover:bg-primary/5 hover:-translate-y-0.5 transition-all duration-300">
+                    Continue Shopping
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Hidden on md and above) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-xl bg-surface dark:bg-primary shadow-lg dark:border-t dark:border-outline-variant pb-safe transition-transform duration-300">
+<div class="w-full h-nav-height-mobile flex justify-around items-center px-sm">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90 p-2">
+<span class="material-symbols-outlined mb-xs" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 transition-transform duration-200 active:scale-90">
+<span class="material-symbols-outlined mb-xs" data-icon="storefront">storefront</span>
+<span class="font-label-md text-label-md">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90 p-2">
+<span class="material-symbols-outlined mb-xs" data-icon="group">group</span>
+<span class="font-label-md text-label-md">Vendors</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-transform duration-200 active:scale-90 p-2">
+<span class="material-symbols-outlined mb-xs" data-icon="person">person</span>
+<span class="font-label-md text-label-md">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

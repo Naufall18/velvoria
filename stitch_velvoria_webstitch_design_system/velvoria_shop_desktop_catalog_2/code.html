@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Velvoria - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#301408",
+                      "primary-fixed": "#dee1ff",
+                      "background": "#fff8f3",
+                      "text-primary": "#333333",
+                      "on-surface": "#1d1b18",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "inverse-on-surface": "#f6efeb",
+                      "surface-tint": "#585d7b",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#fff8f3",
+                      "secondary": "#7d5545",
+                      "outline": "#77767e",
+                      "surface-container-highest": "#e8e1dc",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "on-tertiary": "#ffffff",
+                      "surface-light": "#F5F5F5",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-container": "#60918f",
+                      "on-error-container": "#93000a",
+                      "border-subtle": "#E0E0E0",
+                      "primary": "#030722",
+                      "surface-container-high": "#eee7e2",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "on-secondary-container": "#7a5242",
+                      "tertiary-fixed": "#b9ece9",
+                      "inverse-primary": "#c0c4e8",
+                      "surface": "#fff8f3",
+                      "secondary-container": "#ffc9b4",
+                      "outline-variant": "#c7c5ce",
+                      "surface-variant": "#e8e1dc",
+                      "primary-container": "#1a1f3a",
+                      "warning": "#F59E0B",
+                      "on-primary-fixed-variant": "#404562",
+                      "error": "#EF4444",
+                      "inverse-surface": "#33302d",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#00201f",
+                      "surface-container": "#f3ede8",
+                      "on-primary-container": "#8286a7",
+                      "success": "#10B981",
+                      "on-primary-fixed": "#151a34",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "on-background": "#1d1b18",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed": "#ffdbce",
+                      "tertiary-container": "#002625",
+                      "tertiary": "#000d0c",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "text-secondary": "#808080",
+                      "white": "#FFFFFF",
+                      "surface-container-low": "#f9f2ed",
+                      "on-surface-variant": "#46464d",
+                      "surface-dim": "#dfd9d4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "xs": "4px",
+                      "nav-height-desktop": "80px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "lg": "24px",
+                      "3xl": "64px",
+                      "4xl": "96px",
+                      "nav-height-mobile": "64px",
+                      "2xl": "48px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-card:hover .add-to-bag {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .custom-checkbox:checked + label .checkbox-box {
+            background-color: theme('colors.primary');
+            border-color: theme('colors.primary');
+        }
+        .custom-checkbox:checked + label .checkbox-icon {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="h-[80px] w-full sticky top-0 z-50 shadow-sm bg-white dark:bg-surface-container-lowest shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex justify-between items-center h-[80px] px-12 max-w-[1440px] mx-auto w-full">
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-primary-fixed" href="#">Velvoria</a>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="font-label-lg text-label-lg text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 hover:opacity-80 transition-all duration-300" href="#">Collections</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 hover:opacity-80 transition-all duration-300" href="#">Designers</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 hover:opacity-80 transition-all duration-300" href="#">Bespoke</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-outline hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 hover:opacity-80 transition-all duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center space-x-md">
+<div class="relative hidden lg:block mr-md">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="pl-xl pr-sm py-sm rounded-lg bg-surface-light border-none focus:ring-2 focus:ring-primary/10 w-[300px] font-body-md text-body-md text-text-primary placeholder:text-outline transition-all" placeholder="Search..." type="text"/>
+</div>
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-all duration-300"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-all duration-300"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span></button>
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-all duration-300"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span></button>
+</div>
+</div>
+</nav>
+<!-- Page Header -->
+<header class="py-4xl text-center max-w-[1440px] mx-auto px-12">
+<h1 class="font-display-lg text-display-lg text-primary mb-md">Autumn Collection</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto">Discover our curated selection of effortless elegance. Pieces designed to transcend seasons and elevate your daily wardrobe.</p>
+</header>
+<!-- Main Content Area -->
+<main class="max-w-[1440px] mx-auto px-12 pb-4xl flex gap-2xl">
+<!-- Sticky Sidebar (Filters) -->
+<aside class="w-1/4 hidden lg:block sticky top-[120px] h-[calc(100vh-120px)] overflow-y-auto pr-md scrollbar-hide">
+<div class="mb-xl pb-lg border-b border-surface-variant">
+<h3 class="font-title-md text-title-md text-primary mb-md">Category</h3>
+<ul class="space-y-sm">
+<li>
+<input checked="" class="hidden custom-checkbox" id="cat-dresses" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="cat-dresses">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Dresses</span>
+<span class="ml-auto font-body-sm text-body-sm text-text-secondary">(42)</span>
+</label>
+</li>
+<li>
+<input class="hidden custom-checkbox" id="cat-outerwear" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="cat-outerwear">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Outerwear</span>
+<span class="ml-auto font-body-sm text-body-sm text-text-secondary">(18)</span>
+</label>
+</li>
+<li>
+<input class="hidden custom-checkbox" id="cat-knitwear" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="cat-knitwear">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Knitwear</span>
+<span class="ml-auto font-body-sm text-body-sm text-text-secondary">(24)</span>
+</label>
+</li>
+<li>
+<input class="hidden custom-checkbox" id="cat-accessories" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="cat-accessories">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Accessories</span>
+<span class="ml-auto font-body-sm text-body-sm text-text-secondary">(31)</span>
+</label>
+</li>
+</ul>
+</div>
+<div class="mb-xl pb-lg border-b border-surface-variant">
+<h3 class="font-title-md text-title-md text-primary mb-md">Price</h3>
+<div class="px-sm">
+<input class="w-full h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary" max="1000" min="0" type="range" value="500"/>
+<div class="flex justify-between mt-sm font-body-sm text-body-sm text-text-secondary">
+<span>$0</span>
+<span>$1,000+</span>
+</div>
+</div>
+</div>
+<div class="mb-xl pb-lg border-b border-surface-variant">
+<h3 class="font-title-md text-title-md text-primary mb-md">Designers</h3>
+<ul class="space-y-sm">
+<li>
+<input class="hidden custom-checkbox" id="des-aurelia" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="des-aurelia">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Aurelia</span>
+</label>
+</li>
+<li>
+<input class="hidden custom-checkbox" id="des-lumiere" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="des-lumiere">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Maison Lumière</span>
+</label>
+</li>
+<li>
+<input checked="" class="hidden custom-checkbox" id="des-velvoria" type="checkbox"/>
+<label class="flex items-center cursor-pointer group" for="des-velvoria">
+<div class="checkbox-box w-5 h-5 border border-border-subtle rounded-DEFAULT mr-sm flex items-center justify-center transition-colors group-hover:border-primary">
+<span class="material-symbols-outlined checkbox-icon hidden text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-md text-body-md text-text-primary group-hover:text-primary transition-colors">Velvoria Archive</span>
+</label>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="w-full lg:w-3/4">
+<!-- Grid Header / Sorter -->
+<div class="flex justify-between items-center mb-xl">
+<span class="font-body-sm text-body-sm text-text-secondary">Showing 1-12 of 42 results</span>
+<div class="flex items-center gap-sm">
+<span class="font-label-lg text-label-lg text-text-primary">Sort by:</span>
+<select class="border-none bg-transparent font-body-md text-body-md text-primary cursor-pointer focus:ring-0">
+<option>Newest Arrivals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<!-- The Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<!-- Product Card 1 -->
+<div class="product-card group relative bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Silk Evening Gown" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A luxurious minimalist fashion editorial photograph of a flowing silk evening gown. The gown is a deep, rich navy blue, draped elegantly on a mannequin in a bright, modern studio. The lighting is soft and high-key, creating a pristine, light-mode aesthetic with generous whitespace. The mood is sophisticated and premium, emphasizing the textile's organic sheen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKPAxtQRjb-mHaN2W2Vr5TeQuEZrAnZSfLd9hmHY-rN2AttPyTragekW_j41WBDvUqmk1mW5IT3VNEh9WZnjEZ56w91vsEIxgbuIY842XlzxQVApNn2YCzv3Oa3B64rPW1dhXRGcEFQctb0_yM48xETnAXPtKIRl9cVXGOD3iN6Plrs3weU9COKWMHzEC04VACKM94zbat4wKSrLFx-yuwG4fuGC9ePLVfVC-XoGMyWAqqjd_mOCKkI2Fy7l4gYE0n97FgvU0XhNw"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<div class="absolute top-sm left-sm bg-secondary px-sm py-xs rounded-DEFAULT">
+<span class="font-label-md text-label-md text-white">New</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Silk Evening Gown</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Velvoria Archive</p>
+<p class="font-title-md text-title-md text-primary">$1,250</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group relative bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Cashmere Wrap Coat" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A sophisticated fashion photography shot of a tailored cashmere wrap coat in a warm cream color. The coat is displayed against a stark, pure white background in a well-lit studio environment. The lighting is even and bright, highlighting the soft texture of the luxury knitwear. The overall visual style is clean, modern, and high-end, perfectly suited for a luxury minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeDIQnoV4yU9HPC0hrplXi0V4Dcvv3T3FSqaaTTZgJFJcS3juLLUK1Rt_WzRDyYY2lzvyqsSO_ekKbwuV5FgTKzqw0WU2avMP9Edf2vLX568AIEDXnXBVY7vl1G0wJMVJr-rPtrDgZpZ9fHPA7WNVV30h7sb5T6qP6K2ZUo4_mnMNucCRnW9cq22kCOJE7YBzOaY7oPQ4qXckarYqFijszFQUMnik6X3pGejA5-v7QwGZURzzkcgUoLJKu8pXgGLZsbDKGea5aAME"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Cashmere Wrap Coat</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Maison Lumière</p>
+<p class="font-title-md text-title-md text-primary">$2,400</p>
+</div>
+</div>
+<!-- Product Card 3 (Highlight) -->
+<div class="product-card group relative bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer border-l-4 border-secondary">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Sculptural Leather Tote" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A striking still-life product photo of a minimalist, sculptural leather tote bag in a deep charcoal black. The bag sits on a smooth marble plinth against a pale cream backdrop. Soft, diffused lighting casts subtle shadows, emphasizing the bag's structural elegance and premium craftsmanship. The composition incorporates generous whitespace, conveying a sense of quiet luxury and modern refinement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3LK1Hr8DpEmSmQuYHaxGXGYIVeOU9MTczl585SY-ri_TWgOqnsTNNAsGscd9XzpjNHJbMVfUlki7fl_jZvs1g4TvKF6ed8MiJb4J5EtswxbfdDBQXs9DUlPJj4Jst60FUcuXGgcXdWnS4EdnJ-LbyQ7ae1cSmHKepZ0OFtslZaskV1AmC8qHymHz20j-Nx1HndgCarMdtMIg4xITeclQBufZa9fnvfp3o1ztIQNxRAxdNGr-knVouSVQMklktK2Gt9c-jgXoJ9oM"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<div class="absolute top-sm left-sm bg-primary px-sm py-xs rounded-DEFAULT">
+<span class="font-label-md text-label-md text-white">Curated</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Sculptural Leather Tote</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Aurelia</p>
+<p class="font-title-md text-title-md text-primary">$890</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group relative bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Pleated Midi Skirt" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A bright, airy editorial image of a flowing pleated midi skirt in a subtle rose gold hue. The skirt is captured mid-movement, creating dynamic folds and catching the light against a pristine white studio background. The lighting is high-key and soft, enhancing the ethereal and effortless elegance of the garment. The overall aesthetic is clean, luxurious, and minimalistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcRnAMQg0ySvbkEtnNqRjms1QY1miwcZ8tYNAHrVACiM3Yrfw_GnguXnhdbsSd49xLUmGMiR14lcbnWX8lLYRyS2rhadPH23rY1Wb8XnMnksXHMiF5QaK3c30NppSYsgPH1UVT4-HAGlMq3CnZFuwoPz6snvcUixA928PRNI0q9CutyYk1UxPqCU7Y9ekNIKwSGF3c3CGITjLDsdzWqvTR0khNSA8CRbVcs-u98rqyR7P9OUJUfl8wEvjhaamgZlYNImMpuvpEgDQ"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Pleated Midi Skirt</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Velvoria Archive</p>
+<p class="font-title-md text-title-md text-primary">$550</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-card group relative bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Oversized Linen Shirt" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A clean, minimalist product shot of a crisp, oversized white linen shirt hanging elegantly on a slender metallic rack. The background is a warm, textured cream wall, providing a subtle contrast. The lighting mimics soft, natural daylight, highlighting the organic texture and breathable weave of the linen. The composition is simple, refined, and embodies premium casual luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsIsiKlyJBQchJak7KfCssCVcluRO5OIt0FV823lD8Za3iOhlN1HRcwT9ouPVns0cLTeVd9CU5NpMGk6ooKuIzxWDJjXuIHSuzKNkLRYHnQ2WakyTL-g8TkVfCr5jLBf1C-COn5Yc_Yu0WAkAF3OBMsanW9TxU2lC3Lj_ODHVo80LpTI-pV4P9RLpLOgTLa8G3nfJfXRfo2xdlaYWDXoY4dQcaDAbXZKTcELVRS9ZZeLrTdJHx-nJYXT0KuSSp1t1DjHYnoyBkIus"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Oversized Linen Shirt</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Aurelia</p>
+<p class="font-title-md text-title-md text-primary">$320</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="product-card group relative bg-white rounded-lg shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300 overflow-hidden cursor-pointer">
+<div class="relative h-[400px] w-full overflow-hidden bg-surface-container">
+<img alt="Structured Wool Blazer" class="product-image w-full h-full object-cover transition-transform duration-700 ease-out" data-alt="A premium fashion portrait focusing on a structured, tailored wool blazer in a deep navy tone. The blazer is presented on a minimalist dress form against a light gray backdrop. Subtle spotlighting creates soft shadows that define the garment's sharp lapels and impeccable tailoring. The overall mood is authoritative yet effortlessly elegant, typical of high-end luxury fashion imagery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtBgGWqdwgEVzgniZr2xX_ccIkLzzRNKO4Xa3s9TM6pgBtchkU6Hx8fFA71p6oO9iW6oru7mYUIuFDvhHj953pU0AymhSmxhEJV-SM_sLEMo2Xy1xApTaX5wepN_5cOGLcteQpT-WG3C0_syW1Awo1J5isJSxsvCiYVLQziR8KdCOpa5gniceO4NUGIEItq0hjt6x5qEIZq5JjujOgoz7wtcktrEkLlyP4ABZNS9c74YoKGTwaR8cDSWWobccXvlRS9ogth8hYF_Y"/>
+<div class="absolute top-sm right-sm bg-white/90 rounded-full p-xs hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div class="absolute top-sm left-sm bg-error px-sm py-xs rounded-DEFAULT">
+<span class="font-label-md text-label-md text-white">Sale</span>
+</div>
+<button class="add-to-bag absolute bottom-sm left-sm right-sm bg-primary text-white font-label-lg text-label-lg py-sm rounded-lg opacity-0 translate-y-4 transition-all duration-300 hover:bg-primary/90 flex justify-center items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 0;">shopping_bag</span> Add to Bag
+                        </button>
+</div>
+<div class="p-md text-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-xs">Structured Wool Blazer</h4>
+<p class="font-body-sm text-body-sm text-text-secondary mb-sm">Maison Lumière</p>
+<div class="flex justify-center items-center gap-sm">
+<p class="font-title-md text-title-md text-text-secondary line-through">$1,100</p>
+<p class="font-title-md text-title-md text-error">$850</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination (Simulated) -->
+<div class="mt-4xl flex justify-center items-center space-x-sm">
+<button class="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-outline hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white font-label-lg text-label-lg flex items-center justify-center">1</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle text-text-primary font-label-lg text-label-lg hover:border-primary transition-colors flex items-center justify-center">2</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle text-text-primary font-label-lg text-label-lg hover:border-primary transition-colors flex items-center justify-center">3</button>
+<button class="w-10 h-10 rounded-full border border-border-subtle flex items-center justify-center text-text-primary hover:border-primary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-2xl bg-surface dark:bg-surface-dim">
+<div class="grid grid-cols-4 gap-xl max-w-[1440px] mx-auto px-12 py-3xl w-full">
+<div>
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed mb-lg block" href="#">Velvoria</a>
+<p class="font-body-md text-body-md text-text-secondary mt-md">Effortless elegance for the modern individual.</p>
+</div>
+<div class="flex flex-col space-y-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 focus:ring-2 focus:ring-primary/10" href="#">Explore</a>
+</div>
+<div class="flex flex-col space-y-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 focus:ring-2 focus:ring-primary/10" href="#">Customer Care</a>
+</div>
+<div class="flex flex-col space-y-md">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 focus:ring-2 focus:ring-primary/10" href="#">Legal</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-outline hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 focus:ring-2 focus:ring-primary/10" href="#">Stay Connected</a>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-12 border-t border-surface-variant pt-lg mt-lg text-center">
+<p class="font-body-sm text-body-sm text-text-secondary">© 2024 Velvoria Luxury. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

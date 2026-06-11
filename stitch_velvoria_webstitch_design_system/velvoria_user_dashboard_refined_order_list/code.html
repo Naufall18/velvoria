@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Order History - Velvoria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#030722",
+                      "text-primary": "#333333",
+                      "surface-variant": "#e8e1dc",
+                      "secondary-container": "#ffc9b4",
+                      "secondary-fixed-dim": "#f0bba7",
+                      "primary-container": "#1a1f3a",
+                      "on-error": "#ffffff",
+                      "on-background": "#1d1b18",
+                      "surface-container-high": "#eee7e2",
+                      "white": "#FFFFFF",
+                      "primary-fixed": "#dee1ff",
+                      "background": "#fff8f3",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed-dim": "#c0c4e8",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e8e1dc",
+                      "inverse-on-surface": "#f6efeb",
+                      "surface-tint": "#585d7b",
+                      "on-tertiary-container": "#60918f",
+                      "border-subtle": "#E0E0E0",
+                      "on-tertiary-fixed-variant": "#1a4e4c",
+                      "on-surface": "#1d1b18",
+                      "secondary-fixed": "#ffdbce",
+                      "error-container": "#ffdad6",
+                      "text-secondary": "#808080",
+                      "success": "#10B981",
+                      "on-tertiary-fixed": "#00201f",
+                      "on-secondary-container": "#7a5242",
+                      "on-secondary-fixed": "#301408",
+                      "surface-light": "#F5F5F5",
+                      "surface-dim": "#dfd9d4",
+                      "surface-container": "#f3ede8",
+                      "tertiary-container": "#002625",
+                      "on-primary-fixed-variant": "#404562",
+                      "surface": "#fff8f3",
+                      "tertiary": "#000d0c",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#fff8f3",
+                      "outline": "#77767e",
+                      "inverse-primary": "#c0c4e8",
+                      "secondary": "#7d5545",
+                      "outline-variant": "#c7c5ce",
+                      "inverse-surface": "#33302d",
+                      "on-secondary": "#ffffff",
+                      "error": "#EF4444",
+                      "on-primary-fixed": "#151a34",
+                      "on-secondary-fixed-variant": "#623e2f",
+                      "on-primary-container": "#8286a7",
+                      "surface-container-low": "#f9f2ed",
+                      "on-surface-variant": "#46464d",
+                      "tertiary-fixed-dim": "#9dd0cd",
+                      "warning": "#F59E0B",
+                      "tertiary-fixed": "#b9ece9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "2xl": "48px",
+                      "nav-height-mobile": "64px",
+                      "xl": "32px",
+                      "3xl": "64px",
+                      "4xl": "96px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "base": "8px",
+                      "md": "16px",
+                      "nav-height-desktop": "80px",
+                      "safe": "env(safe-area-inset-bottom)"
+              },
+              "fontFamily": {
+                      "headline-sm": [
+                              "Playfair Display"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "label-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "title-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "title-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-md": [
+                              "Playfair Display"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.4px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.25px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.15px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "58px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-md": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.5px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "0px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.1px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .luxury-shadow {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-primary antialiased min-h-screen pb-[90px] pt-[80px]">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-[80px] px-lg w-full fixed top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+<button class="hover:opacity-80 transition-opacity active:scale-95 text-primary">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight">Order History</h1>
+<button class="hover:opacity-80 transition-opacity active:scale-95 text-primary">
+<span class="material-symbols-outlined text-[24px]" data-icon="search">search</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="px-md max-w-lg mx-auto w-full pt-md flex flex-col gap-md">
+<!-- Order Card 1: Delivered -->
+<article class="bg-white rounded-lg luxury-shadow p-md flex flex-col gap-md p-lg gap-lg">
+<div class="flex justify-between items-center border-b border-border-subtle pb-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold font-headline-sm">#ORD-2024-8891</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Oct 12, 2024</span>
+</div>
+<div class="border border-primary text-primary px-md py-xs rounded-full font-label-md text-label-md tracking-tight">Delivered</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex gap-md items-center">
+<div class="w-[80px] h-[80px] bg-surface-variant rounded-md overflow-hidden flex-shrink-0 rounded-lg">
+<img alt="A luxurious midnight blue leather tote bag styled elegantly against a minimalist cream background. High-key studio lighting emphasizes the premium texture and structured design of the bag. The overall aesthetic is clean, modern, and perfectly suited for a high-end fashion e-commerce site." class="w-full h-full object-cover" data-alt="A luxurious midnight blue leather tote bag styled elegantly against a minimalist cream background. High-key studio lighting emphasizes the premium texture and structured design of the bag. The overall aesthetic is clean, modern, and perfectly suited for a high-end fashion e-commerce site." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyBdXsTA4qJgAvs7IIJCnElHu4NNMO77a3ar1X9a_iCBCow-xnThEXTSly7PYICn_he2pAMiJhbh43FGcTpgOhyX9c9nzs-ivv6iwVqOt94q6gs1UVNnm_1sOY8bV96mmNv84E3B1WcH_QXhzYmzvsKtsrPZS76GU-tVMVgT-wrnrnC3tr1y45YtkwTqXM2P2vG7DjCnfsFqx9EocczzW6A4mX8IKg4P7Ux9rrj_uC90q7DLVnCMd-nFC8Txqe10TOUfvoPQYPEX4"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary">Midnight Tote</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Qty: 1</span>
+</div>
+</div>
+<div class="flex gap-md items-center">
+<div class="w-[80px] h-[80px] bg-surface-variant rounded-md overflow-hidden flex-shrink-0 rounded-lg">
+<img alt="A delicately folded silk scarf featuring a sophisticated geometric pattern in deep navy and rose gold accents. The scarf is presented on a pristine white surface with soft, diffused lighting highlighting its sheen. The image conveys a sense of quiet luxury and effortless elegance." class="w-full h-full object-cover" data-alt="A delicately folded silk scarf featuring a sophisticated geometric pattern in deep navy and rose gold accents. The scarf is presented on a pristine white surface with soft, diffused lighting highlighting its sheen. The image conveys a sense of quiet luxury and effortless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB65oFFa8ihqDeEqB3dZYLq2LFCG8bYnmZbqCz-SdHBKzTgk4CkQaUoVkONu5eq6IX7SJ5S099LQQC5L16LN73KBUHr0eOG93jecs4LMzqwfIgMaUE9Uhu6gPB7ws0d_nXFxitlcV8_7MisWaL4Ut0EuvTojKVDyzkWe3eYsxsYfyzJs2b8X5Cdl-7YY0NS4TjOYCRPx6y87PizqbirR3uZZCqQINzBIaUOn0B4YyWSorQvTlAoRSXExLyFv1RXGA2nKbVpM9tDSI"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary">Silk Scarf - Geometric</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Qty: 2</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-sm border-t border-border-subtle mt-sm">
+<span class="font-label-lg text-label-lg text-text-secondary">Total</span>
+<span class="font-title-md text-title-md text-primary font-bold">$1,450.00</span>
+</div>
+</article>
+<!-- Order Card 2: Processing -->
+<article class="bg-white rounded-lg luxury-shadow p-md flex flex-col gap-md p-lg gap-lg">
+<div class="flex justify-between items-center border-b border-border-subtle pb-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold font-headline-sm">#ORD-2024-8902</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Oct 24, 2024</span>
+</div>
+<div class="bg-secondary-fixed-dim/20 text-secondary-fixed-dim border border-secondary-fixed-dim px-md py-xs rounded-full font-label-md text-label-md tracking-tight">Processing</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex gap-md items-center">
+<div class="w-[80px] h-[80px] bg-surface-variant rounded-md overflow-hidden flex-shrink-0 rounded-lg">
+<img alt="A pair of sleek, minimalist leather ankle boots in a soft cream color, displayed on a smooth marble surface. The lighting is bright and even, creating a clean, modern aesthetic that aligns with luxury minimalism. The composition highlights the premium craftsmanship of the footwear." class="w-full h-full object-cover" data-alt="A pair of sleek, minimalist leather ankle boots in a soft cream color, displayed on a smooth marble surface. The lighting is bright and even, creating a clean, modern aesthetic that aligns with luxury minimalism. The composition highlights the premium craftsmanship of the footwear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc-EKpV1Nl5ajUq7MNJUhQtmxwzPdgCzsuD5RZMPKr5qcYEJLv3-e5MHIj1l_M4mBfaQtdZN1u_4_2ognWGFYHdeGrr1H2T05rNCRcEFwX5qNqyBOrXREFX4Bj4VI6o_L9RjMQRX2jEA-k-ei4ekwi04Vf59YhOjyB17Y6bsEizvXSnzYkk-4up9sPey4D8hMgcVj5MUrkmdZNS0CKu8-1rY1ht0W8M_B0TJo49x16zOtjs6WUGrLdWahi3mr99jIZl2YSTSVmHvo"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary">Ivory Ankle Boots</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Qty: 1</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-sm border-t border-border-subtle mt-sm">
+<span class="font-label-lg text-label-lg text-text-secondary">Total</span>
+<span class="font-title-md text-title-md text-primary font-bold">$680.00</span>
+</div>
+</article>
+<!-- Order Card 3: Shipped -->
+<article class="bg-white rounded-lg luxury-shadow p-md flex flex-col gap-md p-lg gap-lg">
+<div class="flex justify-between items-center border-b border-border-subtle pb-sm">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-semibold font-headline-sm">#ORD-2024-8875</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Sep 28, 2024</span>
+</div>
+<div class="bg-success/10 text-success border border-success px-md py-xs rounded-full font-label-md text-label-md tracking-tight">Shipped</div>
+</div>
+<div class="flex flex-col gap-sm">
+<div class="flex gap-md items-center">
+<div class="w-[80px] h-[80px] bg-surface-variant rounded-md overflow-hidden flex-shrink-0 rounded-lg">
+<img alt="A minimalist, rose gold bangle bracelet resting gently on a textured, off-white linen cloth. The lighting is soft and ambient, casting delicate shadows that emphasize the jewelry's polished surface. The overall mood is sophisticated and refined, perfect for a luxury brand showcase." class="w-full h-full object-cover" data-alt="A minimalist, rose gold bangle bracelet resting gently on a textured, off-white linen cloth. The lighting is soft and ambient, casting delicate shadows that emphasize the jewelry's polished surface. The overall mood is sophisticated and refined, perfect for a luxury brand showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1BGNgZLWUnYwG96obaf3WzEMmcVzHtMZIosinsvnaR79YosI-Rb5bHyeukk71nQAAnoINUqGChe9vvodBvi9V8GxhsK_nC8FlAlpvcBFryBZ97DHdKYpfxpl5hOjhBX3-QNjbM8L842C6TtgIeaP0Q-3IcNBQW9o_7UtLGNcjRl772FEjik3Bo_RD4nImaEgSguQSwOgowlfc4f2xNtj2DBLMql_PcCF6zNPZtHBos2FNQ-qNKJDz3LzVCQFuBXOJrI4bBT937dk"/>
+</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary">Rose Gold Bangle</span>
+<span class="font-body-sm text-body-sm text-text-secondary">Qty: 1</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-sm border-t border-border-subtle mt-sm">
+<span class="font-label-lg text-label-lg text-text-secondary">Total</span>
+<span class="font-title-md text-title-md text-primary font-bold">$320.00</span>
+</div>
+</article>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-[64px] px-md pb-safe bg-white shadow-[0_-2px_8px_rgba(0,0,0,0.08)] rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors active:scale-90 pt-2 w-[64px]">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-label-md text-label-md mt-1">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary-fixed-dim font-semibold border-t-2 border-secondary-fixed-dim pt-2 w-[64px]">
+<span class="material-symbols-outlined fill" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-md text-label-md mt-1">Orders</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors active:scale-90 pt-2 w-[64px]">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label-md text-label-md mt-1">Wishlist</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary hover:text-primary transition-colors active:scale-90 pt-2 w-[64px]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>

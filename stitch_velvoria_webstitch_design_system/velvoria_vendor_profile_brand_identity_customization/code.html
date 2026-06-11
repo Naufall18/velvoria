@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor Profile Customization - Maison de Luxe</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#7a5242",
+                        "on-primary-fixed": "#151a34",
+                        "on-tertiary-container": "#60918f",
+                        "surface-container-low": "#f9f2ed",
+                        "success": "#10B981",
+                        "secondary-container": "#ffc9b4",
+                        "surface-tint": "#585d7b",
+                        "tertiary-fixed": "#b9ece9",
+                        "secondary": "#7d5545",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#404562",
+                        "text-secondary": "#808080",
+                        "inverse-primary": "#c0c4e8",
+                        "surface-variant": "#e8e1dc",
+                        "surface-container": "#f3ede8",
+                        "tertiary-container": "#002625",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "surface-bright": "#fff8f3",
+                        "primary": "#030722",
+                        "border-subtle": "#E0E0E0",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "surface-dim": "#dfd9d4",
+                        "surface-container-highest": "#e8e1dc",
+                        "outline-variant": "#c7c5ce",
+                        "on-secondary-fixed": "#301408",
+                        "primary-fixed-dim": "#c0c4e8",
+                        "primary-container": "#1a1f3a",
+                        "outline": "#77767e",
+                        "surface-light": "#F5F5F5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#eee7e2",
+                        "secondary-fixed": "#ffdbce",
+                        "on-surface-variant": "#46464d",
+                        "white": "#FFFFFF",
+                        "on-surface": "#1d1b18",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f6efeb",
+                        "tertiary": "#000d0c",
+                        "text-primary": "#333333",
+                        "background": "#fff8f3",
+                        "on-background": "#1d1b18",
+                        "on-primary-container": "#8286a7",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dee1ff",
+                        "inverse-surface": "#33302d",
+                        "warning": "#F59E0B",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "error": "#EF4444",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface": "#fff8f3",
+                        "on-primary": "#ffffff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        xs: "4px",
+                        "3xl": "64px",
+                        "nav-height-desktop": "80px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "base": "8px",
+                        "4xl": "96px",
+                        "nav-height-mobile": "64px",
+                        "2xl": "48px",
+                        "lg": "24px"
+                    },
+                    fontFamily: {
+                        "title-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "title-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Playfair Display", "serif"],
+                        "headline-md": ["Playfair Display", "serif"],
+                        "headline-sm": ["Playfair Display", "serif"],
+                        "label-lg": ["Inter", "sans-serif"],
+                        "headline-lg": ["Playfair Display", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "title-sm": ["Inter", "sans-serif"],
+                        "display-md": ["Playfair Display", "serif"]
+                    },
+                    fontSize: {
+                        "title-md": ["16px", { lineHeight: "24px", letterSpacing: "0.15px", fontWeight: "600" }],
+                        "body-lg": ["16px", { lineHeight: "24px", letterSpacing: "0.5px", fontWeight: "400" }],
+                        "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.5px", fontWeight: "500" }],
+                        "display-lg": ["48px", { lineHeight: "58px", letterSpacing: "-0.5px", fontWeight: "700" }],
+                        "title-lg": ["22px", { lineHeight: "28px", letterSpacing: "0px", fontWeight: "600" }],
+                        "body-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.4px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", letterSpacing: "0px", fontWeight: "700" }],
+                        "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "0px", fontWeight: "700" }],
+                        "headline-sm": ["24px", { lineHeight: "32px", letterSpacing: "0px", fontWeight: "700" }],
+                        "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "0px", fontWeight: "700" }],
+                        "body-md": ["14px", { lineHeight: "20px", letterSpacing: "0.25px", fontWeight: "400" }],
+                        "title-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.1px", fontWeight: "600" }],
+                        "display-md": ["40px", { lineHeight: "48px", letterSpacing: "-0.5px", fontWeight: "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #dfd9d4; /* surface-dim */
+            border-radius: 4px;
+        }
+        
+        /* Subtle transition for image hover effects */
+        .img-hover-zoom {
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .group:hover .img-hover-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface flex h-screen overflow-hidden antialiased">
+<!-- Navigation Drawer (Desktop) -->
+<aside class="hidden md:flex flex-col h-screen py-md px-sm w-72 bg-surface shadow-md bg-surface-container-low z-20 shrink-0">
+<!-- Header -->
+<div class="flex items-center gap-4 mb-xl px-4 mt-sm">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden shrink-0 border border-border-subtle">
+<img alt="Vendor Logo" class="w-full h-full object-cover" data-alt="A minimalist logo for a luxury brand featuring a stylized geometric monogram in dark navy against a pristine white background. The design is elegant, modern, and high-contrast, suitable for a premium boutique identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-4gIepiiwyEnPZQ7xmxgeeL9GcZRf7hT3DWpl0vhVtgHEzz6pexWPf51mxfb_VtRvyj4lUx8SPgupLReRPEPPqXrFjc4tc2CDP2yvws8tpJOaqMOWYrtSgKmbg-tyDqnMaB-VrmmrLprC2JM92ocvgMMN1AiVu0xGAQS192EHOtcIzBM_QQlgC5ffypzxwSk6VejKqvBfXi_bYJvdHUlv0T4ri9-vaSV16LAHo7bGzXm9zlv-2Jw6rvRX9u0QlQavDOOMePvDLD0"/>
+</div>
+<div class="flex flex-col overflow-hidden">
+<span class="font-title-md text-title-md text-primary truncate">Maison de Luxe</span>
+<span class="font-body-sm text-body-sm text-text-secondary truncate">Premium Partner</span>
+<span class="font-label-md text-label-md text-success flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Verified
+                </span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold font-label-lg text-label-lg transition-transform scale-95 translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">branding_watermark</span>
+<span>Brand Identity</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all duration-300 rounded-lg font-label-lg text-label-lg" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span>Boutique Stories</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all duration-300 rounded-lg font-label-lg text-label-lg" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span>Shopper Preview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant transition-all duration-300 rounded-lg font-label-lg text-label-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<!-- Main Application Canvas -->
+<div class="flex-1 flex flex-col h-full overflow-hidden relative">
+<!-- TopAppBar -->
+<header class="bg-white shadow-sm w-full h-nav-height-desktop flex justify-between items-center px-lg z-10 shrink-0">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-on-surface-variant hover:bg-surface-variant p-2 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-primary">Vendor Suite</h1>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-variant p-2 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<!-- Scrollable Content Area -->
+<main class="flex-1 overflow-y-auto pb-3xl md:pb-0 relative scroll-smooth">
+<div class="max-w-[1024px] mx-auto w-full px-4 md:px-lg py-xl flex flex-col gap-4xl">
+<!-- Page Title -->
+<div>
+<h2 class="font-display-md text-display-md text-primary mb-2">Profile Customization</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Curate your boutique's digital presence with effortless elegance.</p>
+</div>
+<!-- Section 1: Brand Identity Header (Banner & Logo) -->
+<section class="flex flex-col gap-xl">
+<div class="flex items-center gap-2">
+<span class="w-1 h-6 bg-secondary-container rounded-full"></span>
+<h3 class="font-title-lg text-title-lg text-primary">Brand Atmosphere</h3>
+</div>
+<div class="relative w-full rounded-xl bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden">
+<!-- Banner Area -->
+<div class="relative h-48 md:h-64 w-full bg-surface-variant group">
+<img alt="Boutique Banner" class="w-full h-full object-cover opacity-90 transition-opacity group-hover:opacity-100" data-alt="A serene, minimalist architectural interior featuring soft, diffused natural light illuminating textured cream walls. A sculptural, neutral-toned vase sits on a low plinth, creating a sophisticated and tranquil atmosphere representative of a high-end luxury lifestyle brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfxOFyZcbh2-WmQt8oWwxGv2OWVqhsuLVJztpkSTE-UejoIO0fnuCzXqC181RxULmWbCsChIbrtAux9tAg-wygsJXLfyENeMMuQrVBvWeqCitgzjPLt-wPFP7C4jv2_giMHyanN78D_FHBla-hAMlvpcB7Crv9yQDflOm1cX-bZMLeVOhCukdl_33UFkWbDil_I9P5e_0_N6Q_YtFztrBY170JDBl4BXjnEVaOqC1SQB2Fv3px9Ye8P1kdzp8suS9Ze3JVa19ssc"/>
+<!-- Banner Edit Overlay -->
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
+<button class="bg-white/90 text-primary px-4 py-2 rounded-lg font-label-md text-label-md flex items-center gap-2 shadow-md hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+                                    Update Cover
+                                </button>
+</div>
+</div>
+<!-- Avatar Area (Overlapping) -->
+<div class="absolute left-6 md:left-12 -bottom-10 z-10 group cursor-pointer">
+<div class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white bg-surface overflow-hidden shadow-md relative">
+<img alt="Boutique Logo" class="w-full h-full object-cover" data-alt="A minimalist logo for a luxury brand featuring a stylized geometric monogram in dark navy against a pristine white background. The design is elegant, modern, and high-contrast, suitable for a premium boutique identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9GMglgNW1hxYEEcj4bcboKq0kKLi74y8c-3hmSX_0gOHDlgU1D-_dPvTcG10wQpLXWAMGZmma87jUSLwA8WQGqghvQrfIWkGnw6AXRW6TkEz6-7KizVb4fPKGz-n1nxswSQUdVJt8UKxcj10HFSzUjrSrx3_UtTi170iNw5AJ6RtY3LNfIQLAieEe8YHMjABv3OTyqDHBy8EMhOM8t6wPyPGm3GLkNmSLEV_T7lXZ6XW1UiXz6f1GwpSXdbbtDUgAwrqIYTr8-Zk"/>
+<!-- Avatar Edit Overlay -->
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white">edit</span>
+</div>
+</div>
+</div>
+<!-- Spacer for overlapping avatar -->
+<div class="h-14 md:h-16 w-full bg-white"></div>
+</div>
+</section>
+<!-- Section 2: Boutique Name & Tagline -->
+<section class="flex flex-col gap-xl bg-white p-6 md:p-8 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)]">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-1 h-6 bg-secondary-container rounded-full"></span>
+<h3 class="font-title-lg text-title-lg text-primary">Identity Details</h3>
+</div>
+<div class="flex flex-col gap-lg">
+<!-- Name Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-text-primary" for="boutique-name">Boutique Name</label>
+<input class="w-full border border-border-subtle rounded-lg px-4 py-3 font-display-md text-display-md text-primary bg-surface-light focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-outline-variant" id="boutique-name" placeholder="Enter your brand name" type="text" value="Maison de Luxe"/>
+</div>
+<!-- Tagline Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-lg text-label-lg text-text-primary" for="boutique-tagline">Brand Tagline</label>
+<input class="w-full border border-border-subtle rounded-lg px-4 py-3 font-body-lg text-body-lg text-on-surface bg-surface-light focus:bg-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all placeholder:text-outline-variant" id="boutique-tagline" placeholder="A brief description of your essence" type="text" value="Effortless elegance for the modern aesthete."/>
+</div>
+</div>
+</section>
+<!-- Section 3: Brand Story -->
+<section class="flex flex-col gap-xl">
+<div class="flex items-center gap-2">
+<span class="w-1 h-6 bg-secondary-container rounded-full"></span>
+<h3 class="font-title-lg text-title-lg text-primary">The Narrative</h3>
+</div>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.08)] overflow-hidden border border-border-subtle/50">
+<!-- Rich Text Toolbar (Simplified visually) -->
+<div class="flex items-center gap-2 px-4 py-3 border-b border-border-subtle bg-surface-light/50">
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_bold</span></button>
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_italic</span></button>
+<div class="w-px h-5 bg-border-subtle mx-1"></div>
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">format_list_bulleted</span></button>
+<button class="p-1.5 rounded hover:bg-surface-variant text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-[20px]">link</span></button>
+<div class="flex-1"></div>
+<button class="p-1.5 rounded hover:bg-surface-variant text-primary transition-colors flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">image</span> Add Media
+                            </button>
+</div>
+<textarea class="w-full p-6 font-body-lg text-body-lg text-on-surface border-none focus:ring-0 resize-y min-h-[200px] leading-relaxed placeholder:text-outline-variant" id="brand-story" placeholder="Share the origins, philosophy, and unique perspective of your boutique..." rows="8">Founded in 2018, Maison de Luxe curates a selection of objects that celebrate the beauty of thoughtful design and enduring quality. We believe that the spaces we inhabit should reflect a quiet confidence, characterized by a refined palette and meticulous attention to detail.
+
+Our collections are sourced globally from independent artisans and heritage studios, ensuring each piece carries its own distinct narrative.</textarea>
+</div>
+</section>
+<!-- Section 4: Editorial Collections (Bento Grid Style) -->
+<section class="flex flex-col gap-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1 h-6 bg-secondary-container rounded-full"></span>
+<h3 class="font-title-lg text-title-lg text-primary">Featured Curations</h3>
+</div>
+<button class="font-label-md text-label-md text-primary flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-[18px]">add</span> Create Collection
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Collection Card 1 -->
+<div class="group relative bg-white rounded-xl overflow-hidden border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer flex flex-col h-[320px]">
+<div class="h-48 overflow-hidden relative">
+<img alt="The Minimalist Home Collection" class="w-full h-full object-cover img-hover-zoom" data-alt="A curated collection of minimalist interior design objects arranged elegantly on a textured stone surface. The composition features a neutral color palette of cream, taupe, and soft gray, illuminated by dramatic side lighting that highlights the textures of the ceramic and linen materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU0uISf0-YOzNvM7fuzgkye5qKMY_kkCFSczSF3S_rn2yIJS-t-aECNM7qCVv07Ea1uWD7qynYO0tye7XSDUbhjXq0VSHxnlAtoRVxgtXBv2txyDgUzZbHOm5jvtxt-iDeM0VRiDdMt5aU6GeNm_56z7oFiyjfNE2TE-Qxmdx9C0AKbfGhGjR7XJ-lWkhsKJkDDMx9C1r-H0n2gOudjrDglmkaNuCZqw5lxKqMHTsSsR4T5aj7LHgDmwhLFWgzMWQ8n55JQvS7uZ0"/>
+<!-- Action Overlay -->
+<div class="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 bg-white/90 rounded text-primary hover:bg-white shadow-sm backdrop-blur-sm"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">The Sanctuary</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">8 Items • Published</p>
+</div>
+</div>
+<!-- Collection Card 2 -->
+<div class="group relative bg-white rounded-xl overflow-hidden border border-border-subtle shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 cursor-pointer flex flex-col h-[320px]">
+<div class="h-48 overflow-hidden relative">
+<img alt="Artisan Ceramics" class="w-full h-full object-cover img-hover-zoom" data-alt="Close-up view of handcrafted ceramic vessels with matte finishes in deep earthy tones. The items are displayed on a clean wooden shelf against a soft, light background, creating a sophisticated and tactile visual experience typical of premium homeware brands." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa43rKZ-Bw_fPRsWuB0KKg8uQRJ6vR_GcdegwC_WhyxUSVKSukh-AWSqrqRL2ApRezI-wjTPfAXDfu-am5w1lvLdhkoWLz05kpDTBXwpf3kKIqtVhu69uvtLx57FTcCCioYaNIKsqFTObH5lgBBfWEHm65kTEpDq5p0YM84uyae5E3MaJxN2xRVl_bkieOKf7g-PD4PgBSAdMtmlYeyT4A35kyBzGkkt2DyLwCbCy5ZTABVdsRsXMHBxkIdqfqPn2nvgYcCrYA0dc"/>
+<!-- Action Overlay -->
+<div class="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 bg-white/90 rounded text-primary hover:bg-white shadow-sm backdrop-blur-sm"><span class="material-symbols-outlined text-[16px]">edit</span></button>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-center">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-1">Earthy Textures</h4>
+<p class="font-body-sm text-body-sm text-text-secondary">12 Items • Published</p>
+</div>
+</div>
+<!-- Collection Card 3 (Empty State / Add New) -->
+<div class="group border-2 border-dashed border-border-subtle rounded-xl flex flex-col items-center justify-center p-6 text-on-surface-variant hover:bg-surface-variant/50 hover:border-primary/30 hover:text-primary transition-all duration-300 cursor-pointer h-[320px]">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">add_photo_alternate</span>
+</div>
+<span class="font-title-md text-title-md mb-1">Curate New Story</span>
+<span class="font-body-sm text-body-sm text-center px-4">Group products into a compelling narrative collection.</span>
+</div>
+</div>
+</section>
+<!-- Bottom spacing to ensure content isn't hidden behind action bar -->
+<div class="h-24"></div>
+</div>
+</main>
+<!-- Section 5: Action Bar (Floating Footer) -->
+<div class="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-border-subtle/50 px-4 md:px-lg py-4 flex justify-between items-center z-10 hidden md:flex">
+<span class="font-body-sm text-body-sm text-text-secondary">Last saved just now</span>
+<div class="flex items-center gap-4">
+<button class="font-title-sm text-title-sm text-secondary bg-transparent border-2 border-secondary px-6 py-2.5 rounded-lg hover:bg-secondary/5 transition-colors duration-300">
+                    Preview Profile
+                </button>
+<button class="font-title-sm text-title-sm text-white bg-primary px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors duration-300 shadow-[0_4px_12px_rgba(3,7,34,0.15)]">
+                    Save Changes
+                </button>
+</div>
+</div>
+<!-- Mobile Action Bar (Inline with content end) -->
+<div class="md:hidden w-full px-4 py-6 bg-surface mt-auto flex flex-col gap-3 pb-24 border-t border-border-subtle/30">
+<button class="w-full font-title-sm text-title-sm text-white bg-primary px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors duration-300">
+                Save Changes
+            </button>
+<button class="w-full font-title-sm text-title-sm text-secondary bg-transparent border-2 border-secondary px-6 py-3 rounded-lg hover:bg-secondary/5 transition-colors duration-300">
+                Preview Profile
+            </button>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-md pb-md h-nav-height-mobile bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.05)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-2xl px-4 py-1 scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">branding_watermark</span>
+<span class="font-label-md text-label-md mt-1">Identity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md mt-1">Stories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">visibility</span>
+<span class="font-label-md text-label-md mt-1">Preview</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

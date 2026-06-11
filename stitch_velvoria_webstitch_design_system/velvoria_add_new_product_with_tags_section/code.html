@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Vendor - Add Product</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#c0c4e8",
+                        "primary": "#030722",
+                        "primary-container": "#1a1f3a",
+                        "on-secondary-container": "#7a5242",
+                        "surface-container-low": "#f9f2ed",
+                        "on-tertiary-container": "#60918f",
+                        "on-primary-fixed-variant": "#404562",
+                        "tertiary": "#000d0c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e8e1dc",
+                        "text-secondary": "#808080",
+                        "outline-variant": "#c7c5ce",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eee7e2",
+                        "on-primary-fixed": "#151a34",
+                        "secondary-fixed-dim": "#f0bba7",
+                        "on-surface-variant": "#46464d",
+                        "surface-tint": "#585d7b",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1d1b18",
+                        "tertiary-fixed-dim": "#9dd0cd",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#301408",
+                        "background": "#fff8f3",
+                        "secondary-container": "#ffc9b4",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#1a4e4c",
+                        "surface-dim": "#dfd9d4",
+                        "outline": "#77767e",
+                        "border-subtle": "#E0E0E0",
+                        "secondary": "#7d5545",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#b9ece9",
+                        "surface-variant": "#e8e1dc",
+                        "error": "#EF4444",
+                        "on-primary-container": "#8286a7",
+                        "surface-bright": "#fff8f3",
+                        "on-secondary-fixed-variant": "#623e2f",
+                        "surface": "#fff8f3",
+                        "on-background": "#1d1b18",
+                        "inverse-surface": "#33302d",
+                        "inverse-primary": "#c0c4e8",
+                        "surface-light": "#F5F5F5",
+                        "secondary-fixed": "#ffdbce",
+                        "primary-fixed": "#dee1ff",
+                        "text-primary": "#333333",
+                        "success": "#10B981",
+                        "on-error-container": "#93000a",
+                        "white": "#FFFFFF",
+                        "tertiary-container": "#002625",
+                        "inverse-on-surface": "#f6efeb",
+                        "surface-container": "#f3ede8",
+                        "warning": "#F59E0B"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "24px",
+                        "nav-height-desktop": "80px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "4xl": "96px",
+                        "2xl": "48px",
+                        "nav-height-mobile": "64px",
+                        "base": "8px",
+                        "3xl": "64px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-md": ["Playfair Display"],
+                        "title-sm": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "600" }],
+                        "title-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "58px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.4px", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "display-md": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.5px", "fontWeight": "700" }],
+                        "title-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0px", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .form-input-luxe {
+            @apply w-full border border-border-subtle rounded-lg bg-white px-4 py-3 text-body-lg font-body-lg text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow duration-300;
+        }
+        .form-label-luxe {
+            @apply block text-label-lg font-label-lg text-text-primary mb-sm;
+        }
+    </style>
+</head>
+<body class="bg-background min-h-screen text-on-surface antialiased">
+<!-- Top Navigation (Shell suppressed based on task instructions to focus on linear transactional Add Product form, but adding a specialized header for the flow) -->
+<header class="sticky top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-border-subtle/50 px-md md:px-2xl h-nav-height-mobile md:h-nav-height-desktop flex items-center justify-between">
+<div class="flex items-center gap-md">
+<button aria-label="Go back" class="p-2 -ml-2 rounded-full hover:bg-surface-variant transition-colors text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm md:font-headline-md md:text-headline-md text-primary">Add New Product</h1>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<button class="px-6 py-2 rounded-lg border-2 border-primary text-primary font-label-lg text-label-lg hover:bg-surface-variant transition-colors">
+                Save Draft
+            </button>
+<button class="px-6 py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg hover:opacity-90 transition-opacity">
+                Publish Product
+            </button>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-md md:px-lg py-xl md:py-2xl pb-32 md:pb-2xl">
+<form class="space-y-xl md:space-y-2xl">
+<!-- Image Upload Section -->
+<section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed rounded-l-xl"></div>
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Product Media</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Primary Image Upload -->
+<div class="md:col-span-2 aspect-video md:aspect-square bg-surface-container-lowest border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center cursor-pointer hover:bg-surface-variant transition-colors group relative overflow-hidden">
+<span class="material-symbols-outlined text-4xl text-text-secondary group-hover:text-primary transition-colors mb-sm" style="font-variation-settings: 'FILL' 0;">add_photo_alternate</span>
+<p class="font-body-md text-body-md text-text-secondary group-hover:text-primary transition-colors">Click to upload primary image</p>
+<p class="font-body-sm text-body-sm text-outline mt-xs">High-resolution JPEG or PNG. Max 5MB.</p>
+<!-- Simulated preview image once uploaded -->
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-primary-fixed"></div>
+</div>
+<!-- Gallery Thumbnail Slots -->
+<div class="grid grid-cols-4 md:grid-cols-2 gap-sm md:gap-md h-full">
+<div class="aspect-square bg-surface border border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+<div class="aspect-square bg-surface border border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+<div class="aspect-square bg-surface border border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+<div class="aspect-square bg-surface border border-dashed border-outline-variant rounded-lg flex items-center justify-center cursor-pointer hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">add</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Basic Information -->
+<section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Basic Information</h2>
+<div class="space-y-lg">
+<div>
+<label class="form-label-luxe" for="productName">Product Name</label>
+<input class="form-input-luxe" id="productName" placeholder="e.g., Silk Evening Gown" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div>
+<label class="form-label-luxe" for="category">Category</label>
+<div class="relative">
+<select class="form-input-luxe appearance-none cursor-pointer" id="category">
+<option disabled="" selected="" value="">Select Category</option>
+<option value="apparel">Apparel</option>
+<option value="jewelry">Jewelry</option>
+<option value="accessories">Accessories</option>
+<option value="home">Home Decor</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-text-secondary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="form-label-luxe" for="brand">Brand / Designer</label>
+<input class="form-input-luxe" id="brand" placeholder="e.g., Maison Margiela" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Description -->
+<section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Description &amp; Details</h2>
+<div>
+<label class="form-label-luxe sr-only" for="description">Product Description</label>
+<!-- Rich Text Editor Toolbar Mockup -->
+<div class="border border-border-subtle border-b-0 rounded-t-lg bg-surface-light px-sm py-2 flex items-center gap-xs">
+<button class="p-2 rounded hover:bg-surface-variant text-text-secondary" type="button"><span class="material-symbols-outlined text-sm">format_bold</span></button>
+<button class="p-2 rounded hover:bg-surface-variant text-text-secondary" type="button"><span class="material-symbols-outlined text-sm">format_italic</span></button>
+<button class="p-2 rounded hover:bg-surface-variant text-text-secondary" type="button"><span class="material-symbols-outlined text-sm">format_underlined</span></button>
+<div class="w-px h-6 bg-border-subtle mx-2"></div>
+<button class="p-2 rounded hover:bg-surface-variant text-text-secondary" type="button"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
+</div>
+<textarea class="form-input-luxe rounded-t-none resize-y" id="description" placeholder="Detail the craftsmanship, materials, and story behind this piece..." rows="6"></textarea>
+</div>
+</section>
+<!-- Pricing & Inventory -->
+<section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Pricing &amp; Inventory</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<div>
+<label class="form-label-luxe" for="price">Retail Price</label>
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+<span class="text-text-secondary font-body-lg text-body-lg">$</span>
+</div>
+<input class="form-input-luxe pl-8" id="price" placeholder="0.00" type="number"/>
+</div>
+</div>
+<div>
+<label class="form-label-luxe" for="sku">SKU (Optional)</label>
+<input class="form-input-luxe font-mono text-sm" id="sku" placeholder="e.g., AW23-DRS-001" type="text"/>
+</div>
+<div>
+<label class="form-label-luxe" for="stock">Stock Quantity</label>
+<input class="form-input-luxe" id="stock" placeholder="0" type="number"/>
+</div>
+</div>
+</section>
+<!-- Attributes -->
+<section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Attributes</h2>
+<div class="space-y-xl">
+<!-- Size Selector Mockup -->
+<div>
+<div class="flex justify-between items-center mb-sm">
+<label class="form-label-luxe mb-0">Sizes Available</label>
+<button class="text-label-md font-label-md text-primary hover:text-secondary transition-colors flex items-center gap-xs" type="button"><span class="material-symbols-outlined text-sm">settings</span>Manage Scale</button>
+</div>
+<div class="flex flex-wrap gap-sm"><button class="w-12 h-12 flex items-center justify-center border border-border-subtle rounded-md text-body-lg font-headline-sm text-text-primary hover:border-primary transition-colors" type="button">XS</button><button class="w-12 h-12 flex items-center justify-center border-2 border-[#1A1F3A] bg-primary/5 rounded-md text-body-lg font-headline-sm text-primary" type="button">S</button><button class="w-12 h-12 flex items-center justify-center border-2 border-[#1A1F3A] bg-primary/5 rounded-md text-body-lg font-headline-sm text-primary" type="button">M</button><button class="w-12 h-12 flex items-center justify-center border border-border-subtle rounded-md text-body-lg font-headline-sm text-text-primary hover:border-primary transition-colors" type="button">L</button><button class="w-12 h-12 flex items-center justify-center border border-border-subtle rounded-md text-body-lg font-headline-sm text-text-primary hover:border-primary transition-colors" type="button">XL</button></div>
+</div>
+<!-- Color Swatch Mockup -->
+<div>
+<label class="form-label-luxe">Colorways</label>
+<div class="flex flex-wrap gap-md items-center"><div class="flex flex-col items-center gap-xs group cursor-pointer"><div class="w-12 h-12 rounded-full bg-[#1A1F3A] shadow-inner border-2 border-white ring-2 ring-primary relative flex items-center justify-center"><span class="material-symbols-outlined text-white text-sm">check</span></div><span class="text-label-md font-label-md text-text-secondary">Midnight</span></div><div class="flex flex-col items-center gap-xs group cursor-pointer"><div class="w-12 h-12 rounded-full bg-[#F5F5DC] shadow-inner border border-border-subtle hover:scale-105 transition-transform"></div><span class="text-label-md font-label-md text-text-secondary">Cream</span></div><div class="flex flex-col items-center gap-xs group cursor-pointer"><div class="w-12 h-12 rounded-full bg-[#800020] shadow-inner border border-border-subtle hover:scale-105 transition-transform"></div><span class="text-label-md font-label-md text-text-secondary">Burgundy</span></div><button class="w-12 h-12 rounded-full border border-dashed border-outline-variant flex items-center justify-center text-text-secondary hover:text-primary hover:bg-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-sm">add</span></button></div>
+</div>
+</div>
+</section><section class="bg-white rounded-xl p-lg md:p-xl shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-border-subtle/30">
+<h2 class="font-title-lg text-title-lg text-primary mb-lg">Product Tags</h2>
+<div class="space-y-md">
+<div>
+<label class="form-label-luxe" for="product-tags">Tags (Optional)</label>
+<div class="relative">
+<input class="form-input-luxe" id="product-tags" placeholder="Add tags (e.g., Sustainable, Silk, Handmade)" type="text"/>
+</div>
+</div>
+<div class="flex flex-wrap gap-sm">
+<div class="flex items-center gap-xs bg-[#F5F5DC] text-[#1A1F3A] px-3 py-1 rounded-full text-label-md font-label-md">
+        Sustainable
+        <button class="material-symbols-outlined text-sm hover:text-secondary" type="button">close</button>
+</div>
+<div class="flex items-center gap-xs bg-[#F5F5DC] text-[#1A1F3A] px-3 py-1 rounded-full text-label-md font-label-md">
+        Handmade
+        <button class="material-symbols-outlined text-sm hover:text-secondary" type="button">close</button>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-text-secondary">Tags help customers find your products more easily.</p>
+</div>
+</section>
+</form>
+</main>
+<!-- Mobile Action Bar (Sticky Bottom) -->
+<div class="md:hidden fixed bottom-0 w-full bg-white border-t border-border-subtle p-md flex gap-md shadow-[0_-4px_16px_rgba(0,0,0,0.05)] z-40 pb-safe">
+<button class="flex-1 py-3 rounded-lg border-2 border-primary text-primary font-label-lg text-label-lg active:bg-surface-variant transition-colors">
+            Save Draft
+        </button>
+<button class="flex-1 py-3 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg active:opacity-90 transition-opacity">
+            Publish
+        </button>
+</div>
+</body></html>
